@@ -1,0 +1,30 @@
+{
+  "name": "charlottes-web-log",
+  "version": "0.1.0",
+  "description": "A spider's blog about her web",
+  "repository": "https://github.com/dev-academy-challenges/charlottes-web-log.git",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server & webpack --watch"
+  },
+  "babel": {
+    "presets": [
+      "env",
+      "react"
+    ]
+  },
+  "author": "EDA",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.2"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "webpack": "^3.10.0"
+  }
+}

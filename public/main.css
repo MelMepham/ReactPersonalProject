@@ -1,0 +1,100 @@
+body {
+  font-family: 'Josefin Sans', sans-serif !important;
+}
+
+h2{
+  margin-top: 10px
+    vertical-align: text-bottom;
+    color: #FFFFFF !important;
+    text-align: center;
+}
+
+h4{
+  color: #EF26C4 !important;
+  text-align: right;
+}
+
+menu{
+  padding: 0 !important;
+  font-size: 15px;
+  text-align: center;
+}
+
+.menuButton {
+  background-color: #EF26C4
+}
+
+.icons{
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 15px;
+  height: 80%;
+  width: auto;
+}
+
+.bottomLine {
+  border-bottom: 3px solid #EF26C4;
+  border-bottom-width: 80%
+}
+
+.margin {
+  margin: 2px;
+}
+
+.headerPadding {
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.menuPadding {
+  padding-top: 10px;
+}
+/* unvisited link */
+#menuBig a:link {
+    color: #EF26C4;
+}
+
+/* visited link */
+#menuBig a:visited {
+    color: green;
+}
+
+/* mouse over link */
+#menuBig a:hover {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background: #EF26C4;
+  color: #FFFFFF !important;
+  text-decoration: none !important;
+}
+
+
+/* unvisited link */
+#mobileView a:link {
+    color: #EF26C4;
+}
+
+/* visited link */
+#mobileView a:visited {
+    color: #EF26C4;
+}
+
+/* mouse over link */
+#mobileView a:hover {
+  background: #EF26C4;
+  color: #FFFFFF !important;
+  text-decoration: none !important;
+}
+
+@media only screen and (max-width: 576px) {
+  .mobileHide {
+    display:none;
+  }
+}
+
+  @media only screen and (min-width: 576px) {
+    .mobileView {
+      display:none;
+    }
+}
