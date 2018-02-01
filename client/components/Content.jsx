@@ -4,14 +4,28 @@ import HorizontalScroll from 'react-scroll-horizontal'
 const Content = (props) => {
 
 
-  return (
-  <div className="hello">
-    <HorizontalScroll>
-      <div />
+
+    return (
+      <div className="parentHorizontal">
+        <HorizontalScroll>
+            <div className='childHorizontal'>Hello</div>
+              <div className='childHorizontal'>Hello</div>
+                <div className='childHorizontal'>Hello</div>
+                  <div className='childHorizontal'>Hello</div>
+                    <div className='childHorizontal'>Hello</div>
+                      <div className='childHorizontal'>Hello</div>
+                        <div className='childHorizontal'>Hello</div>
+                          <div className='childHorizontal'>Hello</div>
+                            <div className='childHorizontal'>Hello</div>
+                              <div className='childHorizontal'>Hello</div>
+                                <div className='childHorizontal'>Hello</div>
+                                  <div className='childHorizontal'>Hello</div>
+
 
         </HorizontalScroll>
-  </div>
-  )
+      </div>
+    )
+
 }
 
 export default Content
