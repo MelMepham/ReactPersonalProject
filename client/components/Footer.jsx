@@ -42,7 +42,7 @@ const Footer = (props) => {
           </button>
         </div>
       </div>
-      <div className="collapse navbar-collapse, container-flui" id="myNavbar">
+      <div className="collapse navbar-collapse, container-fluid" id="myNavbar">
         <ul className="nav navbar-nav">
           {footerLink('home', 'HOME', true)}
           {footerLink('art', 'ART', true)}

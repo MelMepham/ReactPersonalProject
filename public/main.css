@@ -51,19 +51,25 @@ menu{
   padding-top: 10px;
 }
 
+.parentheight {
+  height: 100%;
+  width: auto;
+}
+
 .parentHorizontal {
   padding: 30px;
   width: auto;
-  height: 800px;
+  height: 620px;
   background-color:yellow
 }
 .childHorizontal {
   margin-top: 20px;
   margin-bottom: 20px;
-  width: 400px;
-  height: 400px;
+  max-width: 100%;
+  max-height: 100%;
   backgroundColor: pink;
 }
+
 /* unvisited link */
 #menuBig a:link {
     color: #EF26C4;
