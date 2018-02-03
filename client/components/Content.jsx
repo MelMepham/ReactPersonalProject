@@ -1,36 +1,46 @@
 import React from 'react'
 import HorizontalScroll from 'react-scroll-horizontal'
 
+
 class Content extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      isHidden: true
+      show: false
+    }
+    this.hideDiv = this.hideDiv.bind(this)
+  }
 
-    }
-z  }
-  toggleHidden () {
-      this.setState({
-        isHidden: !this.state.isHidden
-      })
-    }
+hideDiv() {
+  let { show } = this.state;
+  this.setState( { show: !show } )
+}
 
 
 render() {
     return (
-      <div className="parentHorizontal">
-        <HorizontalScroll>
-            <img onClick={this.toggleHidden.bind(this)} className='art childHorizontal img-responsive' src='images/art/jellyfish1.jpg'/>
-            {!this.state.isHidden && <Child />}
-            <div id='myDIV'><h1>hello</h1></div>
 
 
 
-        </HorizontalScroll>
+    <div className="parentHorizontal">
+      <HorizontalScroll>
+
+      <img onClick={ this.hideDiv } className='art childHorizontal img-responsive' src='images/art/jellyfish1.jpg'/>
+      {this.state.show && <Box />}
+      </HorizontalScroll>
+
       </div>
     )
 }
 }
 
+class Box extends React.Component {
+  render () {
+    return (
+      <div><h1>hello</h1></div>
+
+    )
+  }
+}
 
 export default Content
