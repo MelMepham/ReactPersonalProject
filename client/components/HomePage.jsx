@@ -1,10 +1,11 @@
 
 import React from 'react'
-const mandalaPink = require('../../public/images/mandalaSketch') 
+const mandala = require('../../public/images/sketch.js')
+
 const HomePage = (props) => {
   return (
     <div>
-      //mandala
+      {mandala.mandalaPink()}
     </div>
   )
 }

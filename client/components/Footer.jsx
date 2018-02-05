@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom'
 
 const Footer = (props) => {
   const footerLink = (path, display, mobile) =>
-  <Link to={`/${path}`} className={`col-sm-2 menuPadding ${props.location.pathname == "/" + path ? mobile ? 'mobileViewHover' : "menuBigHover" : ''}`} id={path}>
+  <Link to={`/${path}`} className={`col-sm-2 menuPadding ${props.location.pathname == "/" + path ? mobile ? 'mobileViewHover' : "menuBigHover" : ''}`} id={path} onClick={function(){$('.navbar-toggle').click()}}>
     {mobile
       ? <menu>{display}</menu>
       : <h5>{display}</h5>
@@ -34,11 +34,11 @@ const Footer = (props) => {
         </div>
     </div>
 
-    <div id="mobileView" className="mobileView fixed-bottom">
+    <div id="mobileView" className="mobileView fixed-bottom slick-list">
       <div className="container-fluid">
         <div className="row">
-          <button type="button" className="navbar-toggle btn-block menuButton" data-toggle="collapse" data-target="#myNavbar">
-            <h2>MENU</h2>
+          <button type="button" className="navbar-toggle btn-block menuButton slick-list" data-toggle="collapse" data-target="#myNavbar">
+            <h2 className='slick-list'>MENU</h2>
           </button>
         </div>
       </div>

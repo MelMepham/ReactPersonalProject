@@ -59,7 +59,7 @@ menu{
 .parentHorizontal {
   padding: 30px;
   width: auto;
-  height: 620px;
+  height: 620px !important;
   background-color:yellow
 }
 .childHorizontal {
@@ -68,6 +68,11 @@ menu{
   max-width: 100%;
   max-height: 100%;
   backgroundColor: pink;
+}
+
+.box {
+  width: 300px;
+  height: 300px;
 }
 
 /* unvisited link */
@@ -93,6 +98,8 @@ menu{
 /* unvisited link */
 #mobileView a:link {
     color: #EF26C4;
+    background-color: white !important;
+    padding: 0 !important;
 }
 
 /* visited link */
@@ -117,4 +124,9 @@ menu{
     .mobileView {
       display:none;
     }
+}
+
+
+.slick-list {
+    outline: none !important;
 }
