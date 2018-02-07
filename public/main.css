@@ -60,7 +60,7 @@ menu{
   padding: 30px;
   width: auto;
   height: 620px !important;
-  background-color:yellow
+  background-color:yellow;
 }
 .childHorizontal {
   margin-top: 20px;
@@ -69,10 +69,26 @@ menu{
   max-height: 100%;
   backgroundColor: pink;
 }
-
+.inline{
+  display: inline-block;
+}
 .box {
   width: 300px;
-  height: 300px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin: 20px;
+  background-color: white;
+}
+
+.logo {
+  width: 60%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  margin-botton: 50px;
+  width: 40%;
 }
 
 /* unvisited link */
