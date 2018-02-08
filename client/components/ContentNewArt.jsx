@@ -11,7 +11,7 @@ render() {
     return (
 
           return ( <div>
-            <img onClick={ (art) => this.showArt(art) } className='art childHorizontal img-responsive' src={art.img}/>
+            <div><img onClick={ (art) => this.showArt(art) } className='art childHorizontal img-responsive' src={art.img}/></div>
               {show == true && <div className='box'><h1>{art.title}</h1></div>} </div>
                 )
             }
