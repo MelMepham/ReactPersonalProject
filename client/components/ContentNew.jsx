@@ -22,24 +22,34 @@ class ContentNew extends React.Component {
   }
 
   scrollTo(element) {
-      console.log(element)
+      console.log('scroll' + element)
   }
 
+  hideAll(artToHide) {
+      var mappedArt = this.state.art.map((art) => {art.show = false; return art})
+      this.setState({art: mappedArt})
+    }
+
   showArt(artToShow) {
-    const {art} = this.state
-    console.log({art, artToShow});
-    var index = art.findIndex(artItem => artItem.title === artToShow.title)
-    art[index].show = !art[index].show
-    this.setState({art})
-  }
+      const {art} = this.state
+        var index = art.findIndex(artItem => artItem.title === artToShow.title)
+        art[index].show = !art[index].show
+        this.setState({art})
+}
+
+turnFalse(){
+  console.log('false')
+  console.log(this.art)
+  this.setState.art.show === false
+}
 
 render() {
     return (
     <div className="parentHorizontal">
-      <HorizontalScroll>
+      <HorizontalScroll reverseScroll='true'>
         {this.state.art && this.state.art.map(art => {
           return ([
-            <img onClick={ (e) => {this.showArt(art); this.scrollTo(e.target) }} className='art childHorizontal img-responsive' src={art.img}/>,
+            <img onClick={ (e) => {this.hideAll(art); this.showArt(art); this.scrollTo(e.target) }} className='art childHorizontal img-responsive' src={art.img}/>,
             <div>{art.show == true && <div className='box'><h1>{art.title}</h1></div>}</div>
           ])
             }
