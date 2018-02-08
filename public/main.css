@@ -59,8 +59,8 @@ menu{
 .parentHorizontal {
   padding: 30px;
   width: auto;
-  height: 620px;
-  background-color:yellow
+  height: 620px !important;
+  background-color:yellow;
 }
 .childHorizontal {
   margin-top: 20px;
@@ -68,6 +68,27 @@ menu{
   max-width: 100%;
   max-height: 100%;
   backgroundColor: pink;
+}
+.inline{
+  display: inline-block;
+}
+.box {
+  width: 300px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin: 20px;
+  background-color: white;
+}
+
+.logo {
+  width: 60%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  margin-botton: 50px;
+  width: 40%;
 }
 
 /* unvisited link */
@@ -93,6 +114,8 @@ menu{
 /* unvisited link */
 #mobileView a:link {
     color: #EF26C4;
+    background-color: white !important;
+    padding: 0 !important;
 }
 
 /* visited link */
@@ -117,4 +140,9 @@ menu{
     .mobileView {
       display:none;
     }
+}
+
+
+.slick-list {
+    outline: none !important;
 }

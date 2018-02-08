@@ -6,6 +6,9 @@ import Footer from './components/Footer'
 import Content from './components/Content'
 import HomePage from './components/HomePage'
 import AboutMe from './components/AboutMe'
+import ArtPage from './components/ArtPage'
+import ContentNew from './components/ContentNew'
+
 
 
 
@@ -17,9 +20,9 @@ const App = (props) => {
       <div>
       <Header />
 
-      <Route path='/art' component={Content} />
+      <Route path='/art' component={ArtPage} />
       <Route path='/design' component={Content} />
-      <Route path='/webdev' component={Content} />
+      <Route path='/webdev' component={ContentNew} />
       <Route path='/home' component={HomePage} />
       <Route path='/aboutme' component={AboutMe} />
       <Route path='/' component={Footer} />

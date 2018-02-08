@@ -1,11 +1,12 @@
 
 import React from 'react'
-const mandalaPink = require('../../public/images/mandalaSketch') 
+const mandala = require('../../public/images/sketch.js')
+
 const HomePage = (props) => {
   return (
     <div>
-      //mandala
-    </div>
+      <img className='logo img-responsive' src='../../images/logobig.svg'/>
+  </div>
   )
 }
 
