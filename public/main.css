@@ -32,6 +32,28 @@ menu{
   width: auto;
 }
 
+.img {
+  width: 100vw;
+  height: 100vw;
+}
+
+iframe, object, embed {
+  border: 0;
+  max-width: 100%;
+}
+
+.iFrameResponsive{
+  max-width: 80% !important;
+  max-height: 80%!important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding: 30px !important;
+  position: relative !important;
+  display: block !important;
+  overflow: hidden !important;
+}
+
+
 .bottomLine {
   border-bottom: 3px solid #EF26C4;
   border-bottom-width: 80%
@@ -58,9 +80,9 @@ menu{
 
 .parentHorizontal {
   padding: 30px;
-  width: auto;
-  height: 620px !important;
-  background-color:yellow;
+  max-width: 100vw;
+  height: 100vw;
+  max-height: 560px !important;
 }
 .childHorizontal {
   margin-top: 20px;
@@ -68,6 +90,8 @@ menu{
   max-width: 100%;
   max-height: 100%;
   backgroundColor: pink;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
 .inline{
   display: inline-block;

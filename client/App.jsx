@@ -3,11 +3,10 @@ import React from 'react'
 import {render} from 'react-dom'
 import Header from './components/Header'
 import Footer from './components/Footer'
-import Content from './components/Content'
 import HomePage from './components/HomePage'
 import AboutMe from './components/AboutMe'
-import ArtPage from './components/ArtPage'
-import ContentNew from './components/ContentNew'
+import artPage from './components/artPage'
+
 
 
 
@@ -20,11 +19,11 @@ const App = (props) => {
       <div>
       <Header />
 
-      <Route path='/art' component={ArtPage} />
-      <Route path='/design' component={Content} />
-      <Route path='/webdev' component={ContentNew} />
+      <Route exact path='/art' component={artPage} />
+      <Route exact path='/design' component={artPage} />
+      <Route exact path='/webdev' component={artPage} />
       <Route path='/home' component={HomePage} />
-      <Route path='/aboutme' component={AboutMe} />
+      <Route exact path='/aboutme' component={AboutMe} />
       <Route path='/' component={Footer} />
 
       </div>

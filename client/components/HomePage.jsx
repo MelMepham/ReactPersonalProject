@@ -1,11 +1,10 @@
 
 import React from 'react'
-const mandala = require('../../public/images/sketch.js')
 
 const HomePage = (props) => {
   return (
-    <div>
-      <img className='logo img-responsive' src='../../images/logobig.svg'/>
+    <div className='iFrameResponsive'>
+      <iframe className="mx-auto d-block" src="../../p5/p5.html" width="600px" height="600px"></iframe>
   </div>
   )
 }
