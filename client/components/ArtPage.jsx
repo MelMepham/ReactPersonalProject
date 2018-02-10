@@ -1,6 +1,5 @@
 import React from 'react'
 import HorizontalScroll from 'react-scroll-horizontal'
-import ContentImages from './ContentImages'
 
 
 class ArtPage extends React.Component {

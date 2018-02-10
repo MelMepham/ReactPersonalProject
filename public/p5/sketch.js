@@ -1,6 +1,4 @@
 
-function mandalaPink() {
-
 var rot = 60
 var rota = 15
 var x = .1
@@ -268,7 +266,3 @@ function draw() {
     // pop()
 
 }
-
-}
-
-module.exports = {mandalaPink: mandalaPink}
