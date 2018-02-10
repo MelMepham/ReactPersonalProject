@@ -5,8 +5,8 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import HomePage from './components/HomePage'
 import AboutMe from './components/AboutMe'
-import ArtPage from './components/ArtPage'
-import ContentNew from './components/ContentNew'
+import artPage from './components/artPage'
+
 
 
 
@@ -19,9 +19,9 @@ const App = (props) => {
       <div>
       <Header />
 
-      <Route exact path='/art' component={ContentNew} />
-      <Route exact path='/design' component={ContentNew} />
-      <Route exact path='/webdev' component={ContentNew} />
+      <Route exact path='/art' component={artPage} />
+      <Route exact path='/design' component={artPage} />
+      <Route exact path='/webdev' component={artPage} />
       <Route path='/home' component={HomePage} />
       <Route exact path='/aboutme' component={AboutMe} />
       <Route path='/' component={Footer} />
