@@ -9,22 +9,34 @@ class artPage extends React.Component {
     this.state = {
       art: [],
       show: false,
+      scrollX: 500
+
     }
 
     this.showArt = this.showArt.bind(this)
-    this.scrollTo = this.scrollTo.bind(this)
+    // this.scrollTo = this.scrollTo.bind(this)
   }
   componentDidMount() {
      this.setState({art:thisArt})
 }
 
-  scrollTo(element) {
-      console.log('scroll' + element)
+  componentDidUpdate() {
+    document.querySelector('.scroll-horizontal').scrollLeft = this.state.scrollX
+    console.log('component did update ' + this.state.scrollX)
   }
 
+  // scrollTo() {
+  //   console.log('scroll to' + this.state.scrollX)
+  //   this.setState({scrollX: document.querySelector('.scroll-horizontal > div').style.transform})
+  // }
+
   hideAll(artToHide) {
-      var mappedArt = this.state.art.map((art) => {art.show = false; return art})
-      this.setState({art: mappedArt})
+      var mappedArt = this.state.art.map((art) => {
+        if (artToHide.show == true) {
+        } else {
+         art.show = false; return art}
+        this.setState({art: mappedArt})
+      })
     }
 
   showArt(artToShow) {
@@ -34,28 +46,30 @@ class artPage extends React.Component {
         this.setState({art})
   }
 
-  turnFalse(){
-    this.setState.art.show === false
-  }
 
   render() {
-      return (
-      <div className="parentHorizontal">
-        <HorizontalScroll reverseScroll='true'>
-          {this.state.art && this.state.art.map(art => {
-            return ([
-              <img onClick={ (e) => {this.hideAll(art); this.showArt(art); this.scrollTo(e.target) }} className='art img-responsive childHorizontal' src={art.img}/>,
-              <div>{art.show == true && <div className='box'><h1>{art.title}</h1></div>}</div>
-            ])
-              }
-          )}
 
-        </HorizontalScroll>
+    console.log('render ' + this.state.scrollX)
+        return (
+        <div className="parentHorizontal">
+          <HorizontalScroll>
+            {this.state.art && this.state.art.map(art => {
+              return ([
 
-        </div>
-      )
+              <img onClick={ (e) => {this.hideAll(art); this.showArt(art); this.setState({scrollX: document.querySelector('.scroll-horizontal').scrollLeft})} } className='art img-responsive childHorizontal' src={art.img}/>,
+                <div>{art.show == true && <div className='box'><h1>{art.title}</h1><p>{art.about}</p></div>}</div>
+              ])
+                }
+
+
+            )}
+
+          </HorizontalScroll>
+
+          </div>
+        )
+    }
   }
-}
 
 
 
