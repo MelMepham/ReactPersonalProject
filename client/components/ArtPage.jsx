@@ -9,7 +9,7 @@ class artPage extends React.Component {
     this.state = {
       art: [],
       show: false,
-      scrollX: 0
+      scrollX: 500
 
     }
 
@@ -21,7 +21,7 @@ class artPage extends React.Component {
 }
 
   componentDidUpdate() {
-    document.querySelector('.scroll-horizontal > div').style.transform = this.state.scrollX
+    document.querySelector('.scroll-horizontal').scrollLeft = this.state.scrollX
     console.log('component did update ' + this.state.scrollX)
   }
 
@@ -55,7 +55,8 @@ class artPage extends React.Component {
           <HorizontalScroll>
             {this.state.art && this.state.art.map(art => {
               return ([
-              <img onClick={ (e) => {this.hideAll(art); this.showArt(art); this.setState({scrollX: document.querySelector('.scroll-horizontal > div').style.transform})} } className='art img-responsive childHorizontal' src={art.img}/>,
+
+              <img onClick={ (e) => {this.hideAll(art); this.showArt(art); this.setState({scrollX: document.querySelector('.scroll-horizontal').scrollLeft})} } className='art img-responsive childHorizontal' src={art.img}/>,
                 <div>{art.show == true && <div className='box'><h1>{art.title}</h1><p>{art.about}</p></div>}</div>
               ])
                 }

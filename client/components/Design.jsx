@@ -1,57 +1,50 @@
 import React from 'react'
 import HorizontalScroll from 'react-scroll-horizontal'
 import { Link, DirectLink, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
-import thisArt from '../data/artInfo.js'
+import thisDesign from '../data/designInfo.js'
 
 class Design extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      art: [],
+      design: [],
       show: false,
       x: 0,
     }
 
-    this.showArt = this.showArt.bind(this)
+    this.showDesign = this.showDesign.bind(this)
     // this.scrollTo = this.scrollTo.bind(this)
   }
   componentDidMount() {
-     this.setState({art:thisArt})
+     this.setState({design:thisDesign})
 }
 
-_onMouseMove(e) {
-  this.setState({ x: e.screenX });
-}
-
-  hideAll(artToHide) {
-      var mappedArt = this.state.art.map((art) => {
-        if (artToHide.show == true) {
+  hideAll(designToHide) {
+      var mappedDesign = this.state.design.map((design) => {
+        if (designToHide.show == true) {
         } else {
-         art.show = false; return art}
-        this.setState({art: mappedArt})
+         design.show = false; return design}
+        this.setState({design: mappedDesign})
       })
     }
 
-  showArt(artToShow) {
-      const {art} = this.state
-        var index = art.findIndex(artItem => artItem.title === artToShow.title)
-        art[index].show = !art[index].show
-        this.setState({art})
+  showDesign(designToShow) {
+      const {design} = this.state
+        var index = design.findIndex(designItem => designItem.title === designToShow.title)
+        design[index].show = !design[index].show
+        this.setState({design})
   }
 
 
   render() {
-      const { x } = this.state;
-      console.log(x)
-
         return (
         <div className="parentHorizontal">
           <HorizontalScroll reverseScroll='true'>
 
-            {this.state.art && this.state.art.map(art => {
+            {this.state.design && this.state.design.map(design => {
               return ([
-                <img onClick={ (e) => {this.hideAll(art); this.showArt(art)}} className='art img-responsive childHorizontal' src={art.img}/>,
-                <div>{art.show == true && <div className='box'><h1>{art.title}</h1><p>{art.about}</p></div>}</div>
+                <img onClick={ (e) => {this.hideAll(design); this.showDesign(design)}} className='design img-responsive childHorizontal' src={design.img}/>,
+                <div>{design.show == true && <div className='box'><h1>{design.title}</h1><p>{design.about}</p></div>}</div>
               ])
                 }
 

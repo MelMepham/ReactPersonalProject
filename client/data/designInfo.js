@@ -1,4 +1,4 @@
-export.modules = [
+module.exports = [
   {img: 'images/design/misprintedCo.jpg', title: 'The Misprint co. ', about: ''},
   {img: 'images/design/coryChampion.jpg', title: 'Cory Champion Poster', about: ''},
   {img: 'images/design/fidelsMenu.jpg', title: "Fidel's Menu", about: ''},
