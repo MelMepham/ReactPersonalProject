@@ -3,13 +3,13 @@ import HorizontalScroll from 'react-scroll-horizontal'
 import { Link, DirectLink, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 import thisArt from '../data/artInfo.js'
 
-class artPage extends React.Component {
+class Design extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
       art: [],
       show: false,
-      
+      x: 0,
     }
 
     this.showArt = this.showArt.bind(this)
@@ -19,6 +19,9 @@ class artPage extends React.Component {
      this.setState({art:thisArt})
 }
 
+_onMouseMove(e) {
+  this.setState({ x: e.screenX });
+}
 
   hideAll(artToHide) {
       var mappedArt = this.state.art.map((art) => {
@@ -38,6 +41,8 @@ class artPage extends React.Component {
 
 
   render() {
+      const { x } = this.state;
+      console.log(x)
 
         return (
         <div className="parentHorizontal">
@@ -45,7 +50,7 @@ class artPage extends React.Component {
 
             {this.state.art && this.state.art.map(art => {
               return ([
-              <img onClick={ (e) => {this.hideAll(art); this.showArt(art)}} className='art img-responsive childHorizontal' src={art.img}/>,
+                <img onClick={ (e) => {this.hideAll(art); this.showArt(art)}} className='art img-responsive childHorizontal' src={art.img}/>,
                 <div>{art.show == true && <div className='box'><h1>{art.title}</h1><p>{art.about}</p></div>}</div>
               ])
                 }
@@ -62,4 +67,4 @@ class artPage extends React.Component {
 
 
 
-export default artPage
+export default Design
