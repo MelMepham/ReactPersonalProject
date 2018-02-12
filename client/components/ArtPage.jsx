@@ -1,5 +1,6 @@
 import React from 'react'
-import HorizontalScroll from 'react-scroll-horizontal'
+// import HorizontalScroll from 'react-scroll-horizontal'
+import MyHorizontalScroll from './MyHorizontalScroll'
 import { Link, DirectLink, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 import thisArt from '../data/artInfo.js'
 
@@ -9,26 +10,26 @@ class artPage extends React.Component {
     this.state = {
       art: [],
       show: false,
-      scrollX: 500
+      scrollX: 0
 
     }
 
     this.showArt = this.showArt.bind(this)
-    // this.scrollTo = this.scrollTo.bind(this)
+    this.scrollTo = this.scrollTo.bind(this)
   }
   componentDidMount() {
      this.setState({art:thisArt})
 }
 
   componentDidUpdate() {
-    document.querySelector('.scroll-horizontal').scrollLeft = this.state.scrollX
+    document.querySelector('.scroll-horizontal > div').style.transform = this.state.scrollX
     console.log('component did update ' + this.state.scrollX)
+
   }
 
-  // scrollTo() {
-  //   console.log('scroll to' + this.state.scrollX)
-  //   this.setState({scrollX: document.querySelector('.scroll-horizontal > div').style.transform})
-  // }
+  scrollTo(e) {
+    this.setState ({scrollX: document.querySelector('.scroll-horizontal > div').style.transform})
+  }
 
   hideAll(artToHide) {
       var mappedArt = this.state.art.map((art) => {
@@ -37,6 +38,7 @@ class artPage extends React.Component {
          art.show = false; return art}
         this.setState({art: mappedArt})
       })
+
     }
 
   showArt(artToShow) {
@@ -44,6 +46,7 @@ class artPage extends React.Component {
         var index = art.findIndex(artItem => artItem.title === artToShow.title)
         art[index].show = !art[index].show
         this.setState({art})
+
   }
 
 
@@ -52,11 +55,10 @@ class artPage extends React.Component {
     console.log('render ' + this.state.scrollX)
         return (
         <div className="parentHorizontal">
-          <HorizontalScroll>
+          <MyHorizontalScroll>
             {this.state.art && this.state.art.map(art => {
               return ([
-
-              <img onClick={ (e) => {this.hideAll(art); this.showArt(art); this.setState({scrollX: document.querySelector('.scroll-horizontal').scrollLeft})} } className='art img-responsive childHorizontal' src={art.img}/>,
+              <img onClick={ (e) => {this.hideAll(art); this.showArt(art); this.scrollTo(e)} } className='art img-responsive childHorizontal' src={art.img}/>,
                 <div>{art.show == true && <div className='box'><h1>{art.title}</h1><p>{art.about}</p></div>}</div>
               ])
                 }
@@ -64,7 +66,7 @@ class artPage extends React.Component {
 
             )}
 
-          </HorizontalScroll>
+          </MyHorizontalScroll>
 
           </div>
         )

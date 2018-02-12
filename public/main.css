@@ -22,7 +22,8 @@ menu{
 
 .subText {
   text-align: center !important;
-  margin-top: 20px;
+  margin-top: 15px;
+  font-size: 15px;
 }
 
 .watchThisSpace {
@@ -131,11 +132,22 @@ iframe, object, embed {
 /* unvisited link */
 #menuBig a:link {
     color: #EF26C4;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background: white;
+    opacity: .85;
+    margin-left: 1px;
+    margin-right: 1px;
+    margin-bottom: -2px;
+
+
 }
 
 /* visited link */
 #menuBig a:visited {
     color: #EF26C4;
+
+
 }
 
 /* mouse over link */
