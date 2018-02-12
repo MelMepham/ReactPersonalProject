@@ -16,7 +16,7 @@ const AboutMe = (props) => {
       <div className="row">
          {info.map(data => {
            return (
-             <div className="col-md-3">
+             <div className="col-sm-3">
                <div onClick='' className="hvr-shrink" href={data.links}>
                  <img className="blogimg img-responsive" src={data.img} alt="mandala"/>
                  <h4 className='subText'>{data.menu}</h4>
