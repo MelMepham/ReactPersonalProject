@@ -26,7 +26,8 @@ menu{
 
 .aboutMeData {
   text-align: center !important;
-  margin-top: 30px
+  margin-top: 80px;
+  margin-bottom: 40px;
 }
 
 .subText {
@@ -48,8 +49,8 @@ menu{
 }
 
 .icons{
-  padding-left: 4px;
-  padding-right: 4px;
+  padding-left: 7px;
+  padding-right: 7px;
   padding-top: 15px;
   height: 80%;
   width: auto;
@@ -221,11 +222,7 @@ iframe, object, embed {
 body { font-size:70%; }
 h1 { font-size:30px; }
 .box { width: 200px; }
-.parentHorizontal {
-  max-width: auto;
-  height: 140vw;
 
-}
 }
 
 .hvr-shrink:hover, .hvr-shrink:focus, .hvr-shrink:active {
@@ -235,7 +232,7 @@ h1 { font-size:30px; }
 }
 
 .blogImg{
-  margin-top: 130px;
+  margin-top: 80px;
   display:block;
   margin-left: auto;
   margin-right: auto;
