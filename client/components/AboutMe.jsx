@@ -34,8 +34,8 @@ class AboutMe extends React.Component {
                 <div className="col-lg-3 col-md-6">
                   <div onClick={ (e) => {this.showInfo(data)} } className="hvr-shrink">
                     <img className="blogImg img-responsive" src={data.img} alt="mandala"/>
-                    <h4 className='subText'>{data.menu}</h4>
                   </div>
+                    <h4 className='subText'>{data.menu}</h4>
                   <div>{data.show == true && <div>
                       <p className='aboutMeData'>{data.pOne}</p>
                       <p className='aboutMeData'>{data.pTwo}</p>

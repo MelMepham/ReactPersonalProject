@@ -26,14 +26,14 @@ menu{
 
 .aboutMeData {
   text-align: center !important;
-  margin-top: 80px;
-  margin-bottom: 40px;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 .subText {
   text-align: center !important;
   margin-top: 15px;
-  font-size: 15px;
+  font-size: 25px;
 }
 
 .watchThisSpace {
@@ -226,9 +226,13 @@ h1 { font-size:30px; }
 }
 
 .hvr-shrink:hover, .hvr-shrink:focus, .hvr-shrink:active {
-  -webkit-transform: scale(1.2);
-  transform: scale(1.2);
 
+  animation: mymove 5s infinite;
+
+}
+
+@keyframes mymove {
+    50% {transform: rotate(-180deg);}
 }
 
 .blogImg{
