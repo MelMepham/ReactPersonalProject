@@ -14,10 +14,19 @@ h4{
   text-align: right;
 }
 
+p {
+  font-size: 100%
+}
+
 menu{
   padding: 0 !important;
   font-size: 15px;
   text-align: center;
+}
+
+.aboutMeData {
+  text-align: center !important;
+  margin-top: 30px
 }
 
 .subText {
@@ -197,7 +206,6 @@ iframe, object, embed {
 }
 
 .hvr-shrink {
-  display: inline-block;
   vertical-align: middle;
   -webkit-transform: perspective(1px) translateZ(0);
   transform: perspective(1px) translateZ(0);
@@ -208,18 +216,30 @@ iframe, object, embed {
   transition-property: transform;
   text-decoration: none !important;
 }
+
+@media only screen and (max-width: 550px) {
+body { font-size:70%; }
+h1 { font-size:30px; }
+.box { width: 200px; }
+.parentHorizontal {
+  max-width: auto;
+  height: 140vw;
+
+}
+}
+
 .hvr-shrink:hover, .hvr-shrink:focus, .hvr-shrink:active {
-  -webkit-transform: scale(0.9);
-  transform: scale(0.9);
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
 
 }
 
-.blogimg{
+.blogImg{
   margin-top: 130px;
   display:block;
   margin-left: auto;
   margin-right: auto;
   padding: 15px;
-  max-width: 90%;
-  max-height: 90%;
+  max-width: 70%;
+  max-height: 70%;
 }
