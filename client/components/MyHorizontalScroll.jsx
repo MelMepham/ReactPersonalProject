@@ -7,7 +7,7 @@ export default class MyHorizontalScroll extends Component {
   constructor(props) {
     super(props)
 
-    this.state = { animValues: -1000 }
+    this.state = { animValues: 0 }
 
     this.onScrollStart = this.onScrollStart.bind(this)
     this.resetMin      = this.resetMin.bind(this)
@@ -143,7 +143,6 @@ export default class MyHorizontalScroll extends Component {
       // ...styles
     }
 
-    console.log('animValues hs' + this.state.animValues)
     return (
       <div
         onWheel={ this.onScrollStart }
@@ -184,7 +183,7 @@ MyHorizontalScroll.proptypes = {
 }
 
 MyHorizontalScroll.defaultProps = {
-  reverseScroll: false,
+  reverseScroll: true,
   pageLock: false,
   config: null,
   style: { width: `100%`, height: `100%` },

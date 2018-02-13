@@ -5,10 +5,13 @@ var x = .1
 var rotspeed = .01
 
 var graphics;
+
+
 function setup() {
-    createCanvas(600, 600);
+    createCanvas(480, 480);
     // rectMode(CENTER)
     graphics = createGraphics(900, 900);
+    translate(70, 70)
 }
 
 function tria() {
@@ -123,7 +126,7 @@ function circc () {
 function draw() {
 
 
-
+    scale(0.8, 0.8)
     background(0);
     noStroke();
     fill(50, 15, 91);
@@ -247,22 +250,23 @@ function draw() {
     pop();
 
 
-    // push()
-    // translate(300, 300)
-    //
-    // rotate(frameCount/60);
-    //
-    // translate(-600, -600);
-    // image(graphics, 300, 300);
-    // graphics.fill(255);
-    // if(mouseIsPressed) {
-    //
-    //   graphics.fill(255)
-    //   graphics.stroke(255);
-    //   graphics.ellipse(mouseX, mouseY, 100)
-    //
-    // }
-    //
-    // pop()
+    push()
+    translate(300, 300)
+
+    rotate(frameCount/60);
+
+    translate(-600, -600);
+    image(graphics, 300, 300);
+    graphics.fill(255);
+    if(mouseIsPressed) {
+
+      graphics.fill(255)
+      graphics.stroke(255);
+      graphics.ellipse(mouseX, mouseY, 100)
+
+    }
+
+    pop()
+
 
 }

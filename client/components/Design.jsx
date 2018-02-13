@@ -1,5 +1,5 @@
 import React from 'react'
-import HorizontalScroll from 'react-scroll-horizontal'
+import MyHorizontalScroll from './MyHorizontalScroll'
 import { Link, DirectLink, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 import thisDesign from '../data/designInfo.js'
 
@@ -9,11 +9,9 @@ class Design extends React.Component {
     this.state = {
       design: [],
       show: false,
-      x: 0,
     }
 
     this.showDesign = this.showDesign.bind(this)
-    // this.scrollTo = this.scrollTo.bind(this)
   }
   componentDidMount() {
      this.setState({design:thisDesign})
@@ -39,7 +37,7 @@ class Design extends React.Component {
   render() {
         return (
         <div className="parentHorizontal">
-          <HorizontalScroll reverseScroll='true'>
+          <MyHorizontalScroll>
 
             {this.state.design && this.state.design.map(design => {
               return ([
@@ -51,7 +49,7 @@ class Design extends React.Component {
 
             )}
 
-          </HorizontalScroll>
+          </MyHorizontalScroll>
 
           </div>
         )
