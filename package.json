@@ -17,6 +17,7 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.2",
+    "bundle": "^2.1.0",
     "express": "^4.16.2",
     "node": "^9.5.0",
     "react-hide-div": "^1.0.1",
