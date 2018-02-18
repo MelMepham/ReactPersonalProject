@@ -5,7 +5,7 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import HomePage from './components/HomePage'
 import AboutMe from './components/AboutMe'
-import artPage from './components/artPage'
+import artPage from './components/ArtPage'
 import Design from './components/Design'
 import WebDev from './components/WebDev'
 
