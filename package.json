@@ -1,8 +1,8 @@
 {
-  "name": "charlottes-web-log",
+  "name": "aplaceofdreams",
   "version": "0.1.0",
-  "description": "A spider's blog about her web",
-  "repository": "https://github.com/dev-academy-challenges/charlottes-web-log.git",
+  "description": "Melissa Mepham's Website",
+  "repository": "https://github.com/MelMepham/ReactPersonalProject",
   "main": "index.js",
   "scripts": {
     "start": "node server & webpack --watch"

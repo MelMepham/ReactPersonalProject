@@ -9,12 +9,6 @@ import artPage from './components/ArtPage'
 import Design from './components/Design'
 import WebDev from './components/WebDev'
 
-
-
-
-
-
-
 import {HashRouter as Router, Route} from 'react-router-dom'
 
 const App = (props) => {
