@@ -2936,6 +2936,10 @@ supports-color@^4.2.1:
   dependencies:
     has-flag "^2.0.0"
 
+swipejs@^2.2.11:
+  version "2.2.11"
+  resolved "https://registry.yarnpkg.com/swipejs/-/swipejs-2.2.11.tgz#3614b2c35f84aa0e1fd37221a5c6c6cf05899dae"
+
 tapable@^0.2.7:
   version "0.2.8"
   resolved "https://registry.yarnpkg.com/tapable/-/tapable-0.2.8.tgz#99372a5c999bf2df160afc0d74bed4f47948cd22"
