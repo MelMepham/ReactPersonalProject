@@ -3,6 +3,8 @@ import React from 'react'
 import MyHorizontalScroll from './MyHorizontalScroll'
 import { Link, DirectLink, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 import thisArt from '../data/artInfo.js'
+import Swipe, { SwipeItem } from 'swipejs/react';
+
 
 class artPage extends React.Component {
   constructor(props) {
@@ -14,7 +16,8 @@ class artPage extends React.Component {
     this.showArt = this.showArt.bind(this)
   }
   componentDidMount() {
-     this.setState({art:thisArt})
+      let mySwipe = this.swipe;
+      this.setState({art:thisArt})
   }
 
   hideAll(artToHide) {
@@ -34,9 +37,22 @@ class artPage extends React.Component {
         this.setState({art})
   }
 
-
   render() {
+    window.mySwipe = new Swipe(document.getElementById('slider'));
         return (
+          <Swipe
+           className='custom-swipe-container-class'
+           ref={o => this.swipe = o}
+           startSlide={0}
+           speed={300}
+           auto={3000}
+           draggable={false}
+           continuous={true}
+           autoRestart={false}
+           disableScroll={false}
+           stopPropagation={false}
+           callback={this.handleCallback}
+           transitionEnd={this.onTransactionEnd}>
           <div className="parentHorizontal">
             <MyHorizontalScroll>
               {this.state.art && this.state.art.map(art => {
@@ -48,6 +64,7 @@ class artPage extends React.Component {
               )}
             </MyHorizontalScroll>
           </div>
+        </Swipe>
         )}
   }
 
