@@ -17,7 +17,6 @@ constructor(props) {
 
 
 render() {
-  console.log(MandalaOne)
   return (
     <Router>
       <div className='mandalaCentered'>
