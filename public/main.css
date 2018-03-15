@@ -244,3 +244,14 @@ h1 { font-size:30px; }
   max-width: 70%;
   max-height: 70%;
 }
+
+.mandalaCentered {
+  width: 100%;
+  overflow: hidden;
+  margin-top: 40px;
+  padding: 10px 0;
+  align-items: center;
+  justify-content: space-around;
+  display: flex;
+  float: none;
+}

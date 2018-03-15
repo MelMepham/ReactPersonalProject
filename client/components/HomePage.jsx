@@ -2,7 +2,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import P5Wrapper from 'react-p5-wrapper'
-import MandalaOne from './MandalaOne'
+import MandalaOne from './sketches/MandalaOne'
 
 import {HashRouter as Router, Route} from 'react-router-dom'
 
@@ -20,8 +20,7 @@ render() {
 
   return (
     <Router>
-      <div>
-      <div>Hello World</div>
+      <div className='mandalaCentered'>
         <P5Wrapper sketch={this.state.MandalaOne}/>
         </div>
     </Router>
