@@ -2,7 +2,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import P5Wrapper from 'react-p5-wrapper'
-import MandalaOne from './sketches/MandalaOne'
+import MandalaOne from '../sketches/MandalaOne'
 
 import {HashRouter as Router, Route} from 'react-router-dom'
 
@@ -11,13 +11,13 @@ class Home extends React.Component{
 constructor(props) {
   super(props);
   this.state = {
-    MandalaOne: MandalaOne,
+    MandalaOne: MandalaOne
   };
 }
 
 
 render() {
-
+  console.log(MandalaOne)
   return (
     <Router>
       <div className='mandalaCentered'>
