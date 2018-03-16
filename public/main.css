@@ -56,26 +56,9 @@ menu{
 }
 
 .img {
-  width: 100vw;
+  width: auto;
   height: 100vw;
 }
-
-iframe, object, embed {
-  border: 0;
-  max-width: 100%;
-}
-
-.iFrameResponsive{
-  max-width: 80% !important;
-  max-height: 80%!important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-  padding: 30px !important;
-  position: relative !important;
-  display: block !important;
-  overflow: hidden !important;
-}
-
 
 .bottomLine {
   border-bottom: 3px solid #EF26C4;
@@ -197,7 +180,6 @@ iframe, object, embed {
     }
 }
 
-
 .slick-list {
     outline: none !important;
 }
@@ -249,4 +231,10 @@ h1 { font-size:30px; }
   justify-content: space-around;
   display: flex;
   float: none;
+}
+
+.btn-pink, .btn-pink:hover{
+  background-color: #EF26C4;
+  display: block;
+  color: white;
 }

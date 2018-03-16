@@ -32,7 +32,6 @@ module.exports = [
       links: '',
       pOne: 'I would love to hear from you regarding your projects or potential job opportunities',
       pTwo: '',
-      pThree: '',
       show: false
     }
   ]
