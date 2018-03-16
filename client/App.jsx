@@ -20,7 +20,7 @@ const App = (props) => {
       <Route exact path='/art' component={artPage} />
       <Route exact path='/design' component={Design} />
       <Route exact path='/webdev' component={WebDev} />
-      <Route exact path='/homepage' component={HomePage} />
+      <Route exact path='/' component={HomePage} />
       <Route exact path='/aboutme' component={AboutMe} />
       <Route exact path='/CV' component={CV} />
       <Route path='/' component={Footer} />
