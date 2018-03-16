@@ -98,6 +98,7 @@ img {
   display: inline-block;
 }
 .box {
+  padding-top: 45px;
   width: 300px;
   margin-bottom: 20px;
   margin: 20px;

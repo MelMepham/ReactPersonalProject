@@ -1,47 +1,17 @@
 module.exports = [
   {
-    img: '',
-    title: 'Mandala Animations',
-    about: ''
+    img: 'images/webdev/melissamepham.JPG',
+    title: 'Check out where you are!',
+    about: 'hello'
   },
   {
-    img: '',
+    img: 'images/webdev/pantrytoplate1.JPG',
     title: 'Mandala Animations',
-    about: ''
+    about: 'hello'
   },
   {
-    img: '',
-    title: 'Mandala Animations',
-    about: ''
-  },
-  {
-    img: '',
-    title: 'Mandala Animations',
-    about: ''
-  },
-  {
-    img: '',
-    title: 'Mandala Animations',
-    about: ''
-  },
-  {
-    img: '',
-    title: 'Mandala Animations',
-    about: ''
-  },
-  {
-    img: '',
-    title: 'Mandala Animations',
-    about: ''
-  },
-  {
-    img: '',
-    title: 'Mandala Animations',
-    about: ''
-  },
-  {
-    img: '',
-    title: 'Mandala Animations',
-    about: ''
+    img: 'images/webdev/bublepop.JPG',
+    title: 'Buble Pop',
+    about: 'hello'
   }
 ]
