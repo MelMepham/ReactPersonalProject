@@ -4,6 +4,15 @@ export default function MandalaOne (p) {
     p.rotate(p.radians(degrees))
   }
 
+  function fourPointedTriangle() {
+    p.beginShape()
+    p.vertex(-15, -166.6); //a
+    p.vertex(0, -186.6); //b
+    p.vertex(15, -166.6); //c
+    p.vertex(0, -146.6); //d
+    p.endShape(CLOSE);
+  }
+
 p.setup = () => {
     p.createCanvas(600, 600);
 }
@@ -25,7 +34,6 @@ p.draw = () => {
     p.push() //FLOWER OF LIFE PATTERN
     p.translate(300, 300);
       p.rotate(p.radians(p.sin(p.frameCount/240)*200));
-
       p.blendMode(p.MULTIPLY);
       p.ellipse(450, 450, 210, 210);
       p.fill(247, 175, 207);
@@ -68,6 +76,21 @@ p.draw = () => {
         rotation(60)
       }
     p.pop()
+
+    p.push() //FOUR POINTED TRIANGLE SHAPE
+    p.translate(300, 300);
+    p.fill(91, 131, 226);
+    for (let i=0; i<12; i++) {
+      p.beginShape();
+        p.vertex(-15, -166.6); //a
+        p.vertex(0, -186.6); //b
+        p.vertex(15, -166.6); //c
+        p.vertex(0, -146.6); //d
+      p.endShape(p.CLOSE);
+      rotation(30)
+    }
+    p.pop()
+
 
     p.push() // CIRCLE OUTLINE
       p.translate (300, 300)

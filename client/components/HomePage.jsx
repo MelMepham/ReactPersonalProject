@@ -20,16 +20,13 @@ render() {
   return (
     <Router>
       <div>
-        <br /> <br /> 
+        <br /> <br />
         <div className='mandalaCentered'>
           <P5Wrapper sketch={this.state.MandalaOne}/>
         </div>
       </div>
     </Router>
-
-
-  )
-}
+  )}
 }
 
   export default Home
