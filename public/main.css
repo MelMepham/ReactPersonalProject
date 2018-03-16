@@ -41,7 +41,6 @@ menu{
   padding: 40px !important;
   background-color: #EF26C4;
   color: white;
-  margin-top: 100px;
 }
 
 .menuButton {
@@ -88,9 +87,9 @@ iframe, object, embed {
 }
 
 .headerPadding {
-  padding-top: 20px;
   padding-left: 20px;
   padding-right: 20px;
+  position: fixed;
 }
 
 .menuPadding {
@@ -245,18 +244,12 @@ h1 { font-size:30px; }
   max-height: 70%;
 }
 
-.swipe {
-  overflow: hidden;
-  visibility: hidden;
-  position: relative;
-}
-.swipe-wrap {
-  overflow: hidden;
-  position: relative;
-}
-.swipe-wrap > div {
-  float: left;
+.mandalaCentered {
   width: 100%;
-  position: relative;
   overflow: hidden;
+  padding: 10px 0;
+  align-items: center;
+  justify-content: space-around;
+  display: flex;
+  float: none;
 }
