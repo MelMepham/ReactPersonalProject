@@ -29,6 +29,15 @@ p.draw = () => {
     p.background(255, 242, 235);
     p.noStroke();
 
+    p.push(); //TETRAHEDRON PINK
+    p.translate(300, 300);
+    for (let i=0; i<6; i++) {
+      p.fill(143, 255, 255);
+      p.triangle(-300, 0, -200, 114, -200, -114);
+      rotation(60);
+    }
+    p.pop();
+
     p.push(); // OUTER FLOWER OF LIFE NON TRANSPARENT LAYER
       p.translate(300, 300);
       p.rotate(p.radians(p.sin(p.frameCount/240)*200));
@@ -39,14 +48,14 @@ p.draw = () => {
       p.pop();
       p.push();
         p.scale(1.8);
-        p.fill(170, 236, 226);
+        p.fill(142, 148, 255);
         flowerOfLife();
       p.pop();
     p.pop();
 
     p.push(); // LITTLE TURQUOUSE DOTS
       p.translate(300, 300);
-      p.fill(197, 255, 215);
+      p.fill(143, 255, 255);
       for (let i=0; i<24; i++) {
         p.ellipse(200, 200, 20, 20);
         rotation(15);
@@ -62,6 +71,7 @@ p.draw = () => {
         rotation(7.5);
       }
     p.pop()
+
 
     p.push(); //TETRAHEDRON PINK
     p.translate(300, 300);
@@ -113,7 +123,7 @@ p.draw = () => {
 
     p.push() //DARKEST TRIANGLE IN THE CENTRAL HEXAGON SHAPE
       p.translate(300, 300);
-      p.fill(0, 255, (p.sin(p.frameCount/120)+1)*128);
+      p.fill(0, 255, 255);
       for (let i=0; i<6; i++) {
         p.triangle(-52, 30, -52, -30, 0, 0);
         rotation(60);
