@@ -92,7 +92,7 @@ p.draw = () => {
     p.push(); //TETRAHEDRON PINK
 
     p.translate(300, 300);
-    p.scale((p.sin(p.frameCount/40)*1.3)+.5)
+    p.scale((p.sin(p.frameCount/240)*1.3)+.5)
     p.rotate(p.radians(p.frameCount/240)*-50);
     for (let i=0; i<6; i++) {
       p.fill(90, 112, 255);
@@ -125,14 +125,15 @@ p.draw = () => {
     }
     p.pop()
 
-    p.push() //TRIANGLES JUST BEYOND FLOWER OF LIFE
-    p.translate(300, 300);
-    p.fill(247, 128, 207);
-    for (let i=0; i<6; i++) {
-      p.triangle(-90, 52, -90, -52, -120, 0);
-      rotation(60);
-    }
-    p.pop()
+    // p.push() //TRIANGLES JUST BEYOND FLOWER OF LIFE
+    // p.translate(300, 300);
+    // p.fill(247, 128, 207);
+    // p.scale((p.sin(p.frameCount/240)*1.3)+.5)
+    // for (let i=0; i<6; i++) {
+    //   p.triangle(-90, 52, -90, -52, -120, 0);
+    //   rotation(60);
+    // }
+    // p.pop()
 
 
     p.push(); //FLOWER OF LIFE PATTERN
@@ -146,7 +147,7 @@ p.draw = () => {
     p.pop();
 
     p.push() //CIRCLE FRAMING THE HEXAGON IN THE CENTER
-      // p.blendMode(p.MULTIPLY);
+      p.blendMode(p.MULTIPLY);
       p.translate(300, 300);
       p.fill(170, 236, 226);
       p.ellipse(0, 0, 120, 120);
@@ -155,6 +156,7 @@ p.draw = () => {
     p.push() //DARKEST TRIANGLE IN THE CENTRAL HEXAGON SHAPE
       p.translate(300, 300);
       p.fill(0, 255, 255);
+      p.rotate(p.radians(p.sin(p.frameCount/240)*-300));
       for (let i=0; i<6; i++) {
         p.triangle(-52, 30, -52, -30, 0, 0);
         rotation(60);
@@ -164,6 +166,7 @@ p.draw = () => {
     p.push() //LIGHTEST TRIANGLE IN THE CENTRAL HEXAGON SHAPE
       p.translate(300, 300);
       p.fill(197, 255, 215);
+      p.rotate(p.radians(p.sin(p.frameCount/240)*300));
       for (let i=0; i<6; i++) {
         p.triangle(-52, -30, 0, 0, -35, 0);
         rotation(60);
@@ -173,6 +176,7 @@ p.draw = () => {
     p.push() // CENTRAL TURQUOIUSE HEXAGON
       p.translate(300, 300);
       p.fill(0, 144, 207);
+      p.rotate(p.radians(p.sin(p.frameCount/240)*-300));
       for (let i=0; i<6; i++) {
         p.triangle(-52, 30, -35, 0, 0, 0);
         rotation(60);
@@ -181,7 +185,8 @@ p.draw = () => {
 
     p.push() //12 DIAMOND SHAPES SHAPE
     p.translate(300, 300);
-    p.fill(255, 79, 207);
+    p.fill(255, (p.sin(p.frameCount/120)+1)*128, 207);
+    p.scale((p.sin(p.frameCount/240)*1.3)+.5)
     for (let i=0; i<12; i++) {
       diamond();
       rotation(30);
