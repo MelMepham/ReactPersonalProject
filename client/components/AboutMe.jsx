@@ -27,17 +27,18 @@ class AboutMe extends React.Component {
 
     render() {
       return (
-        <div>
           <div className="container">
+            <br /> <br /> <br /> <br />
+
             <div className="row">
               {this.state.info.map(data => {
                 return (
                   <div className="col-lg-3 col-md-6">
                     <div onClick={ (e) => {this.showInfo(data)} } className="hvr-shrink">
-                      <img className="blogImg img-responsive" src={data.img} alt="mandala"/>
+                      <img className="aboutMeImg img-responsive" src={data.img} alt="mandala"/>
                     </div>
-                      <h4 className='subText'>{data.menu}</h4>
-                    <div>{data.show == true && <div>
+                    <h4 className='subText'>{data.menu}</h4>
+                      <div>{data.show == true && <div>
                         <p className='aboutMeData'>{data.pOne}</p>
                         <p className='aboutMeData'>{data.pTwo}</p>
                         <p className='aboutMeData'>{data.pThree}</p>
@@ -48,13 +49,10 @@ class AboutMe extends React.Component {
                           <a href="images/MelissaMephamCV.pdf" download className="btn btn-pink btn-sm active" role="button" aria-pressed="true">Download my CV</a>
                         </div> : ''}
                       </div>}
-                    </div>
                   </div>
-                )}
+                </div>
               )}
-            </div>
-          </div>
-          <div className="container">
+            )}
           </div>
         </div>
       )
