@@ -1,5 +1,4 @@
 export default function MandalaOne (p) {
-
   function rotation(degrees) {
     p.rotate(p.radians(degrees))
   }
