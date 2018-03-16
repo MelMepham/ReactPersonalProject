@@ -4,13 +4,13 @@ export default function MandalaOne (p) {
     p.rotate(p.radians(degrees))
   }
 
-  function fourPointedTriangle() {
-    p.beginShape()
-    p.vertex(-15, -166.6); //a
-    p.vertex(0, -186.6); //b
-    p.vertex(15, -166.6); //c
-    p.vertex(0, -146.6); //d
-    p.endShape(CLOSE);
+  function diamond() {
+    p.beginShape();
+      p.vertex(-15, -166.6); //a
+      p.vertex(0, -186.6); //b
+      p.vertex(15, -166.6); //c
+      p.vertex(0, -146.6); //d
+    p.endShape(p.CLOSE);
   }
 
 p.setup = () => {
@@ -18,9 +18,17 @@ p.setup = () => {
 }
 
 p.draw = () => {
-
     p.background(255, 242, 235);
     p.noStroke();
+
+    p.push() //TRIANGLES JUST BEYOND FLOWER OF LIFE
+    p.translate(300, 300);
+    p.fill(161, 163, 255);
+    for (let i=0; i<6; i++) {
+      p.triangle(-127, 74, -59.6, 104, -120, 0);
+      rotation(60)
+    }
+    p.pop()
 
     p.push() //TRIANGLES JUST BEYOND FLOWER OF LIFE
     p.translate(300, 300);
@@ -37,9 +45,9 @@ p.draw = () => {
       p.blendMode(p.MULTIPLY);
       p.ellipse(450, 450, 210, 210);
       p.fill(247, 175, 207);
-        for (let i=0; i<6; i++) {
-          p.ellipse(-60, 0, 120, 120);
-          rotation(60)
+      for (let i=0; i<6; i++) {
+        p.ellipse(-60, 0, 120, 120);
+        rotation(60)
         }
     p.pop();
 
@@ -81,12 +89,7 @@ p.draw = () => {
     p.translate(300, 300);
     p.fill(91, 131, 226);
     for (let i=0; i<12; i++) {
-      p.beginShape();
-        p.vertex(-15, -166.6); //a
-        p.vertex(0, -186.6); //b
-        p.vertex(15, -166.6); //c
-        p.vertex(0, -146.6); //d
-      p.endShape(p.CLOSE);
+      diamond()
       rotation(30)
     }
     p.pop()
