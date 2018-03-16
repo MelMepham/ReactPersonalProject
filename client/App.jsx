@@ -15,8 +15,7 @@ const App = (props) => {
   return (
     <Router>
       <div>
-      <Header />
-
+      <Route path='/' component={Header} />
       <Route exact path='/art' component={artPage} />
       <Route exact path='/design' component={Design} />
       <Route exact path='/webdev' component={WebDev} />

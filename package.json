@@ -28,6 +28,7 @@
     "react-dom": "^15.5.4",
     "react-hide-div": "^1.0.1",
     "react-motion": "^0.5.2",
+    "react-p5-wrapper": "^0.0.4",
     "react-router-dom": "^4.2.2",
     "react-scroll": "^1.7.6",
     "react-scroll-horizontal": "^1.2.0",

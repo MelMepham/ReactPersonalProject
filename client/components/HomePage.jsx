@@ -1,13 +1,33 @@
 
 import React from 'react'
+import ReactDOM from 'react-dom'
+import P5Wrapper from 'react-p5-wrapper'
+import MandalaOne from '../sketches/MandalaOne'
 
-const HomePage = (props) => {
-  return (
-    <div className='iFrameResponsive'>
-      <br/>
-      <iframe className="mx-auto d-block" src="../../p5/p5.html" width="500px" height="500px"></iframe>
-    </div>
-  )
+import { HashRouter as Router, Route } from 'react-router-dom'
+
+
+class Home extends React.Component{
+constructor(props) {
+  super(props);
+  this.state = {
+    MandalaOne: MandalaOne,
+  };
+
 }
 
-  export default HomePage
+
+render() {
+  return (
+    <Router>
+      <div>
+        <br /> <br />
+        <div className='mandalaCentered'>
+          <P5Wrapper sketch={this.state.MandalaOne}/>
+        </div>
+      </div>
+    </Router>
+  )}
+}
+
+  export default Home
