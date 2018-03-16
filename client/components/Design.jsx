@@ -40,7 +40,7 @@ class Design extends React.Component {
             <MyHorizontalScroll>
               {this.state.design && this.state.design.map(design => {
                 return ([
-                  <img onClick={ (e) => {this.hideAll(design); this.showDesign(design)}} className='design img-responsive childHorizontal' src={design.img}/>,
+                  <img onClick={ (e) => {this.hideAll(design); this.showDesign(design)}} className='design img-responsive childHorizontal img' src={design.img}/>,
                   <div>{design.show == true && <div className='box'><h1>{design.title}</h1><p>{design.about}</p></div>}</div>
                 ])
               }
