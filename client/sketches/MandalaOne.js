@@ -44,7 +44,26 @@ p.draw = () => {
       p.pop();
     p.pop();
 
-    p.push(); //FIRST HALF PURPLE TRIANGLES TOUCHING THE DIAMONDS
+    p.push(); // LITTLE TURQUOUSE DOTS
+      p.translate(300, 300);
+      p.fill(197, 255, 215);
+      for (let i=0; i<24; i++) {
+        p.ellipse(200, 200, 20, 20);
+        rotation(15);
+      }
+    p.pop()
+
+    p.push(); // TINY BLUE DOTS
+      p.translate(300, 300);
+      p.fill(161, 163, 255);
+      for (let i=0; i<24; i++) {
+        rotation(7.5);
+        p.ellipse(180, 180, 10, 10);
+        rotation(7.5);
+      }
+    p.pop()
+
+    p.push(); //TETRAHEDRON PINK
     p.translate(300, 300);
     for (let i=0; i<6; i++) {
       p.fill(252, 214, 255);
