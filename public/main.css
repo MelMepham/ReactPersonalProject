@@ -206,8 +206,7 @@ h1 { font-size:30px; }
     50% {transform: rotate(-180deg);}
 }
 
-.blogImg{
-  margin-top: 80px;
+.aboutMeImg{
   display:block;
   margin-left: auto;
   margin-right: auto;
