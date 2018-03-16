@@ -26,15 +26,29 @@ export default function MandalaOne (p) {
   }
 
 p.draw = () => {
-    p.background(255, 242, 235);
+    // DOES TRIPPY THINGS WHEN ITS NOT ON!
+    p.background(255, 255, 255);
     p.noStroke();
 
-    p.push(); //TETRAHEDRON PINK
+    p.push(); //FAR OUTER TRIANGLES
     p.translate(300, 300);
+    p.scale((p.sin(p.frameCount/120)*1.5)+0.2)
     for (let i=0; i<6; i++) {
-      p.fill(143, 255, 255);
+      p.fill(143, (p.sin(p.frameCount/120)+1)*128, 255);
       p.triangle(-300, 0, -200, 114, -200, -114);
       rotation(60);
+
+    }
+    p.pop();
+    p.push(); //SMALLER OF THE FAR OUTER TRIANGLES
+    p.translate(300, 300);
+    p.scale((p.sin(p.frameCount/120)*1))
+    rotation(30);
+    for (let i=0; i<6; i++) {
+      p.fill(143, (p.sin(p.frameCount/120)+1)*128, 255);
+      p.triangle(-300, 0, -200, 114, -200, -114);
+      rotation(60);
+
     }
     p.pop();
 
@@ -43,7 +57,7 @@ p.draw = () => {
       p.rotate(p.radians(p.sin(p.frameCount/240)*200));
       p.push();
         p.scale(2);
-        p.fill(255, 112, 255);
+        p.fill(255, (p.sin(p.frameCount/120)+1)*128, 255);
         flowerOfLife();
       p.pop();
       p.push();
@@ -54,7 +68,8 @@ p.draw = () => {
     p.pop();
 
     p.push(); // LITTLE TURQUOUSE DOTS
-      p.translate(300, 300);
+    p.translate(300, 300);
+      p.rotate(p.radians(p.frameCount/240)*100);
       p.fill(143, 255, 255);
       for (let i=0; i<24; i++) {
         p.ellipse(200, 200, 20, 20);
@@ -64,6 +79,7 @@ p.draw = () => {
 
     p.push(); // TINY BLUE DOTS
       p.translate(300, 300);
+      p.rotate(p.radians(p.frameCount/240)*-100);
       p.fill(161, 163, 255);
       for (let i=0; i<24; i++) {
         rotation(7.5);
@@ -74,7 +90,22 @@ p.draw = () => {
 
 
     p.push(); //TETRAHEDRON PINK
+
     p.translate(300, 300);
+    p.scale((p.sin(p.frameCount/40)*1.3)+.5)
+    p.rotate(p.radians(p.frameCount/240)*-50);
+    for (let i=0; i<6; i++) {
+      p.fill(90, 112, 255);
+      p.triangle(-127, 74, -200, 114, -120, 0);
+      p.fill(204, 245, 255);
+      p.triangle(-200, 114, -127, 74, -59.6, 104);
+      rotation(60);
+    }
+    p.pop();
+
+    p.push(); //TETRAHEDRON PINK
+    p.translate(300, 300);
+    p.rotate(p.radians(p.frameCount/240)*100);
     for (let i=0; i<6; i++) {
       p.fill(252, 214, 255);
       p.triangle(-127, 74, -200, 114, -120, 0);
