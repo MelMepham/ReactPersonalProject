@@ -40,20 +40,9 @@ class artPage extends React.Component {
   render() {
     window.mySwipe = new Swipe(document.getElementById('slider'));
         return (
-          <Swipe
-           className='custom-swipe-container-class'
-           ref={o => this.swipe = o}
-           startSlide={0}
-           speed={300}
-           auto={3000}
-           draggable={false}
-           continuous={true}
-           autoRestart={false}
-           disableScroll={false}
-           stopPropagation={false}
-           callback={this.handleCallback}
-           transitionEnd={this.onTransactionEnd}>
+
           <div className="parentHorizontal">
+            <br /> 
             <MyHorizontalScroll>
               {this.state.art && this.state.art.map(art => {
                 return ([
@@ -64,7 +53,6 @@ class artPage extends React.Component {
               )}
             </MyHorizontalScroll>
           </div>
-        </Swipe>
         )}
   }
 

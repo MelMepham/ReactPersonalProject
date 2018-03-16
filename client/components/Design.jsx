@@ -36,6 +36,7 @@ class Design extends React.Component {
   render() {
         return (
           <div className="parentHorizontal">
+            <br />
             <MyHorizontalScroll>
               {this.state.design && this.state.design.map(design => {
                 return ([
