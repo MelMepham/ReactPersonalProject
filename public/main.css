@@ -237,4 +237,12 @@ h1 { font-size:30px; }
   background-color: #EF26C4;
   display: block;
   color: white;
+  text-decoration: none !important;
+}
+
+.littleButton, .littleButton:hover {
+  background-color: #EF26C4;
+  display: block;
+  color: white;
+  text-decoration: none !important;
 }

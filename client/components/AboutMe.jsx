@@ -1,6 +1,8 @@
 
 import React from 'react'
 import data from '../data/personalData.js'
+import { Link } from 'react-router-dom'
+
 
 
 class AboutMe extends React.Component {
@@ -39,7 +41,12 @@ class AboutMe extends React.Component {
                         <p className='aboutMeData'>{data.pOne}</p>
                         <p className='aboutMeData'>{data.pTwo}</p>
                         <p className='aboutMeData'>{data.pThree}</p>
-                        {data.menu === 'HIRE ME' ? <div><br /><a href="images/MelissaMephamCV.pdf" download className="btn btn-pink btn-sm active" role="button" aria-pressed="true">Download my CV</a></div> : ''}
+                        {data.menu === 'HIRE ME' ? <div>
+                          <br />
+                          <Link className="btn-pink" to= '/CV' ><a className="btn btn-pink btn-sm active" role="button">Go to my CV</a></Link>
+                          <br />
+                          <a href="images/MelissaMephamCV.pdf" download className="btn btn-pink btn-sm active" role="button" aria-pressed="true">Download my CV</a>
+                        </div> : ''}
                       </div>}
                     </div>
                   </div>
