@@ -239,3 +239,11 @@ h1 { font-size:30px; }
   color: white;
   text-decoration: none !important;
 }
+
+.onHover, .onHover:hover, .onHover:focus, .onHover:active{
+  background-color: #FF6249 !important;
+  color: white;
+
+
+
+}

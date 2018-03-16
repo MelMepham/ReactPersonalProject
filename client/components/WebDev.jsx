@@ -13,6 +13,8 @@ class webDev extends React.Component {
     }
 
     this.showDev = this.showDev.bind(this)
+    this.mouseOver = this.mouseOver.bind(this)
+
   }
   componentDidMount() {
       let mySwipe = this.swipe;
@@ -26,15 +28,18 @@ class webDev extends React.Component {
          dev.show = false; return dev}
          this.setState({dev: mappedDev})
       })
+  }
 
+  mouseOver() {
+    console.log('hello')
   }
 
   showDev(devToShow) {
       const {devInfo} = this.state
-      console.log({devInfo})
         var index = devInfo.findIndex(devItem => devItem.title === devToShow.title)
         devInfo[index].show = !devInfo[index].show
         this.setState({devInfo})
+        console.log({devInfo})
   }
 
   render() {
@@ -45,7 +50,7 @@ class webDev extends React.Component {
             <MyHorizontalScroll>
               {this.state.devInfo && this.state.devInfo.map(dev => {
                 return ([
-                  <img onClick={ (e) => {this.hideAll(dev); this.showDev(dev)} } className='art img-responsive childHorizontal' src={dev.img}/>,
+                  <img onClick={ (e) => {this.hideAll(dev); this.showDev(dev)} } className='onHover art img-responsive childHorizontal' src={dev.img}/>,
                   <div>{dev.show == true && <div className='img-responsive box'><h1>{dev.title}</h1><p>{dev.about}</p></div>}</div>
                 ])
               }
