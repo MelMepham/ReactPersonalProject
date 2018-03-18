@@ -13,11 +13,10 @@ class webDev extends React.Component {
     }
 
     this.showDev = this.showDev.bind(this)
-    this.mouseOver = this.mouseOver.bind(this)
-
+    this.onMouseOver = this.onMouseOver.bind(this)
+    this.onMouseOut = this.onMouseOut.bind(this)
   }
   componentDidMount() {
-      let mySwipe = this.swipe;
       this.setState({devInfo:thisDevInfo})
   }
 
@@ -30,16 +29,19 @@ class webDev extends React.Component {
       })
   }
 
-  mouseOver() {
-    console.log('hello')
-  }
+onMouseOver() {
+  console.log("hello")
+}
+
+onMouseOut() {
+  console.log("world")
+}
 
   showDev(devToShow) {
       const {devInfo} = this.state
         var index = devInfo.findIndex(devItem => devItem.title === devToShow.title)
         devInfo[index].show = !devInfo[index].show
         this.setState({devInfo})
-        console.log({devInfo})
   }
 
   render() {
@@ -50,7 +52,7 @@ class webDev extends React.Component {
             <MyHorizontalScroll>
               {this.state.devInfo && this.state.devInfo.map(dev => {
                 return ([
-                  <img onClick={ (e) => {this.hideAll(dev); this.showDev(dev)} } className='onHover art img-responsive childHorizontal' src={dev.img}/>,
+                  <img onClick={ (e) => {this.hideAll(dev); this.showDev(dev)} } onMouseOver={this.onMouseOver} onMouseOut={this.onMouseOut} className='art img-responsive childHorizontal' src={dev.img}/>,
                   <div>{dev.show == true && <div className='img-responsive box'><h1>{dev.title}</h1><p>{dev.about}</p></div>}</div>
                 ])
               }
