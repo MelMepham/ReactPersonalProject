@@ -9,11 +9,26 @@ class Design extends React.Component {
     this.state = {
       design: [],
     }
-
     this.showDesign = this.showDesign.bind(this)
+    this.onMouseOver = this.onMouseOver.bind(this)
+    this.onMouseOut = this.onMouseOut.bind(this)
   }
   componentDidMount() {
      this.setState({design:thisDesign})
+  }
+
+  onMouseOver(img) {
+      const {artInfo} = this.state
+      var index = artInfo.findIndex(Item => Item.img == img.img)
+      artInfo[index].img = artInfo[index].imgMouseOver
+      this.setState({devInfo})
+  }
+
+  onMouseOut(img) {
+      const {devInfo} = this.state
+      var index = devInfo.findIndex(Item => Item.imgMouseOver == img.imgMouseOver)
+      devInfo[index].img = devInfo[index].imgMouseOut
+      this.setState({devInfo})
   }
 
   hideAll(designToHide) {

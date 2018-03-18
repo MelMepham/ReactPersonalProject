@@ -34,8 +34,6 @@ onMouseOver(devImg) {
     var index = devInfo.findIndex(Item => Item.img == devImg.img)
     devInfo[index].img = devInfo[index].imgMouseOver
     this.setState({devInfo})
-    console.log(devInfo[index].imgMouseOver)
-    console.log("mouseOver", index)
 }
 
 onMouseOut(img) {
@@ -43,8 +41,6 @@ onMouseOut(img) {
     var index = devInfo.findIndex(Item => Item.imgMouseOver == img.imgMouseOver)
     devInfo[index].img = devInfo[index].imgMouseOut
     this.setState({devInfo})
-    console.log("mouseOut", index)
-
 }
 
   showDev(devToShow) {
@@ -62,7 +58,11 @@ onMouseOut(img) {
             <MyHorizontalScroll>
               {this.state.devInfo && this.state.devInfo.map(dev => {
                 return ([
-                  <img onClick={ (e) => {this.hideAll(dev); this.showDev(dev)} } onMouseOver={(e) => {this.onMouseOver(dev)}} onMouseOut={(e) => {this.onMouseOut(dev)}} className='art img-responsive childHorizontal' src={dev.img}/>,
+                  <img onClick={ (e) => {this.hideAll(dev); this.showDev(dev)} }
+                    onMouseOver={(e) => {this.onMouseOver(dev)}}
+                    onMouseOut={(e) => {this.onMouseOut(dev)}}
+                    className='art img-responsive childHorizontal'
+                    src={dev.img}/>,
                   <div>{dev.show == true && <div className='img-responsive box'><h1>{dev.title}</h1><p>{dev.about}</p></div>}</div>
                 ])
               }
