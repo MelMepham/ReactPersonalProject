@@ -5,7 +5,7 @@ module.exports = [
       imgMouseOver: 'images/webdev/melissamephamhover.JPG',
       title: 'Check out where you are!',
       about: 'I have always wanted to create a website exactly the way I wanted it, but have never had the skills to do so until now. This is going to be an ongoing project that will change and develop and morph alongside my dev career, I have never been quite so proud of my achievements in such a short time as I have been going through EDA and this website has proven to myself how much I am able to achieve when I am really passionate about the project.',
-      linkToProject: 'www.pantrytoplate.herokuapp.com'
+      linkToProject: 'http://aplaceofdreams.herokuapp.com'
 
     },
 
@@ -15,7 +15,7 @@ module.exports = [
       imgMouseOver: 'images/webdev/pantrytoplatehover.JPG',
       title: 'Group Project',
       about: 'At the end of EDA we had 7 days for a group project. We worked in a team of five and came up with an app to allow people to populate a pantry and then discover recipes they could make with that food. We focused a lot on the human skills side of this project before we got to the code, created some group agreements, talked about what our stress triggers were and how the group could help and came up with a conflict resolution plan. This project was hugely sucessful, we were a group of talented and individals and worked really well together',
-      linkToProject: 'www.pantrytoplate.herokuapp.com'
+      linkToProject: 'http://pantry-to-plate.herokuapp.com'
     },
     {
       img: 'images/webdev/bublepop.JPG',

@@ -61,9 +61,17 @@ onMouseOut(img) {
                   <img onClick={ (e) => {this.hideAll(dev); this.showDev(dev)} }
                     onMouseOver={(e) => {this.onMouseOver(dev)}}
                     onMouseOut={(e) => {this.onMouseOut(dev)}}
-                    className='art img-responsive childHorizontal'
+                    className='cursor img-responsive childHorizontal'
                     src={dev.img}/>,
-                  <div>{dev.show == true && <div className='img-responsive box'><h1>{dev.title}</h1><p>{dev.about}</p></div>}</div>
+                  <div>{dev.show == true &&
+                  <div className='img-responsive box'>
+                    <h1>{dev.title}</h1>
+                      <a href={dev.linkToProject} target="_blank" className="btn btn-pink btn-sm active" role="button" aria-pressed="true">
+                        Go to Project Site
+                      </a> <br />
+                    <p>{dev.about}</p>
+                  </div>}
+                </div>
                 ])
               }
               )}

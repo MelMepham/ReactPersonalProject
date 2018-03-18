@@ -62,7 +62,7 @@ class artPage extends React.Component {
                   <img onClick={ (e) => {this.hideAll(art); this.showArt(art)} }
                     onMouseOver={(e) => {this.onMouseOver(art)}}
                     onMouseOut={(e) => {this.onMouseOut(art)}}
-                    className='art img-responsive childHorizontal'
+                    className='art cursor img-responsive childHorizontal'
                     src={art.img}/>,
                   <div>{art.show == true && <div className='img-responsive box'><h1>{art.title}</h1><p>{art.about}</p></div>}</div>
                 ])

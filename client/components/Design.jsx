@@ -57,7 +57,7 @@ class Design extends React.Component {
                   <img onClick={ (e) => {this.hideAll(design); this.showDesign(design)}}
                     onMouseOver={(e) => {this.onMouseOver(design)}}
                     onMouseOut={(e) => {this.onMouseOut(design)}}
-                    className='design img-responsive childHorizontal'
+                    className='cursor design img-responsive childHorizontal'
                     src={design.img}/>,
                   <div>{design.show == true && <div className='box'><h1>{design.title}</h1><p>{design.about}</p></div>}</div>
                 ])
