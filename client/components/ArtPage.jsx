@@ -11,12 +11,27 @@ class artPage extends React.Component {
     this.state = {
       art: [],
     }
-
     this.showArt = this.showArt.bind(this)
+    this.onMouseOver = this.onMouseOver.bind(this)
+    this.onMouseOut = this.onMouseOut.bind(this)
   }
   componentDidMount() {
       let mySwipe = this.swipe;
       this.setState({art:thisArt})
+  }
+
+  onMouseOver(img) {
+      const {art} = this.state
+      var index = art.findIndex(Item => Item.img == img.img)
+      art[index].img = art[index].imgMouseOver
+      this.setState({art})
+  }
+
+  onMouseOut(img) {
+      const {art} = this.state
+      var index = art.findIndex(Item => Item.imgMouseOver == img.imgMouseOver)
+      art[index].img = art[index].imgMouseOut
+      this.setState({art})
   }
 
   hideAll(artToHide) {
@@ -26,7 +41,6 @@ class artPage extends React.Component {
          art.show = false; return art}
          this.setState({art: mappedArt})
       })
-
   }
 
   showArt(artToShow) {
@@ -45,7 +59,11 @@ class artPage extends React.Component {
             <MyHorizontalScroll>
               {this.state.art && this.state.art.map(art => {
                 return ([
-                  <img onClick={ (e) => {this.hideAll(art); this.showArt(art)} } className='art img-responsive childHorizontal' src={art.img}/>,
+                  <img onClick={ (e) => {this.hideAll(art); this.showArt(art)} }
+                    onMouseOver={(e) => {this.onMouseOver(art)}}
+                    onMouseOut={(e) => {this.onMouseOut(art)}}
+                    className='art img-responsive childHorizontal'
+                    src={art.img}/>,
                   <div>{art.show == true && <div className='img-responsive box'><h1>{art.title}</h1><p>{art.about}</p></div>}</div>
                 ])
               }
