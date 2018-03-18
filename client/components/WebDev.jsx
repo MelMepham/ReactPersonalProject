@@ -29,25 +29,25 @@ class webDev extends React.Component {
       })
   }
 
-onMouseOver(devImg) {
-    const {devInfo} = this.state
-    var index = devInfo.findIndex(Item => Item.img == devImg.img)
-    devInfo[index].img = devInfo[index].imgMouseOver
-    this.setState({devInfo})
-}
+  onMouseOver(devImg) {
+      const {devInfo} = this.state
+      var index = devInfo.findIndex(Item => Item.img == devImg.img)
+      devInfo[index].img = devInfo[index].imgMouseOver
+      this.setState({devInfo})
+  }
 
-onMouseOut(img) {
-    const {devInfo} = this.state
-    var index = devInfo.findIndex(Item => Item.imgMouseOver == img.imgMouseOver)
-    devInfo[index].img = devInfo[index].imgMouseOut
-    this.setState({devInfo})
-}
+  onMouseOut(img) {
+      const {devInfo} = this.state
+      var index = devInfo.findIndex(Item => Item.imgMouseOver == img.imgMouseOver)
+      devInfo[index].img = devInfo[index].imgMouseOut
+      this.setState({devInfo})
+  }
 
   showDev(devToShow) {
-        const {devInfo} = this.state
-        var index = devInfo.findIndex(devItem => devItem.title === devToShow.title)
-        devInfo[index].show = !devInfo[index].show
-        this.setState({devInfo})
+      const {devInfo} = this.state
+      var index = devInfo.findIndex(devItem => devItem.title === devToShow.title)
+      devInfo[index].show = !devInfo[index].show
+      this.setState({devInfo})
   }
 
   render() {
