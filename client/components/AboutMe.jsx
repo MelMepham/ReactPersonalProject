@@ -40,8 +40,6 @@ class AboutMe extends React.Component {
                     <h4 className='subText'>{data.menu}</h4>
                       <div>{data.show == true && <div>
                         <p className='aboutMeData'>{data.pOne}</p>
-                        <p className='aboutMeData'>{data.pTwo}</p>
-                        <p className='aboutMeData'>{data.pThree}</p>
                         {data.menu === 'HIRE ME' ? <div>
                           <br />
                           <Link className="btn-pink" to= '/CV' ><a className="btn btn-pink btn-sm active" role="button">Go to my CV</a></Link>

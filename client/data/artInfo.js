@@ -68,21 +68,21 @@ module.exports = [
       imgMouseOut: 'images/art/mandala.jpg',
       imgMouseOver: 'images/art/mandalahover.jpg',
       title: 'Mandala',
-      about: ''
+      about: 'This was a piece of work I completed while living in Brisbane, and an early exploration into Geometry. I became facinated with geometry in around 2011 in my last year of university when I was exploring the ideas behind Junian Psychology and the way that symbols can be used to explore the subconscious.'
     },
     {
       img: 'images/art/chaos.jpg',
       imgMouseOut: 'images/art/chaos.jpg',
       imgMouseOver: 'images/art/chaoshover.jpg',
       title: 'Chaos',
-      about: ''
+      about: 'This is the biggest painting I have completed to date, it took about 12 months, and I used goache and pen. After hours and hours of painting this I spilt some of the paint on the image, not sure about what to do I sat there and stared at it for about 30 minutes. Knowing I had nothing to loose I decided to spill more paint on the image and experiemented with how I could use that. That element really added to the final product, and goes to show that mistakes are inevitable and have an amazing opportinuty to learn.'
     },
     {
       img: 'images/art/stardust.jpg',
       imgMouseOut: 'images/art/stardust.jpg',
       imgMouseOver: 'images/art/stardusthover.jpg',
       title: 'We are all made of Stardust',
-      about: ''
+      about: 'Sketchbooks is a really important way for me to explore new ideas, express myself and learn more, its where I make a lot of mistakes, and a place that reminds me why I love drawing. I think its important to look at where people get to where they are and sketchbooks are a great way to show thoughts and processes.'
     }
 
 ]
