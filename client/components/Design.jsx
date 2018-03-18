@@ -18,17 +18,17 @@ class Design extends React.Component {
   }
 
   onMouseOver(img) {
-      const {artInfo} = this.state
-      var index = artInfo.findIndex(Item => Item.img == img.img)
-      artInfo[index].img = artInfo[index].imgMouseOver
-      this.setState({devInfo})
+      const {design} = this.state
+      var index = design.findIndex(item => item.img == img.img)
+      design[index].img = design[index].imgMouseOver
+      this.setState({design})
   }
 
   onMouseOut(img) {
-      const {devInfo} = this.state
-      var index = devInfo.findIndex(Item => Item.imgMouseOver == img.imgMouseOver)
-      devInfo[index].img = devInfo[index].imgMouseOut
-      this.setState({devInfo})
+      const {design} = this.state
+      var index = design.findIndex(item => item.imgMouseOver == img.imgMouseOver)
+      design[index].img = design[index].imgMouseOut
+      this.setState({design})
   }
 
   hideAll(designToHide) {
@@ -47,7 +47,6 @@ class Design extends React.Component {
         this.setState({design})
   }
 
-
   render() {
         return (
           <div className="parentHorizontal">
@@ -55,7 +54,11 @@ class Design extends React.Component {
             <MyHorizontalScroll>
               {this.state.design && this.state.design.map(design => {
                 return ([
-                  <img onClick={ (e) => {this.hideAll(design); this.showDesign(design)}} className='design img-responsive childHorizontal' src={design.img}/>,
+                  <img onClick={ (e) => {this.hideAll(design); this.showDesign(design)}}
+                    onMouseOver={(e) => {this.onMouseOver(design)}}
+                    onMouseOut={(e) => {this.onMouseOut(design)}}
+                    className='design img-responsive childHorizontal'
+                    src={design.img}/>,
                   <div>{design.show == true && <div className='box'><h1>{design.title}</h1><p>{design.about}</p></div>}</div>
                 ])
               }
