@@ -1,7 +1,7 @@
 import React from 'react'
 import MyHorizontalScroll from './MyHorizontalScroll'
 import { Link, DirectLink, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
-import thisDevInfo from '../data/webinfo.js'
+import thisDevInfo from '../data/webInfo.js'
 import Swipe, { SwipeItem } from 'swipejs/react';
 
 
