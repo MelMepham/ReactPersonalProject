@@ -16,14 +16,14 @@ module.exports = [
     {
       img: 'images/design/fidelsMenu.jpg',
       imgMouseOut: 'images/design/fidelsMenu.jpg',
-      imgMouseOver: 'images/design/fidelsMenuhover.JPG',
+      imgMouseOver: 'images/design/fidelsMenuhover.jpg',
       title: "Fidel's Menu",
       about: 'While I was the General Manager I redesigned their 6 page menu, utilizing a dynamic 5 column grid structure to allow each page to be utilized to create a compresensive menu that can easily be updated and modified.'
     },
     {
       img: 'images/design/giftVoucher.jpg',
       imgMouseOut: 'images/design/giftVoucher.jpg',
-      imgMouseOver: 'images/design/fidelsMenuhoverhover.JPG',
+      imgMouseOver: 'images/design/fidelsMenuhoverhover.jpg',
       title: "Fidel's gift voucher",
       about: "The Fidel's gift voucher hadn't been updated in a very long time, so I worked with some of the updated styling to create a new and updated voucher."
     },
