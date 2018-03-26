@@ -5,7 +5,9 @@
   "repository": "https://github.com/MelMepham/ReactPersonalProject",
   "main": "index.js",
   "scripts": {
-    "start": "node server & webpack --watch"
+    "start": "node server & webpack --watch",
+    "test": "jest",
+    "watch": "nodemon -e js,jsx -x npm test"
   },
   "babel": {
     "presets": [
@@ -15,6 +17,14 @@
   },
   "author": "EDA",
   "license": "ISC",
+  "devDependencies": {
+    "enzyme": "^2.8.2",
+    "enzyme-adapter-react-15": "^1.0.5",
+    "jest": "^21.2.1",
+    "nodemon": "^1.11.0",
+    "supertest": "^3.0.0",
+    "jest-enzyme": "^6.0.0"
+  },
   "dependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
@@ -23,6 +33,7 @@
     "body-parser": "^1.18.2",
     "bundle": "^2.1.0",
     "express": "^4.16.2",
+    "jsdom": "^11.0.0",
     "node": "^9.5.0",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
@@ -32,6 +43,7 @@
     "react-router-dom": "^4.2.2",
     "react-scroll": "^1.7.6",
     "react-scroll-horizontal": "^1.2.0",
+    "react-test-renderer": "15",
     "swipejs": "^2.2.11",
     "webpack": "^3.10.0"
   }
