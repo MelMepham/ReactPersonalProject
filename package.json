@@ -6,8 +6,8 @@
   "main": "index.js",
   "scripts": {
     "start": "node server & webpack --watch",
-    "debug": "nodemon --inspect server/index",
-    "test": "jest --watch --noStackTrace"
+    "test": "jest",
+    "watch": "nodemon -e js,jsx -x npm test"
   },
   "babel": {
     "presets": [
@@ -17,6 +17,13 @@
   },
   "author": "EDA",
   "license": "ISC",
+  "devDependencies": {
+    "enzyme": "^2.8.2",
+    "enzyme-adapter-react-15": "^1.0.5",
+    "jest": "^21.2.1",
+    "nodemon": "^1.11.0",
+    "supertest": "^3.0.0"
+  },
   "dependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
@@ -24,10 +31,7 @@
     "babel-preset-react": "^6.24.1",
     "body-parser": "^1.18.2",
     "bundle": "^2.1.0",
-    "enzyme": "^3.3.0",
-    "enzyme-adapter-react-15": "^1.0.5",
     "express": "^4.16.2",
-    "jest": "^22.4.3",
     "jest-enzyme": "^6.0.0",
     "node": "^9.5.0",
     "react": "^15.5.4",
