@@ -22,7 +22,8 @@
     "enzyme-adapter-react-15": "^1.0.5",
     "jest": "^21.2.1",
     "nodemon": "^1.11.0",
-    "supertest": "^3.0.0"
+    "supertest": "^3.0.0",
+    "jest-enzyme": "^6.0.0"
   },
   "dependencies": {
     "babel-core": "^6.26.0",
@@ -32,7 +33,7 @@
     "body-parser": "^1.18.2",
     "bundle": "^2.1.0",
     "express": "^4.16.2",
-    "jest-enzyme": "^6.0.0",
+    "jsdom": "^11.0.0",
     "node": "^9.5.0",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
