@@ -14,8 +14,9 @@ describe('<AboutMe />', () => {
   });
   describe('clicking a mandala show equals true', () => {
     const component = mount(<AboutMe />);
-    // const onClick = component.find('hvr-shrink');
-    // // onClick.simulate('onClick');
+    component.find('.hvr-shrink').first().simulate('click');
+
+    // expect
     // component.find('div').simulate('click');
     // // console.log(component.nodes[0].state.info[0].show)
   })
