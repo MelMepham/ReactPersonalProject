@@ -40,6 +40,7 @@ p.draw = () => {
 
     }
     p.pop();
+
     p.push(); //SMALLER OF THE FAR OUTER TRIANGLES
     p.translate(300, 300);
     p.scale((p.sin(p.frameCount/120)*1))
@@ -88,7 +89,6 @@ p.draw = () => {
       }
     p.pop()
 
-
     p.push(); //TETRAHEDRON PINK
 
     p.translate(300, 300);
@@ -115,7 +115,6 @@ p.draw = () => {
     }
     p.pop();
 
-
     p.push(); //PURPLE TRIANGLES TOUCHING THE DIAMONDS
     p.translate(300, 300);
     p.fill(161, 163, 255);
@@ -124,17 +123,6 @@ p.draw = () => {
       rotation(60);
     }
     p.pop()
-
-    // p.push() //TRIANGLES JUST BEYOND FLOWER OF LIFE
-    // p.translate(300, 300);
-    // p.fill(247, 128, 207);
-    // p.scale((p.sin(p.frameCount/240)*1.3)+.5)
-    // for (let i=0; i<6; i++) {
-    //   p.triangle(-90, 52, -90, -52, -120, 0);
-    //   rotation(60);
-    // }
-    // p.pop()
-
 
     p.push(); //FLOWER OF LIFE PATTERN
     p.translate(300, 300);

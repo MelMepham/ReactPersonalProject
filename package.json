@@ -5,7 +5,9 @@
   "repository": "https://github.com/MelMepham/ReactPersonalProject",
   "main": "index.js",
   "scripts": {
-    "start": "node server & webpack --watch",
+    "postinstall": "webpack",
+    "dev": "nodemon --watch server & webpack --watch",
+    "start": "node server/index",
     "test": "jest",
     "watch": "nodemon -e js,jsx -x npm test"
   },
