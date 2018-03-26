@@ -8,7 +8,7 @@
     "postinstall": "webpack",
     "dev": "nodemon --watch server & webpack --watch",
     "start": "node server/index",
-    "test": "jest --watchman",
+    "test": "jest --watch",
     "watch": "nodemon -e js,jsx -x npm test"
   },
   "babel": {
@@ -47,7 +47,6 @@
     "react-scroll-horizontal": "^1.2.0",
     "react-test-renderer": "15",
     "swipejs": "^2.2.11",
-    "watchman": "^1.0.0",
     "webpack": "^3.10.0"
   }
 }
