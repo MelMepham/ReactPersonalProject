@@ -2,12 +2,16 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import DOM from 'react-dom'
 import { Motion, spring, presets } from 'react-motion'
+import Draggable, {DraggableCore} from 'react-draggable';
+
 
 export default class MyHorizontalScroll extends Component {
   constructor(props) {
     super(props)
 
-    this.state = { animValues: 0 }
+    this.state = {
+      animValues: 0,
+    }
 
     this.onScrollStart = this.onScrollStart.bind(this)
     this.resetMin      = this.resetMin.bind(this)
@@ -30,6 +34,7 @@ export default class MyHorizontalScroll extends Component {
   }
 
   componentDidUpdate() {this.calculate()}
+
 
   onScrollStart(e) {
     e.preventDefault()
@@ -76,13 +81,6 @@ export default class MyHorizontalScroll extends Component {
 
     return true
   }
-  // THIS IS THE CODE THAT SCREWS UP MY ONCLICK!
-  // componentWillReceiveProps(nextProps) {
-  //   if (this.props.children !== nextProps.children) {
-  //     // Reset container offset
-  //     this.resetMin()
-  //   }
-  // }
 
   caniscroll() {
     let el = DOM.findDOMNode(this.hScrollParent)
@@ -142,8 +140,10 @@ export default class MyHorizontalScroll extends Component {
       position: `relative`,
       // ...styles
     }
+    const dragHandlers = {onStart: this.onStart, onStop: this.onStop};
 
     return (
+      <Draggable onDrag={this.handleDrag} {...dragHandlers} >
       <div
         onWheel={ this.onScrollStart }
         ref={ r => { this.hScrollParent = r }}
@@ -170,6 +170,7 @@ export default class MyHorizontalScroll extends Component {
             } }
         </Motion>
       </div>
+      </Draggable>
     )
   }
 }

@@ -23,9 +23,9 @@
     "enzyme": "^2.8.2",
     "enzyme-adapter-react-15": "^1.0.5",
     "jest": "^21.2.1",
+    "jest-enzyme": "^6.0.0",
     "nodemon": "^1.11.0",
-    "supertest": "^3.0.0",
-    "jest-enzyme": "^6.0.0"
+    "supertest": "^3.0.0"
   },
   "dependencies": {
     "babel-core": "^6.26.0",
@@ -39,6 +39,7 @@
     "node": "^9.5.0",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
+    "react-draggable": "^3.0.5",
     "react-hide-div": "^1.0.1",
     "react-motion": "^0.5.2",
     "react-p5-wrapper": "^0.0.4",
