@@ -12,10 +12,10 @@ describe('<Design />', () => {
     const component = shallow(<Design name = "Design" />);
     expect(component.instance().props.name).toBe("Design");
   });
-  describe('clicking a mandala show equals true', () => {
+  describe('Clicking an image shows the text', () => {
     const component = mount(<Design />);
-    console.log(component)
-    // const onClick = component.find('.hvr-shrink').first().simulate('click');
-    // expect(onClick.root.node.state.info[0].show).toBe(true);
+    const store = component.state()
+    const onClick = component.find('img').first().simulate('click')
+    expect(onClick.root.node.state.design[0].show).toBe(true);
   })
 });
