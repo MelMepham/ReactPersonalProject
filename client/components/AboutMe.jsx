@@ -31,9 +31,9 @@ class AboutMe extends React.Component {
             <br /> <br /> <br /> <br />
 
             <div className="row">
-              {this.state.info.map(data => {
+              {this.state.info.map((data, i) => {
                 return (
-                  <div className="col-lg-3 col-md-6">
+                  <div key={i} className="col-lg-3 col-md-6">
                     <div onClick={ (e) => {this.showInfo(data)} } className="hvr-shrink">
                       <img className="aboutMeImg img-responsive cursor" src={data.img} alt="mandala"/>
                     </div>
