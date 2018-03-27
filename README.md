@@ -23,10 +23,11 @@ What can you do? - have a look around! Check it out make sure you
 
 ## Testing
 
-There is an enzyme test on all of the components, 
-- art / design / webdev / aboutme pages : making sure the onClicks are working appropriately
-- cv : checking the H1 header
-(Work in Progress)
+To get the test suite working: 
+'''yarn test'''
+Make sure you have watchman installed on your computer by writing either one of these in your CLI 
+```npm r -g watchman
+brew install watchman``` 
 
 ## Links
 
