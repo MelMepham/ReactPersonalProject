@@ -21,10 +21,12 @@ What can you do? - have a look around! Check it out make sure you
 * Click on the Mandala
 * Click on the images in Art and Design to get some more info
 
-## Configuration
+## Testing
 
-Here you should write what are all of the configurations a user can enter when
-using the project.
+There is an enzyme test on all of the components, 
+- art / design / webdev / aboutme pages : making sure the onClicks are working appropriately
+- cv : checking the H1 header
+(Work in Progress)
 
 ## Links
 
