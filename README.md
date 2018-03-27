@@ -26,8 +26,8 @@ What can you do? - have a look around! Check it out make sure you
 To get the test suite working: 
 '''yarn test'''
 Make sure you have watchman installed on your computer by writing either one of these in your CLI 
-```npm r -g watchman```
-```brew install watchman``` 
+
+```npm r -g watchman``` or ```brew install watchman``` 
 
 ## Links
 
