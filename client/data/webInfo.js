@@ -6,7 +6,6 @@ module.exports = [
       title: 'Check out where you are!',
       about: 'I have always wanted to create a website exactly the way I wanted it, but have never had the skills to do so until now. This is going to be an ongoing project that will change and develop and morph alongside my dev career, I have never been quite so proud of my achievements in such a short time as I have been going through EDA and this website has proven to myself how much I am able to achieve when I am really passionate about the project.',
       linkToProject: 'http://aplaceofdreams.herokuapp.com'
-
     },
 
     {

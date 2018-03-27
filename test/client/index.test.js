@@ -6,6 +6,6 @@ import './setup-dom'
 
 App.prototype.componentDidMount = () => {}
 
-test('Hello World renders on App', () => {
+test('App component is rendering', () => {
   const wrapper = shallow(<App />)
 })
