@@ -21,7 +21,7 @@ class AboutMe extends React.Component {
     showInfo(contactMeInfo) {
         const {info} = this.state
         var index = info.findIndex(infoItem => infoItem.menu === contactMeInfo.menu)
-        // info[index].show = !info[index].show
+        info[index].show = !info[index].show
         this.setState({info})
       }
 

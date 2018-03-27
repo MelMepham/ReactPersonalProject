@@ -7,7 +7,7 @@
   "scripts": {
     "postinstall": "webpack",
     "dev": "nodemon --watch server & webpack --watch",
-    "start": "node server/index",
+    "start": "node server & webpack --watch",
     "test": "jest --watch",
     "watch": "nodemon -e js,jsx -x npm test"
   },
