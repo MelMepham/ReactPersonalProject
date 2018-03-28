@@ -2,7 +2,7 @@ import React from 'react'
 
 const Header = (props) => {
   return (
-    <header className="container-fluid headerPadding">
+    <header id="grad" className="container-fluid header">
       <div className="row">
         <div className="col-lg-8 col-md-7 col-sm-6 col-xs-12 vertical-align--bottom">
           <br/>

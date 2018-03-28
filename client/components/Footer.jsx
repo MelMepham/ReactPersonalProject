@@ -13,7 +13,7 @@ const Footer = (props) => {
 
   return (
     <div>
-      <div id="menuBig" className="mobileHide">
+      <div id="menuBig" className="mobileHide background">
         <div className="fixed-bottom container-fluid, d-none, d-sm-block">
           <div className="row text-center align-text-bottom">
             <div className="col-sm-1"></div>
@@ -25,7 +25,7 @@ const Footer = (props) => {
             <div className="col-sm-1"></div>
           </div>
             <div className="row">
-              <div className="col-lg-12">
+              <div className="col-lg-12 background">
                 <div className="bottomLine"></div>
                 <br/>
               </div>
