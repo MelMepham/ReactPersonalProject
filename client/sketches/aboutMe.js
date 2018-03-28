@@ -13,7 +13,7 @@ export default function AboutMeMandala (p) {
 
     p.push(); //FLOWER OF LIFE PATTERN
     p.translate(75, 75);
-      p.fill(255, 168, 255);
+      p.fill(25, 238, 241);
       p.ellipse(0, 0, 30, 30);
       p.blendMode(p.MULTIPLY);
       for (let i=0; i<6; i++) {

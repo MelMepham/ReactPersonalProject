@@ -35,44 +35,37 @@ class AboutMe extends React.Component {
       }
 
     render() {
+      //<P5Wrapper sketch={this.state.mandalas[i]}/>
       return (
         <div className="container">
-        <br /> <br /> <br /> <br />
-          <div className="row ">
-            {this.state.info.map((data, i) => {
-              return (
-                <div key={i} className="col-lg-3 col-md-6 mandalaCentered">
-                  <div className="cursor" onClick={(e) => {this.showInfo(data)} }>
-                    <P5Wrapper sketch={this.state.mandalas[i]}/>
-                  </div>
-                </div>
-              )
-            }
-            )}
-          </div>
+              <br /> <br /> <br /> <br />
 
-          <div className="row">
-          {this.state.info.map((data, i) => {
-            return (
-              <div key={i} className="col-lg-3 col-md-6">
-                <h4 className='subText'>{data.menu}</h4>
-                <div>{data.show == true && <div>
-                <p className='aboutMeData'>{data.pOne}</p>
-                  {data.menu === 'HIRE ME' ? <div>
-                  <br />
-                  <Link className="btn-pink" to= '/CV' ><a className="btn btn-pink btn-sm active" role="button">Go to my CV</a></Link>
-                  <br />
-                  <a href="images/MelissaMephamCV.pdf" download className="btn btn-pink btn-sm active" role="button" aria-pressed="true">Download my CV</a>
-                </div> : ''}
-              </div>}
+              <div className="row">
+                {this.state.info.map((data, i) => {
+                  return (
+                    <div key={i} className="col-lg-3 col-md-6">
+                      <div onClick={ (e) => {this.showInfo(data)} } className="mandalaCentered cursor">
+                          <P5Wrapper sketch={this.state.mandalas[i]}/>
+                      </div>
+                      <h4 className='subText'>{data.menu}</h4>
+                        <div>{data.show == true && <div>
+                          <p className='aboutMeData'>{data.pOne}</p>
+                          {data.menu === 'HIRE ME' ? <div>
+                            <br />
+                            <Link className="btn-pink" to= '/CV' ><a className="btn btn-pink btn-sm active" role="button">Go to my CV</a></Link>
+                            <br />
+                            <a href="images/MelissaMephamCV.pdf" download className="btn btn-pink btn-sm active" role="button" aria-pressed="true">Download my CV</a>
+                          </div> : ''}
+                        </div>}
+                    </div>
+                  </div>
+                )}
+              )}
             </div>
-      </div>
-    )}
-    )}
-  </div>
-</div>
-)}
-}
+          </div>
+        )
+      }
+    }
 
 
   export default AboutMe

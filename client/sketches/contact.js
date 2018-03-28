@@ -1,6 +1,6 @@
-export default function ContactMandala (p) {
+export default function AboutMeMandala (p) {
   p.setup = () => {
-    p.createCanvas(100, 100);
+    p.createCanvas(150, 150);
   }
 
   function rotation(degrees) {
@@ -11,31 +11,16 @@ export default function ContactMandala (p) {
     p.background(255, 255, 255);
     p.noStroke();
 
-    // p.push() //DARKEST TRIANGLE IN THE CENTRAL HEXAGON SHAPE
-    //   p.translate(50, 50);
-    //   p.fill(0, 255, 255);
-    //   for (let i=0; i<6; i++) {
-    //     p.triangle(-52, 30, -52, -30, 0, 0);
-    //     rotation(60);
-    //   }
-    // p.pop()
-    //
-    // p.push() //LIGHTEST TRIANGLE IN THE CENTRAL HEXAGON SHAPE
-    //   p.translate(50, 50);
-    //   p.fill(197, 255, 215);
-    //   for (let i=0; i<6; i++) {
-    //     p.triangle(-52, -30, 0, 0, -35, 0);
-    //     rotation(60);
-    //   }
-    // p.pop()
-
-    p.push() // CENTRAL TURQUOIUSE HEXAGON
-      p.translate(50, 50);
-      p.fill(0, 144, 207);
+    p.push(); //FLOWER OF LIFE PATTERN
+    p.translate(75, 75);
+      p.fill(129, 233, 145);
+      p.ellipse(0, 0, 30, 30);
+      p.blendMode(p.MULTIPLY);
       for (let i=0; i<6; i++) {
-        p.triangle(-52, 30, -35, 0, 0, 0);
-        rotation(60);
-      }
+        p.ellipse(-25, 0, 60, 60);
+        rotation(60)
+        }
     p.pop();
-  }
+
+    }
 }
