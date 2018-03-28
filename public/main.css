@@ -75,6 +75,10 @@ menu{
   z-index: 100;
 }
 
+.background {
+  background-color: white;
+}
+
 .menuPadding {
   padding-top: 10px;
 }
