@@ -49,7 +49,6 @@ p.draw = () => {
       p.fill(143, (p.sin(p.frameCount/120)+1)*128, 255);
       p.triangle(-300, 0, -200, 114, -200, -114);
       rotation(60);
-
     }
     p.pop();
 
@@ -89,8 +88,14 @@ p.draw = () => {
       }
     p.pop()
 
-    p.push(); //TETRAHEDRON PINK
+    p.push();
+    p.translate(300, 300);
+    p.scale(((p.sin(p.frameCount/60)+.5)*10)+5);
+    p.fill(255, 255, 203, (p.sin(p.frameCount/120)+1)*50);
+    p.ellipse (0, 0, 340, 340);
+    p.pop();
 
+    p.push(); //TETRAHEDRON PINK
     p.translate(300, 300);
     p.scale((p.sin(p.frameCount/240)*1.3)+.5)
     p.rotate(p.radians(p.frameCount/240)*-50);

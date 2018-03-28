@@ -54,7 +54,7 @@ class Design extends React.Component {
             <MyHorizontalScroll>
               {this.state.design && this.state.design.map(design => {
                 return ([
-                  <img onClick={ (e) => {this.hideAll(design); this.showDesign(design)}}
+                  <img onClick={(e) => {this.hideAll(design); this.showDesign(design)}}
                     onMouseOver={(e) => {this.onMouseOver(design)}}
                     onMouseOut={(e) => {this.onMouseOut(design)}}
                     className='cursor design img-responsive childHorizontal'
