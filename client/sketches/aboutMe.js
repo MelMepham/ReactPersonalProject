@@ -8,7 +8,7 @@ export default function AboutMeMandala (p) {
   }
 
   function rotateMandala() {
-    r = 200
+    r = 400;
   }
 
   function rotation(degrees) {
