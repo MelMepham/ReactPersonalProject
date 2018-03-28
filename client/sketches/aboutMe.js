@@ -1,6 +1,14 @@
 export default function AboutMeMandala (p) {
+  var r;
+  var move;
   p.setup = () => {
-    p.createCanvas(150, 150);
+    move = p.createCanvas(150, 150);
+    move.mouseOver(rotateMandala)
+    r = 0;
+  }
+
+  function rotateMandala() {
+    r = 200
   }
 
   function rotation(degrees) {
@@ -13,6 +21,7 @@ export default function AboutMeMandala (p) {
 
     p.push(); //FLOWER OF LIFE PATTERN
     p.translate(75, 75);
+      p.rotate(p.radians(p.sin(p.frameCount/240)*r));
       p.fill(25, 238, 241);
       p.ellipse(0, 0, 30, 30);
       p.blendMode(p.MULTIPLY);
