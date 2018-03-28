@@ -62,6 +62,7 @@ class AboutMe extends React.Component {
                 )}
               )}
             </div>
+            <div className="bottom"></div>
           </div>
         )
       }

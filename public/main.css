@@ -262,6 +262,9 @@ h1 { font-size:30px; }
   cursor: pointer;
 }
 
+.bottom {
+  height: 100px
+}
 
 #myNavbar {
   padding: 0 !important;
