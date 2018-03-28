@@ -3,12 +3,21 @@ import React from 'react'
 import data from '../data/personalData.js'
 import { Link } from 'react-router-dom'
 
+import P5Wrapper from 'react-p5-wrapper'
+
+import AboutMeMandala from '../sketches/aboutMe'
+import ContactMandala from '../sketches/contact'
+import ExhibitionsMandala from '../sketches/exhibitions'
+import HireMeMandala from '../sketches/hireMe'
+
+
 
 
 class AboutMe extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
+      mandalas: [AboutMeMandala, ExhibitionsMandala, ContactMandala, HireMeMandala],
       info: [],
     }
     this.showInfo = this.showInfo.bind(this)
@@ -27,34 +36,43 @@ class AboutMe extends React.Component {
 
     render() {
       return (
-          <div className="container">
-            <br /> <br /> <br /> <br />
-
-            <div className="row">
-              {this.state.info.map((data, i) => {
-                return (
-                  <div key={i} className="col-lg-3 col-md-6">
-                    <div onClick={ (e) => {this.showInfo(data)} } className="hvr-shrink">
-                      <img className="aboutMeImg img-responsive cursor" src={data.img} alt="mandala"/>
-                    </div>
-                    <h4 className='subText'>{data.menu}</h4>
-                      <div>{data.show == true && <div>
-                        <p className='aboutMeData'>{data.pOne}</p>
-                        {data.menu === 'HIRE ME' ? <div>
-                          <br />
-                          <Link className="btn-pink" to= '/CV' ><a className="btn btn-pink btn-sm active" role="button">Go to my CV</a></Link>
-                          <br />
-                          <a href="images/MelissaMephamCV.pdf" download className="btn btn-pink btn-sm active" role="button" aria-pressed="true">Download my CV</a>
-                        </div> : ''}
-                      </div>}
+        <div className="container">
+        <br /> <br /> <br /> <br />
+          <div className="row ">
+            {this.state.info.map((data, i) => {
+              return (
+                <div key={i} className="col-lg-3 col-md-6 mandalaCentered">
+                  <div className="cursor" onClick={(e) => {this.showInfo(data)} }>
+                    <P5Wrapper sketch={this.state.mandalas[i]}/>
                   </div>
                 </div>
-              )}
+              )
+            }
             )}
           </div>
-        </div>
-      )
-    }
-  }
+
+          <div className="row">
+          {this.state.info.map((data, i) => {
+            return (
+              <div key={i} className="col-lg-3 col-md-6">
+                <h4 className='subText'>{data.menu}</h4>
+                <div>{data.show == true && <div>
+                <p className='aboutMeData'>{data.pOne}</p>
+                  {data.menu === 'HIRE ME' ? <div>
+                  <br />
+                  <Link className="btn-pink" to= '/CV' ><a className="btn btn-pink btn-sm active" role="button">Go to my CV</a></Link>
+                  <br />
+                  <a href="images/MelissaMephamCV.pdf" download className="btn btn-pink btn-sm active" role="button" aria-pressed="true">Download my CV</a>
+                </div> : ''}
+              </div>}
+            </div>
+      </div>
+    )}
+    )}
+  </div>
+</div>
+)}
+}
+
 
   export default AboutMe
