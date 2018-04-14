@@ -2,14 +2,20 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import DOM from 'react-dom'
 import { Motion, spring, presets } from 'react-motion'
+import Draggable, {DraggableCore} from 'react-draggable';
+
 
 export default class MyHorizontalScroll extends Component {
   constructor(props) {
     super(props)
 
-    this.state = { animValues: 0 }
+    this.state = {
+      animValues: 0,
+    }
 
-    this.onScrollStart = this.onScrollStart.bind(this)
+    this.onScroll      = this.onScroll.bind(this)
+    this.onDrag        = this.onDrag.bind(this)
+    this.onWheel       = this.onWheel.bind(this)
     this.resetMin      = this.resetMin.bind(this)
     this.resetMax      = this.resetMax.bind(this)
   }
@@ -31,7 +37,12 @@ export default class MyHorizontalScroll extends Component {
 
   componentDidUpdate() {this.calculate()}
 
-  onScrollStart(e) {
+  onDrag(e, data) {
+    console.log('data', data)
+    this.onScroll(-2 * data.deltaX)
+  }
+
+  onWheel(e) {
     e.preventDefault()
     // If scrolling on x axis, change to y axis
     // Otherwise just get the y deltas
@@ -39,7 +50,11 @@ export default class MyHorizontalScroll extends Component {
     // horizontal scrolling by default
     var rawData = e.deltaY ? e.deltaY : e.deltaX
     var mouseY = Math.floor(rawData)
+    this.onScroll(mouseY)
+  }
 
+
+  onScroll(mouseY) {
     // Bring in the existing animation values
     var animationValue            = this.state.animValues
     var newAnimationValue         = (animationValue + mouseY)
@@ -76,13 +91,6 @@ export default class MyHorizontalScroll extends Component {
 
     return true
   }
-  // THIS IS THE CODE THAT SCREWS UP MY ONCLICK!
-  // componentWillReceiveProps(nextProps) {
-  //   if (this.props.children !== nextProps.children) {
-  //     // Reset container offset
-  //     this.resetMin()
-  //   }
-  // }
 
   caniscroll() {
     let el = DOM.findDOMNode(this.hScrollParent)
@@ -144,32 +152,34 @@ export default class MyHorizontalScroll extends Component {
     }
 
     return (
-      <div
-        onWheel={ this.onScrollStart }
-        ref={ r => { this.hScrollParent = r }}
-        style={ styles }
-        className={`scroll-horizontal ${this.props.className || ''}`}
-        >
-        <Motion style={ { z: spring(this.state.animValues, springConfig) } }>
-          { ({z}) => {
+      <DraggableCore onDrag={ this.onDrag }>
+        <div
+          onWheel={ this.onWheel }
+          ref={ r => { this.hScrollParent = r }}
+          style={ styles }
+          className={`scroll-horizontal ${this.props.className || ''}`}
+          >
+          <Motion style={ { z: spring(this.state.animValues, springConfig) } }>
+            { ({z}) => {
 
-              const scrollingElementStyles = {
+                const scrollingElementStyles = {
 
-                transform: `translate3d(${z}px, 0,0)`,
-                display: `inline-flex`,
-                height: `100%`,
-                position: `absolute`,
-                willChange:`transform`
-              }
+                  transform: `translate3d(${z}px, 0,0)`,
+                  display: `inline-flex`,
+                  height: `100%`,
+                  position: `absolute`,
+                  willChange:`transform`
+                }
 
-              return (
-                <div style={ scrollingElementStyles }>
-                  { this.props.children }
-                </div>
-              )
-            } }
-        </Motion>
-      </div>
+                return (
+                  <div style={ scrollingElementStyles }>
+                    { this.props.children }
+                  </div>
+                )
+              } }
+          </Motion>
+        </div>
+      </DraggableCore>
     )
   }
 }
