@@ -150,13 +150,9 @@ export default class MyHorizontalScroll extends Component {
       position: `relative`,
       // ...styles
     }
-    const dragHandlers = {
-      axis: 'x',
-      onDrag: this.onDrag
-    };
 
     return (
-      <DraggableCore {...dragHandlers} >
+      <DraggableCore onDrag={ this.onDrag }>
         <div
           onWheel={ this.onWheel }
           ref={ r => { this.hScrollParent = r }}
