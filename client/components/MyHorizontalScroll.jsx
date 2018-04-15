@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import DOM from 'react-dom'
 import { Motion, spring, presets } from 'react-motion'
-import Draggable, {DraggableCore} from 'react-draggable';
+import { DraggableCore } from 'react-draggable';
 
 
 export default class MyHorizontalScroll extends Component {
@@ -38,7 +38,6 @@ export default class MyHorizontalScroll extends Component {
   componentDidUpdate() {this.calculate()}
 
   onDrag(e, data) {
-    console.log('data', data)
     this.onScroll(-2 * data.deltaX)
   }
 
@@ -49,16 +48,15 @@ export default class MyHorizontalScroll extends Component {
     // Basically, this for Apple mice that allow
     // horizontal scrolling by default
     var rawData = e.deltaY ? e.deltaY : e.deltaX
-    var mouseY = Math.floor(rawData)
-    this.onScroll(mouseY)
+    var delta = Math.floor(rawData)
+    this.onScroll(delta)
   }
 
-
-  onScroll(mouseY) {
+  onScroll(delta) {
     // Bring in the existing animation values
     var animationValue            = this.state.animValues
-    var newAnimationValue         = (animationValue + mouseY)
-    var newAnimationValueNegative = (animationValue - mouseY)
+    var newAnimationValue         = (animationValue + delta)
+    var newAnimationValueNegative = (animationValue - delta)
 
     if (!this.caniscroll()) {
       return

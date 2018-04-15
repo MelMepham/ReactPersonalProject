@@ -13,7 +13,7 @@ const Header = (props) => {
             <a href="https://www.instagram.com/melissamephamillustration/" target="_blank"><img className="icons float-sm-right float-md-left" src="/images/icons/instaIcon.svg" alt="instagram link"/></a>
             <a href="mailto:m.a.mepham@gmail.com"><img className="icons float-sm-right float-md-left" src="/images/icons/envilopeIcon.svg" alt="mail link"/></a>
             <a href="https://github.com/MelMepham/" target="_blank"><img className="icons float-sm-right float-md-left" src="/images/icons/gitIcon.svg" alt="Github link"/></a>
-            <a href="https://www.facebook.com/MelissaMephamIllustraton/" target="_blank"><img className="icons float-sm-right float-md-left" src="/images/icons/facebookIcon.svg" alt="facebook link"/></a>
+            <a href="https://twitter.com/aplaceofdreams" target="_blank"><img className="icons float-sm-right float-md-left" src="/images/icons/twitter.svg" alt="twitter link"/></a>
             <a href="https://www.linkedin.com/in/melissamepham/" target="_blank"><img className="icons float-sm-right float-md-left" src="/images/icons/linkedin.svg" alt="Linkedin link"/></a>
 
           </div>
