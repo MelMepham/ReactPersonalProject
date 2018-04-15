@@ -25,7 +25,9 @@ class AboutMe extends React.Component {
   }
 
     render() {
+      console.log(MyHorizontalScroll)
       return (
+        <div>
         <div>
           <br/> <br/><br/>
             <div className="container-fluid">
@@ -44,26 +46,21 @@ class AboutMe extends React.Component {
                   </p>
                 </div>
               </div>
-              <div className="row">
                 <br />
-                    <MyHorizontalScroll>
-                      <div className="parentHorizontal">
-                        <div><h1>hello</h1></div>
-                          {this.state.exhibitionYears.map(year => {
-                            console.log(year)
-                            return ([
-                              <div className="childHorizontal background">
-                                <h3>year</h3>
-                              </div>
-                            ])
-                          })}
-                        </div>
-                    </MyHorizontalScroll>
 
               </div>
             </div>
 
-        </div>
+
+
+        <div className="parentHorizontal">
+            <MyHorizontalScroll>
+              <div className="childHorizontal background">
+                <img src="/images/me.jpg" alt="logoImage"/>
+                </div>
+            </MyHorizontalScroll>
+          </div>
+</div>
         )
       }
     }
