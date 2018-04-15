@@ -1,8 +1,9 @@
 
 import React from 'react'
 import data from '../data/personalData.js'
-import { Link } from 'react-router-dom'
+import { Link, DirectLink, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 import MyHorizontalScroll from './MyHorizontalScroll'
+
 
 
 import P5Wrapper from 'react-p5-wrapper'
@@ -13,7 +14,7 @@ class AboutMe extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      logoImg: "/images/logo.svg"
+      exhibitionYears: [2017, 2016, 2015, 2014, 2013, 2012]
     }
     this.changeLogoImg = this.changeLogoImg.bind(this)
   }
@@ -44,14 +45,20 @@ class AboutMe extends React.Component {
                 </div>
               </div>
               <div className="row">
-                <div className="parentHorizontal">
-                  <br />
+                <br />
                     <MyHorizontalScroll>
-                      return (
-                        <div></div>
-                      )
+                      <div className="parentHorizontal">
+                        <div><h1>hello</h1></div>
+                          {this.state.exhibitionYears.map(year => {
+                            console.log(year)
+                            return ([
+                              <div className="childHorizontal background">
+                                <h3>year</h3>
+                              </div>
+                            ])
+                          })}
+                        </div>
                     </MyHorizontalScroll>
-                    </div>
 
               </div>
             </div>
