@@ -19,7 +19,6 @@ class artPage extends React.Component {
 
   }
   componentDidMount() {
-      let mySwipe = this.swipe;
       this.setState({art:thisArt})
   }
 

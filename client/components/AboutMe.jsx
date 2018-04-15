@@ -3,7 +3,7 @@ import React from 'react'
 import data from '../data/personalData.js'
 import { Link, DirectLink, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 import MyHorizontalScroll from './MyHorizontalScroll'
-
+import exhibitions from '../data/exhibitions.json'
 
 
 import P5Wrapper from 'react-p5-wrapper'
@@ -14,9 +14,12 @@ class AboutMe extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      exhibitionYears: [2017, 2016, 2015, 2014, 2013, 2012]
+      exhibitionYears: [2017, 2016, 2015, 2014, 2013, 2012],
     }
     this.changeLogoImg = this.changeLogoImg.bind(this)
+  }
+
+  componentDidMount(){
   }
 
   changeLogoImg() {
@@ -25,7 +28,6 @@ class AboutMe extends React.Component {
   }
 
     render() {
-      console.log(MyHorizontalScroll)
       return (
         <div>
         <div>
@@ -51,15 +53,19 @@ class AboutMe extends React.Component {
               </div>
             </div>
 
+            <div className="parentHorizontalExhibition">
+              <MyHorizontalScroll>
+                {exhibitions.map(year => {
+                  console.log(year[2017])
+                  return ([
+                    <div className="childHorizontalExhibition background">
+                      <h1>{year.title}</h1>
+                    </div>
+                  ])
+                })}
+              </MyHorizontalScroll>
+            </div>
 
-
-        <div className="parentHorizontal">
-            <MyHorizontalScroll>
-              <div className="childHorizontal background">
-                <img src="/images/me.jpg" alt="logoImage"/>
-                </div>
-            </MyHorizontalScroll>
-          </div>
 </div>
         )
       }
