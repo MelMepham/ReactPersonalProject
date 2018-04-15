@@ -1,6 +1,13 @@
 body {
   font-family: 'Josefin Sans', sans-serif !important;
 }
+h1{
+    vertical-align: text-bottom;
+    color: #EF26C4;
+}
+.pAboutMe {
+  vertical-align: text-bottom;
+}
 
 h2{
   margin-top: 10px
@@ -257,4 +264,8 @@ h1 { font-size:30px; }
 
 #myNavbar {
   padding: 0 !important;
+}
+
+.imgPadding {
+  padding: 10px
 }
