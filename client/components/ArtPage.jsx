@@ -2,8 +2,7 @@ import React from 'react'
 import MyHorizontalScroll from './MyHorizontalScroll'
 import { Link, DirectLink, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 import thisArt from '../data/artInfo.js'
-import Swipe, { SwipeItem } from 'swipejs/react';
-import Draggable, {DraggableCore} from 'react-draggable';
+
 
 
 class artPage extends React.Component {
@@ -59,14 +58,7 @@ class artPage extends React.Component {
   }
 
   render() {
-    window.mySwipe = new Swipe(document.getElementById('slider'));
         return (
-          <Draggable
-            axis="x"
-            handle=".handle"
-            defaultPosition={{x: 0, y: 0}}
-            position={null}
-            onDrag={this.handleDrag}>
           <div className="parentHorizontal">
             <br />
               <MyHorizontalScroll>
@@ -83,7 +75,6 @@ class artPage extends React.Component {
                 )}
               </MyHorizontalScroll>
           </div>
-        </Draggable>
         )}
   }
 

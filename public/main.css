@@ -4,6 +4,8 @@ body {
 h1{
     vertical-align: text-bottom;
     color: #EF26C4;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: bold;
 }
 .pAboutMe {
   vertical-align: text-bottom;
@@ -258,14 +260,47 @@ h1 { font-size:30px; }
   cursor: pointer;
 }
 
-.bottom {
-  height: 100px
-}
-
 #myNavbar {
-  padding: 0 !important;
+  padding: 0;
 }
 
-.imgPadding {
-  padding: 10px
+#cf {
+  position:relative;
+  padding: 40px;
+}
+
+#cf img {
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+
+#cf img.top:hover {
+  opacity:0;
+}
+
+.top {
+  margin:auto;
+  background-color: white;
+  width: 180px;
+  height: 180px;
+  opacity: 1;
+  position: absolute;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+}
+
+.bottom {
+  /* margin-top: 60px; */
+  width: 180px;
+  height: 180px;
+  margin:auto;
+  position: absolute;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
 }
