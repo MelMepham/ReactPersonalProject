@@ -321,25 +321,30 @@ h1 { font-size:30px; }
 .top {
   margin:auto;
   background-color: white;
-  width: 280px;
-  height: 280px;
+  width: 180px;
+  height: 180px;
   opacity: 1;
   position: absolute;
   top:0;
   right:0;
   bottom:0;
-  left:0;
+  left:1;
+  margin-bottom: 15px;
+  margin-right: 15px !important;
 }
 
 .bottom {
-  width: 280px;
-  height: 280px;
+  width: 180px;
+  height: 180px;
   margin:auto;
   position: absolute;
   top:0;
   right:0;
   bottom:0;
-  left:0;
+  left:1;
+  margin-bottom: 15px;
+  margin-right: 15px !important;
+
 }
 
 .imgPadding{

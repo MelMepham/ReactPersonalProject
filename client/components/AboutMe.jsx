@@ -36,11 +36,6 @@ class AboutMe extends React.Component {
                   <img className="mx-auto d-block top" src="/images/logo.svg" alt="logoImage"/>
                 </div>
               </div>
-            </div>
-            <div className="row">
-              <div className="col-md-3">
-                <Link className="btn-pink CVButton btn btn-pink btn-lg active" to= '/CV' ><p className="btnPadding">Want to see my skills?<br/>CLICK ME</p></Link>
-              </div>
               <div className="col-md-8 typePadding">
               <br/><br/>
                 <h1> KIA ORA / HELLO </h1>
