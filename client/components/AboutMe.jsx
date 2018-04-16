@@ -29,7 +29,11 @@ class AboutMe extends React.Component {
                   <img className="mx-auto d-block top" src="/images/logo.svg" alt="logoImage"/>
                 </div>
               </div>
-              <div className="col-md-6 typePadding">
+            </div>
+            <div className="row">
+              <div className="col-md-3">
+              </div>
+              <div className="col-md-8 typePadding">
               <br/><br/>
                 <h1> KIA ORA / HELLO </h1>
                 <p className="pAboutMe">
