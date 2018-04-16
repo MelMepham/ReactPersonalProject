@@ -217,6 +217,11 @@ img {
   .header {
     background-color: white;
   }
+  .CVButton{
+    margin-left: 0px !important;
+    align-items: left;
+
+  }
 }
 
   @media only screen and (min-width: 576px) {
@@ -249,15 +254,6 @@ h1 { font-size:30px; }
     50% {transform: rotate(-180deg);}
 }
 
-.aboutMeImg{
-  display:block;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 15px;
-  max-width: 70%;
-  max-height: 70%;
-}
-
 .mandalaCentered {
   width: 100%;
   overflow: hidden;
@@ -278,15 +274,21 @@ h1 { font-size:30px; }
   float: none;
 }
 
-.btn-pink, .btn-pink:hover{
-  background-color: #EF26C4;
+.btn-pink{
+  text-align: center;
+  height: 80px;
+  background-color: #FFA4FF;
   display: block;
   color: white;
   text-decoration: none !important;
+  border-radius: 10px;
+}
+
+.btn-pink:hover{
+  color: #EF26C4;
 }
 
 .littleButton, .littleButton:hover {
-  background-color: #EF26C4;
   display: block;
   color: white;
   text-decoration: none !important;
@@ -302,7 +304,7 @@ h1 { font-size:30px; }
 
 #cf {
   position:relative;
-  padding: 40px;
+  padding: 60px;
 }
 
 #cf img {
@@ -319,8 +321,8 @@ h1 { font-size:30px; }
 .top {
   margin:auto;
   background-color: white;
-  width: 180px;
-  height: 180px;
+  width: 280px;
+  height: 280px;
   opacity: 1;
   position: absolute;
   top:0;
@@ -330,8 +332,8 @@ h1 { font-size:30px; }
 }
 
 .bottom {
-  width: 180px;
-  height: 180px;
+  width: 280px;
+  height: 280px;
   margin:auto;
   position: absolute;
   top:0;
@@ -347,4 +349,13 @@ h1 { font-size:30px; }
 
 .typePadding{
   margin-top: 30px;
+}
+
+.CVButton {
+  margin-top: 120px;
+  margin-left: 50px;
+}
+
+.btnPadding {
+  margin-top: 5px;
 }

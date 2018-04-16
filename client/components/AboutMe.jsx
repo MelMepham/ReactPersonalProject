@@ -1,9 +1,12 @@
 
 import React from 'react'
 import data from '../data/personalData.js'
-import { Link, DirectLink, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+import { DirectLink, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 import MyHorizontalScroll from './MyHorizontalScroll'
 import exhibitions from '../data/exhibitions.json'
+
+import { Link } from 'react-router-dom'
+
 
 
 import P5Wrapper from 'react-p5-wrapper'
@@ -32,6 +35,7 @@ class AboutMe extends React.Component {
             </div>
             <div className="row">
               <div className="col-md-3">
+                <Link className="btn-pink CVButton btn btn-pink btn-lg active" to= '/CV' ><p className="btnPadding">Want to see my skills?<br/>CLICK ME</p></Link>
               </div>
               <div className="col-md-8 typePadding">
               <br/><br/>
