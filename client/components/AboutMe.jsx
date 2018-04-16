@@ -30,13 +30,14 @@ class AboutMe extends React.Component {
 
           <div className="container-fluid">
             <div className="row">
+
               <div className="col-md-3 imgPadding">
                 <div id="cf">
                   <img className="mx-auto d-block bottom" src="/images/me.jpg" alt="logoImage"/>
                   <img className="mx-auto d-block top" src="/images/logo.svg" alt="logoImage"/>
                 </div>
               </div>
-              <div className="col-md-8 typePadding">
+              <div className="col-md-7 typePadding">
               <br/><br/>
                 <h1> KIA ORA / HELLO </h1>
                 <p className="pAboutMe">
