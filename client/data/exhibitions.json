@@ -1,15 +1,5 @@
 [
   {
-    "year": 2018,
-    "exhibitions": [
-      {
-        "title": "Have a space for me?",
-        "venue": "Get in touch",
-        "where": "m.a.mepham@gmail.com"
-      }
-    ]
-  },
-  {
     "year": 2017,
     "exhibitions": [
       {
@@ -83,7 +73,7 @@
     "year": 2012,
     "exhibitions": [
       {
-        "title": "A place of Dreams",
+        "title": "A Place of Dreams",
         "venue": "Frameworks Gallery",
         "where": "Paraparaumu, NZ"
       },
@@ -93,7 +83,7 @@
         "where": "Wellington, NZ"
       },
       {
-        "title": "A place of Dreams",
+        "title": "A Place of Dreams",
         "venue": "Frameworks Gallery",
         "where": "Paraparaumu, NZ"
       }
