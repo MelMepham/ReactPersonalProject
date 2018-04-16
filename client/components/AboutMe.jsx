@@ -14,17 +14,7 @@ class AboutMe extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      exhibitionYears: [2017, 2016, 2015, 2014, 2013, 2012],
     }
-    this.changeLogoImg = this.changeLogoImg.bind(this)
-  }
-
-  componentDidMount(){
-  }
-
-  changeLogoImg() {
-    this.setState({logoImg: "/images/me.jpg"})
-
   }
 
     render() {
@@ -55,18 +45,23 @@ class AboutMe extends React.Component {
 
             <div className="parentHorizontalExhibition">
               <MyHorizontalScroll>
-                {exhibitions.map(year => {
-                  console.log(year[2017])
-                  return ([
-                    <div className="childHorizontalExhibition background">
-                      <h1>{year.title}</h1>
-                    </div>
-                  ])
-                })}
+                  {exhibitions.map(events => {
+
+                    return(
+                      <div className="background childHorizontalExhibiton exhibitionBox">
+                        <h1>{events.year}</h1>
+                        {events.exhibitions[0] ? <p>{events.exhibitions[0].title}<br/>{events.exhibitions[0].venue}<br/>{events.exhibitions[0].where}</p> : ""}
+                        {events.exhibitions[1] ? <p>{events.exhibitions[1].title}<br/>{events.exhibitions[1].venue}<br/>{events.exhibitions[1].where}</p> : ""}
+                        {events.exhibitions[2] ? <p>{events.exhibitions[2].title}<br/>{events.exhibitions[2].venue}<br/>{events.exhibitions[2].where}</p> : ""}
+
+                      </div>
+                    )
+                  })
+                }
               </MyHorizontalScroll>
             </div>
-
-</div>
+            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+          </div>
         )
       }
     }

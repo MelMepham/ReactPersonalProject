@@ -1,9 +1,37 @@
 [
   {
-    "2017": {
-      "title": "The Existence of Chaos",
-      "venue": "Black Coffee",
-      "city": "Wellington, NZ"
-    }
+    "year": 2012,
+    "exhibitions": [
+      {
+        "title": "Frameworks Gallery",
+        "venue": "A place of Dreams",
+        "where": "Paraparaumu, NZ"
+      },
+      {
+        "title": "Matchbox",
+        "venue": "A place of Dreams",
+        "where": "Paraparaumu, NZ"
+      },
+      {
+        "title": "something else",
+        "venue": "A place of Dreams",
+        "where": "Paraparaumu, NZ"
+      }
+    ]
+  },
+  {
+    "year": 2013,
+    "exhibitions": [
+      {
+        "title": "Frameworks Gallery",
+        "venue": "A place of Dreams",
+        "where": "Paraparaumu, NZ"
+      },
+      {
+        "title": "Frameworks Gallery",
+        "venue": "A place of Dreams",
+        "where": "Paraparaumu, NZ"
+      }
+    ]
   }
 ]
