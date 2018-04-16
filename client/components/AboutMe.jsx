@@ -46,13 +46,13 @@ class AboutMe extends React.Component {
             <div className="parentHorizontalExhibition">
               <MyHorizontalScroll>
                   {exhibitions.map(events => {
-
+                    var name = events.exhibitions
                     return(
                       <div className="background childHorizontalExhibiton exhibitionBox">
                         <h1>{events.year}</h1>
-                        {events.exhibitions[0] ? <p>{events.exhibitions[0].title}<br/>{events.exhibitions[0].venue}<br/>{events.exhibitions[0].where}</p> : ""}
-                        {events.exhibitions[1] ? <p>{events.exhibitions[1].title}<br/>{events.exhibitions[1].venue}<br/>{events.exhibitions[1].where}</p> : ""}
-                        {events.exhibitions[2] ? <p>{events.exhibitions[2].title}<br/>{events.exhibitions[2].venue}<br/>{events.exhibitions[2].where}</p> : ""}
+                        {name[0] ? <div><h6>{name[0].title}</h6><hr/><p>{name[0].venue}<br/>{name[0].where}</p></div> : ""}
+                        {name[1] ? <div><h6>{name[1].title}</h6><hr/><p>{name[1].venue}<br/>{name[1].where}</p></div> : ""}
+                        {name[2] ? <div><h6>{name[2].title}</h6><hr/><p>{name[2].venue}<br/>{name[2].where}</p></div> : ""}
 
                       </div>
                     )
