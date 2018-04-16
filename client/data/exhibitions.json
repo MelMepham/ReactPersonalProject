@@ -1,0 +1,92 @@
+[
+  {
+    "year": 2017,
+    "exhibitions": [
+      {
+        "title": "The Existence of Chaos",
+        "venue": "Black Coffee",
+        "where": "Wellington, NZ"
+      }
+    ]
+  },
+  {
+    "year": 2016,
+    "exhibitions": [
+      {
+        "title": "Family Portait",
+        "venue": "Roderick and Gillian Deane Community Art Space ",
+        "where": "Paraparaumu, NZ"
+      }
+    ]
+  },
+  {
+    "year": 2015,
+    "exhibitions": [
+      {
+        "title": "Everything that Lives",
+        "venue": "Thistle Hall",
+        "where": "Wellington, NZ"
+      }
+    ]
+  },
+  {
+    "year": 2014,
+    "exhibitions": [
+      {
+        "title": "Sacred Geometry",
+        "venue": "Kulcha jam",
+        "where": "Byron Bay, Aus"
+      },
+      {
+        "title": "Toy to the World",
+        "venue": "PencilNeck Productions",
+        "where": "Melbourne, Aus"
+      },
+      {
+        "title": "The Chaos of Order",
+        "venue": "Ugees",
+        "where": "Brisbane, Aus"
+      }
+    ]
+  },
+  {
+    "year": 2013,
+    "exhibitions": [
+      {
+        "title": "A Place of Dreams",
+        "venue": "Black Cat",
+        "where": "Melbourne, Aus"
+      },
+      {
+        "title": "Man in a Top Hat",
+        "venue": "Kent St",
+        "where": "Melbourne, Aus"
+      },
+      {
+        "title": "Illustrate",
+        "venue": "Matchbox Gallery",
+        "where": "Wellington, NZ"
+      }
+    ]
+  },
+  {
+    "year": 2012,
+    "exhibitions": [
+      {
+        "title": "A Place of Dreams",
+        "venue": "Frameworks Gallery",
+        "where": "Paraparaumu, NZ"
+      },
+      {
+        "title": "Strike One",
+        "venue": "Matchbox Gallery",
+        "where": "Wellington, NZ"
+      },
+      {
+        "title": "A Place of Dreams",
+        "venue": "Frameworks Gallery",
+        "where": "Paraparaumu, NZ"
+      }
+    ]
+  }
+]

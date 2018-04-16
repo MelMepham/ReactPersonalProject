@@ -1,19 +1,33 @@
 body {
   font-family: 'Josefin Sans', sans-serif !important;
 }
+h1 {
+    vertical-align: text-bottom;
+    color: #5a71ff;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: bold;
+}
 
-h2{
+h2 {
   margin-top: 10px
     vertical-align: text-bottom;
     color: #FFFFFF !important;
     text-align: center;
 }
 
-h4{
+h4 {
   color: #EF26C4 !important;
   text-align: right;
 }
-
+h6 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: bold;
+  font-size: 120%
+}
+hr {
+  margin-top: 0;
+  margin-bottom: .25rem;
+}
 p {
   font-size: 100%
 }
@@ -65,7 +79,7 @@ menu{
   margin: 2px;
 }
 
-.header{
+.header {
   padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 20px;
@@ -73,10 +87,6 @@ menu{
   overflow: hidden;
   background:linear-gradient(to top, rgb(255,255,255,0), rgb(255,255,255,1), rgb(255,255,255));
   z-index: 100;
-}
-
-.background {
-  background-color: white;
 }
 
 .menuPadding {
@@ -95,6 +105,27 @@ menu{
   margin-bottom: 20px;
   max-width: 100%;
   max-height: 90%;
+}
+
+.parentHorizontalExhibition {
+  padding-left: 100px;
+  padding-right: 100px;
+  max-width: 100vw;
+  height: 100vw;
+  max-height: 420px;
+}
+
+.childHorizontalExhibiton {
+  margin-top: 70px;
+  margin-bottom: 20px;
+}
+
+.exhibitionBox {
+  width: 200px;
+  height: auto;
+  padding: 10px;
+  margin-bottom: 500px;
+  margin: 20px;
 }
 
 img {
@@ -126,14 +157,14 @@ img {
 
 /* unvisited link */
 #menuBig a:link {
-    color: #EF26C4;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    background: white;
-    opacity: .85;
-    margin-left: 1px;
-    margin-right: 1px;
-    margin-bottom: -2px;
+  color: #EF26C4;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background: white;
+  opacity: .85;
+  margin-left: 1px;
+  margin-right: 1px;
+  margin-bottom: -2px;
 }
 
 /* visited link */
@@ -176,12 +207,31 @@ img {
   .mobileHide {
     display:none;
   }
+  .parentHorizontalExhibition {
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 100vw;
+    height: 100vw;
+    max-height: 350px;
+  }
+  .header {
+    background-color: white;
+  }
+  .CVButton{
+    margin-left: 0px !important;
+    align-items: left;
+
+  }
 }
 
   @media only screen and (min-width: 576px) {
     .mobileView {
       display:none;
     }
+}
+
+.background {
+  background-color: #D1EEFF;
 }
 
 .slick-list {
@@ -204,15 +254,6 @@ h1 { font-size:30px; }
     50% {transform: rotate(-180deg);}
 }
 
-.aboutMeImg{
-  display:block;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 15px;
-  max-width: 70%;
-  max-height: 70%;
-}
-
 .mandalaCentered {
   width: 100%;
   overflow: hidden;
@@ -233,15 +274,21 @@ h1 { font-size:30px; }
   float: none;
 }
 
-.btn-pink, .btn-pink:hover{
-  background-color: #EF26C4;
+.btn-pink{
+  text-align: center;
+  height: 80px;
+  background-color: #FFA4FF;
   display: block;
   color: white;
   text-decoration: none !important;
+  border-radius: 10px;
+}
+
+.btn-pink:hover{
+  color: #EF26C4;
 }
 
 .littleButton, .littleButton:hover {
-  background-color: #EF26C4;
   display: block;
   color: white;
   text-decoration: none !important;
@@ -251,10 +298,64 @@ h1 { font-size:30px; }
   cursor: pointer;
 }
 
-.bottom {
-  height: 100px
+#myNavbar {
+  padding: 0;
 }
 
-#myNavbar {
-  padding: 0 !important;
+#cf {
+  position:relative;
+  padding: 60px;
+}
+
+#cf img {
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+
+#cf img.top:hover {
+  opacity:0;
+}
+
+.top {
+  margin:auto;
+  background-color: white;
+  width: 280px;
+  height: 280px;
+  opacity: 1;
+  position: absolute;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+}
+
+.bottom {
+  width: 280px;
+  height: 280px;
+  margin:auto;
+  position: absolute;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+}
+
+.imgPadding{
+  margin-top: 120px;
+  margin-left: 40px !important;
+}
+
+.typePadding{
+  margin-top: 30px;
+}
+
+.CVButton {
+  margin-top: 120px;
+  margin-left: 50px;
+}
+
+.btnPadding {
+  margin-top: 5px;
 }
