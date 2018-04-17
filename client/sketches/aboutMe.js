@@ -275,7 +275,6 @@ export default function aboutMe (p) {
       diamond(d1900, 200);
     p.pop()
     p.pop() }
-
   function circlesMiddle() {
     p.push()
     p.fill(117, 255, 189)
@@ -306,9 +305,11 @@ export default function aboutMe (p) {
       p.pop()
 
       p.push()
-      // p.frameCount > 100 ? xLeft = xLeft-.5 : ''
+
       p.frameCount > 100 ? (cLeft > 50 ? cLeft = -50 : cLeft = cLeft+.5) : ""
-      p.frameCount > 100 ? (xLeft < 0 ? xLeft = -100 : xLeft = xLeft-.5) : ""
+      p.frameCount > 100 ? xLeft = xLeft-.5 : ''
+      p.frameCount > 100? ( xLeft < -100 ? xLeft = 1900 : "") : ""
+
       p.ellipse(xLeft + 1800, 100, cLeft, cLeft)
       p.ellipse(xLeft + 1600, 100, cLeft, cLeft)
       p.ellipse(xLeft + 1400, 100, cLeft, cLeft)
