@@ -47,11 +47,11 @@ class AboutMe extends React.Component {
               </div>
             </div>
             <br/><br/>
-            <div className="row">
-              <div className="col-md-6">
+
+                <div className='mandalaCentered'>
                 <P5Wrapper sketch={this.state.aboutMeSkillz}/>
-              </div>
-            </div>
+                </div>
+
             <br/><br/>
           </div>
 
