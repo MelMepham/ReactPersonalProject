@@ -6,6 +6,8 @@ export default function aboutMe (p) {
   var c100, c300, c500, c700, c900, c1100, c1300, c1500, c1700, c1900, c2100
   var d100, d300, d500, d700, d900, d1100, d1300, d1500, d1700, d1900, d2100
 
+  var cRight, cLeft, xRight, xLeft
+
   var counter
   p.setup = () => {
     p.createCanvas(1800, 200);
@@ -17,6 +19,9 @@ export default function aboutMe (p) {
     //trianglesBottomTop()
     c1900= 1900; c1700= 1700; c1500= 1500; c1300= 1300; c1100= 1100; c900= 900; c700= 700; c500= 500; c300= 300; c100= 100
     d1900= 1900; d1700= 1700; d1500= 1500; d1300= 1300; d1100= 1100; d900= 900; d700= 700; d500= 500; d300= 300; d100= 100
+
+    //circleMiddle()
+    cRight = 0; cLeft = 0; xRight = 900; xLeft = 900;
   }
 
   function counterTimer() {
@@ -257,24 +262,78 @@ export default function aboutMe (p) {
       d1500 < -100 ? d1500 = 1900 : d1500 = d1500-1.5;
       diamond(d1500, 200);
     p.pop()
-
     p.push(); //9
       c1700 > 1900 ? c1700 = -100 : c1700 = c1700+1.5;
       diamond(c1700, 0);
       d1700 < -100 ? d1700 = 1900 : d1700 = d1700-1.5;
       diamond(d1700, 200);
     p.pop()
-
     p.push(); //10
       c1900 > 1900 ? c1900 = -100 : c1900 = c1900+1.5;
       diamond(c1900, 0);
       d1900 < -100 ? d1900 = 1900 : d1900 = d1900-1.5;
       diamond(d1900, 200);
     p.pop()
+    p.pop() }
+
+  function circlesMiddle() {
+    p.push()
+    p.fill(117, 255, 189)
+
+      p.push()
+      cRight > 50 ? cRight = -50 : cRight = cRight+.5;
+      p.frameCount > 100 ? xRight = xRight+.5 : ''
+      xRight > 1900 ? xRight = -100 : ""
+      p.ellipse(xRight + 1800, 100, cRight, cRight)
+      p.ellipse(xRight + 1600, 100, cRight, cRight)
+      p.ellipse(xRight + 1400, 100, cRight, cRight)
+      p.ellipse(xRight + 1200, 100, cRight, cRight)
+      p.ellipse(xRight + 1000, 100, cRight, cRight)
+      p.ellipse(xRight + 800, 100, cRight, cRight)
+      p.ellipse(xRight + 600, 100, cRight, cRight)
+      p.ellipse(xRight + 400, 100, cRight, cRight)
+      p.ellipse(xRight + 200, 100, cRight, cRight)
+      p.ellipse(xRight, 100, cRight, cRight)
+      p.ellipse(xRight - 200, 100, cRight, cRight)
+      p.ellipse(xRight - 400, 100, cRight, cRight)
+      p.ellipse(xRight - 600, 100, cRight, cRight)
+      p.ellipse(xRight - 800, 100, cRight, cRight)
+      p.ellipse(xRight - 1000, 100, cRight, cRight)
+      p.ellipse(xRight - 1200, 100, cRight, cRight)
+      p.ellipse(xRight - 1400, 100, cRight, cRight)
+      p.ellipse(xRight - 1600, 100, cRight, cRight)
+      p.ellipse(xRight - 1800, 100, cRight, cRight)
+      p.pop()
+
+      p.push()
+      // p.frameCount > 100 ? xLeft = xLeft-.5 : ''
+      p.frameCount > 100 ? (cLeft > 50 ? cLeft = -50 : cLeft = cLeft+.5) : ""
+      p.frameCount > 100 ? (xLeft < 0 ? xLeft = -100 : xLeft = xLeft-.5) : ""
+      p.ellipse(xLeft + 1800, 100, cLeft, cLeft)
+      p.ellipse(xLeft + 1600, 100, cLeft, cLeft)
+      p.ellipse(xLeft + 1400, 100, cLeft, cLeft)
+      p.ellipse(xLeft + 1200, 100, cLeft, cLeft)
+      p.ellipse(xLeft + 1000, 100, cLeft, cLeft)
+      p.ellipse(xLeft + 800, 100, cLeft, cLeft)
+      p.ellipse(xLeft + 600, 100, cLeft, cLeft)
+      p.ellipse(xLeft + 400, 100, cLeft, cLeft)
+      p.ellipse(xLeft + 200, 100, cLeft, cLeft)
+      p.ellipse(xLeft, 100, cLeft, cLeft)
+      p.ellipse(xLeft - 200, 100, cLeft, cLeft)
+      p.ellipse(xLeft - 400, 100, cLeft, cLeft)
+      p.ellipse(xLeft - 600, 100, cLeft, cLeft)
+      p.ellipse(xLeft - 800, 100, cLeft, cLeft)
+      p.ellipse(xLeft - 1000, 100, cLeft, cLeft)
+      p.ellipse(xLeft - 1200, 100, cLeft, cLeft)
+      p.ellipse(xLeft - 1400, 100, cLeft, cLeft)
+      p.ellipse(xLeft - 1600, 100, cLeft, cLeft)
+      p.ellipse(xLeft - 1800, 100, cLeft, cLeft)
+      p.pop()
+
+
 
     p.pop()
-
-}
+  }
 
   p.draw = () => {
 
@@ -284,6 +343,7 @@ export default function aboutMe (p) {
     backgroundImage()
     trianglesBottomTop()
     trianglesTen()
+    circlesMiddle()
 
   }
 }
