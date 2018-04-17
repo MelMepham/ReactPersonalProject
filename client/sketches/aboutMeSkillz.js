@@ -7,8 +7,10 @@ export default function aboutMeSkillz (p) {
   function preload() {
   }
 
+
   p.setup = () => {
     p.createCanvas(1200, 250);
+
     p.fill('#ED225D');
     p.textFont('Josefin Sans');
     creativityY = 0; communicationY = 0; collaborationY = 0, criticalReflectionY = 0
@@ -119,7 +121,7 @@ export default function aboutMeSkillz (p) {
       p.textSize(20);
       p.fill('#74B7C1')
       p.textAlign(p.RIGHT);
-      p.text("CREATIVITY", 1100, 40);
+      p.text("CRITICAL REFLECTION", 1100, 40);
     p.pop()
     p.fill('#74B7C1')
     p.ellipse(650, 70, 40, 40)
