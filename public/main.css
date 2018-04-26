@@ -31,6 +31,10 @@ hr {
 p {
   font-size: 100%
 }
+.txtCentered {
+  color: #EF26C4;
+  text-align: center;
+}
 
 menu{
   padding: 0 !important;
