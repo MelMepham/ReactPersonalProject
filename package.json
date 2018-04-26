@@ -37,7 +37,7 @@
     "express": "^4.16.2",
     "jsdom": "^11.0.0",
     "node": "^9.5.0",
-    "react": "^15.5.4",
+    "react": "15.5.4",
     "react-dom": "^15.5.4",
     "react-draggable": "^3.0.5",
     "react-hide-div": "^1.0.1",

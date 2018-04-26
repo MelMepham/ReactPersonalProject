@@ -1,6 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import { HashRouter as Router, Route } from 'react-router-dom'
+import {HashRouter as Router, Route, Link} from 'react-router-dom'
 import P5Wrapper from 'react-p5-wrapper'
 
 import aboutMe from '../sketches/aboutMe'
