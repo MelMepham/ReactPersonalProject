@@ -8,7 +8,6 @@ import AboutMe from './components/AboutMe'
 import artPage from './components/ArtPage'
 import Design from './components/Design'
 import WebDev from './components/WebDev'
-import CV from './components/CV'
 
 import {HashRouter as Router, Route} from 'react-router-dom'
 
@@ -22,7 +21,6 @@ const App = (props) => {
       <Route exact path='/design' component={Design} />
       <Route exact path='/webdev' component={WebDev} />
       <Route exact path='/aboutme' component={AboutMe} />
-      <Route exact path='/CV' component={CV} />
       <Route path='/' component={Footer} />
 
       </div>

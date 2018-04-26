@@ -9,6 +9,7 @@ import BubbleCanvas from './bubbles/Canvas.jsx'
 
 var canvas = {
   background: "#eee",
+  opacity: "0.5"
 };
 
 var pattern = {
