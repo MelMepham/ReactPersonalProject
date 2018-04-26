@@ -9,8 +9,6 @@ import BubbleCanvas from './bubbles/Canvas.jsx'
 
 var canvas = {
   background: "#eee",
-  padding: "20px",
-  margin: "20px"
 };
 
 var pattern = {
@@ -23,8 +21,7 @@ class webDev extends React.Component {
     this.state = {
       aboutMe: aboutMe,
     }
-  }
-
+}
 
   render() {
         return (

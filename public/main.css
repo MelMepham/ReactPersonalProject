@@ -271,16 +271,6 @@ h1 { font-size:30px; }
   z-index: -1;
 }
 
-.littleMandalaCentered {
-  width: 100%;
-  overflow: hidden;
-  padding: 10px 0;
-  align-items: center;
-  justify-content: space-around;
-  display:flex:
-  float: none;
-}
-
 .btn-pink{
   text-align: center;
   height: 80px;
