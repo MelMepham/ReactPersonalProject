@@ -47,8 +47,7 @@ class Canvas extends React.Component {
     window.setTimeout(this.soundStops.bind(this), 200)
 
     let newBubble = this.state.libraryOfBubbles.filter(bubble => {
-      if (this.state.libraryOfBubbles.indexOf(bubble)) {
-        console.log(this.state.libraryOfBubbles.indexOf(bubble))
+      if (bubble) {
       } else {
         return bubble
       }
