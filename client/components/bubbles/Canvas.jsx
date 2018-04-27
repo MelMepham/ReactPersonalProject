@@ -14,6 +14,7 @@ class Canvas extends React.Component {
     this.spawnBubble = this.spawnBubble.bind(this)
     this.moveBubbles = this.moveBubbles.bind(this)
     this.spawnBubbleOnInterval = this.spawnBubbleOnInterval.bind(this)
+    this.deleteBubbles = this.deleteBubbles.bind(this)
 
     this.spawnBubbleOnInterval()
     this.moveBubbles()
@@ -39,7 +40,7 @@ class Canvas extends React.Component {
 
 
   spawnBubble(){
-    console.log(window.innerHeight)
+    console.log(this.state.libraryOfBubbles.length)
     let cx = Math.floor(Math.random() * 1500)
     let r = Math.floor(15 + Math.random() * (30 - 10))
     let bubble = {r: r, cx: cx, cy: this.state.height, tx:  Math.floor(Math.random() * 5) - 2.5}
@@ -47,24 +48,33 @@ class Canvas extends React.Component {
   }
 
   moveBubbles(){
-    // console.log("moveBubbles")
     let {libraryOfBubbles} = this.state
-    libraryOfBubbles = libraryOfBubbles.map(bubble => {
-      bubble.cy-= Math.floor(Math.random() * 15)
-      bubble.cx+= bubble.tx
-      if (Math.random() < 0.05) bubble.tx = Math.floor(Math.random() * 5) - 2.5
-      return bubble
+    libraryOfBubbles = libraryOfBubbles.map((bubble, i) => {
+        bubble.cy-= Math.floor(Math.random() * 15)
+        bubble.cx+= bubble.tx
+        return bubble
     })
-    // console.log(libraryOfBubbles)
     this.setState({libraryOfBubbles})
     window.setTimeout(this.moveBubbles, 100)
+    this.deleteBubbles()
   }
 
+
+deleteBubbles() {
+  let newBubble = this.state.libraryOfBubbles.filter(bubble => {
+    if (bubble.cy < 0) {
+    } else {
+      return bubble
+    }
+  })
+  this.setState({libraryOfBubbles: newBubble})
+}
+
   render() {
+    console.log("newBubble", this.state.libraryOfBubbles)
     return (
       <div>
-        <h2 class="header"> Score:{this.state.score}</h2>
-        <div class="buble">
+        <div>
         <svg width={this.state.width} height={this.state.height}>
           {
             this.state.libraryOfBubbles.map(bubble=>{

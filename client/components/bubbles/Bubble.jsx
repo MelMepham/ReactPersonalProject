@@ -1,5 +1,6 @@
 import React from 'react'
 
+
   class Bubble extends React.Component {
     constructor(props) {
       super(props)
@@ -13,25 +14,24 @@ import React from 'react'
       }
       this.click = this.click.bind(this)
     }
-
     componentWillReceiveProps(nextProps) {
-      console.log("receive props")
       const {r, cx, cy} = nextProps
       this.setState({r, cx, cy})
     }
 
     click() {
-      console.log("Hello")
+      this.setState({opacity: 0, bubbleStroke: 0})
     }
-
+    
     render() {
-      console.log("child");
+
       return (
-        <circle r={this.state.r} cx={this.state.cx} cy={this.state.cy} fill="#FF53FF" fillOpacity={this.state.opacity} strokeOpacity={this.state.bubbleStroke} stroke={this.state.colour}/>
+        <circle onClick={this.click} r={this.props.r} cx={this.props.cx} cy={this.props.cy} fill={this.state.colour} fillOpacity={this.state.opacity} strokeOpacity={this.state.bubbleStroke} stroke={this.state.colour} />
       )
     }
   }
 
-  module.exports = {
-    Bubble: Bubble
-  }
+
+module.exports= {
+  Bubble: Bubble,
+}
