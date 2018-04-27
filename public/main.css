@@ -31,6 +31,10 @@ hr {
 p {
   font-size: 100%
 }
+.txtCentered {
+  color: #EF26C4;
+  text-align: center;
+}
 
 menu{
   padding: 0 !important;
@@ -264,16 +268,7 @@ h1 { font-size:30px; }
   justify-content: space-around;
   display: flex;
   float: none;
-}
-
-.littleMandalaCentered {
-  width: 100%;
-  overflow: hidden;
-  padding: 10px 0;
-  align-items: center;
-  justify-content: space-around;
-  display:flex:
-  float: none;
+  z-index: -1;
 }
 
 .btn-pink{
@@ -361,4 +356,10 @@ h1 { font-size:30px; }
 .p5Sketch{
   height: 100%;
   width: 100%;
+}
+
+.canvasAbsoloute {
+  position: 'absolute' !important;
+  z-index: 1 !important
+
 }

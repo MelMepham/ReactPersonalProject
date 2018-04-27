@@ -1,85 +1,43 @@
-import React from 'react'
-import MyHorizontalScroll from './MyHorizontalScroll'
-import { Link, DirectLink, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
-import thisDevInfo from '../data/webInfo.js'
-import Swipe, { SwipeItem } from 'swipejs/react';
+  import React from 'react'
+  import {HashRouter as Router, Route, Link} from 'react-router-dom'
+  import P5Wrapper from 'react-p5-wrapper'
+
+  import aboutMe from '../sketches/aboutMe'
+  import BubbleCanvas from './bubbles/Canvas.jsx'
+  import WebDevBody from './WebDevBody.jsx'
 
 
-class webDev extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      devInfo: [],
-    }
 
-    this.showDev = this.showDev.bind(this)
-    this.onMouseOver = this.onMouseOver.bind(this)
-    this.onMouseOut = this.onMouseOut.bind(this)
-  }
-  componentDidMount() {
-      this.setState({devInfo:thisDevInfo})
+  var pattern = {
+    position: "fixed",
   }
 
-  hideAll(artToHide) {
-      var mappedDev = this.state.devInfo.map((dev) => {
-        if (artToHide.show == true) {
-        } else {
-         dev.show = false; return dev}
-         this.setState({dev: mappedDev})
-      })
-  }
-
-  onMouseOver(devImg) {
-      const {devInfo} = this.state
-      var index = devInfo.findIndex(Item => Item.img == devImg.img)
-      devInfo[index].img = devInfo[index].imgMouseOver
-      this.setState({devInfo})
-  }
-
-  onMouseOut(img) {
-      const {devInfo} = this.state
-      var index = devInfo.findIndex(Item => Item.imgMouseOver == img.imgMouseOver)
-      devInfo[index].img = devInfo[index].imgMouseOut
-      this.setState({devInfo})
-  }
-
-  showDev(devToShow) {
-      const {devInfo} = this.state
-      var index = devInfo.findIndex(devItem => devItem.title === devToShow.title)
-      devInfo[index].show = !devInfo[index].show
-      this.setState({devInfo})
+  class webDev extends React.Component {
+    constructor(props) {
+      super(props)
+      this.state = {
+        aboutMe: aboutMe,
+      }
   }
 
   render() {
-    window.mySwipe = new Swipe(document.getElementById('slider'));
         return (
-          <div className="parentHorizontal">
-            <br />
-            <MyHorizontalScroll>
-              {this.state.devInfo && this.state.devInfo.map(dev => {
-                return ([
-                  <img onClick={ (e) => {this.hideAll(dev); this.showDev(dev)} }
-                    onMouseOver={(e) => {this.onMouseOver(dev)}}
-                    onMouseOut={(e) => {this.onMouseOut(dev)}}
-                    className='cursor img-responsive childHorizontal'
-                    src={dev.img}/>,
-                  <div>{dev.show == true &&
-                  <div className='img-responsive box'>
-                    <h1>{dev.title}</h1>
-                      <a href={dev.linkToProject} target="_blank" className="btn btn-pink btn-sm active" role="button" aria-pressed="true">
-                        Go to Project Site
-                      </a> <br />
-                    <p>{dev.about}</p>
-                  </div>}
-                </div>
-                ])
-              }
-              )}
-            </MyHorizontalScroll>
-          </div>
-        )}
+          <Router>
+            <div>
+            <br/> <br/> <br/> <br/>
+              <div style={pattern} className='mandalaCentered'>
+                <P5Wrapper sketch={this.state.aboutMe}/>
+              </div>
+              <div style={pattern} className='mandalaCentered'>
+                <WebDevBody/>
+              </div>
+              <div>
+                <BubbleCanvas/>
+              </div>
+            </div>
+          </Router>
+        )
+      }
   }
-
-
 
 export default webDev

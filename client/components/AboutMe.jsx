@@ -34,6 +34,7 @@ class AboutMe extends React.Component {
             <div className="row">
               <div className="col-md-3 imgPadding">
                 <div id="cf">
+                  <br/><br/><br/><br/>
                   <img className="mx-auto d-block bottom" src="/images/me.jpg" alt="logoImage"/>
                   <img className="mx-auto d-block top" src="/images/logo.svg" alt="logoImage"/>
                 </div>
