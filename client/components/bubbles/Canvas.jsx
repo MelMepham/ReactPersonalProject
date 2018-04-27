@@ -1,6 +1,6 @@
 import React from 'react'
 var Bubble = require('./Bubble').Bubble
-var requestAnimationFrame = window.requestAnimationFrame
+import Sound from 'react-sound';
 
 
 class Canvas extends React.Component {
@@ -9,12 +9,16 @@ class Canvas extends React.Component {
     this.state = {
       libraryOfBubbles: [],
       width: window.innerWidth,
-      height: window.innerHeight - 200
+      height: window.innerHeight - 200,
+      playStatus: Sound.status.STOPPED,
+      colour: "#FF53FF"
     }
     this.spawnBubble = this.spawnBubble.bind(this)
     this.moveBubbles = this.moveBubbles.bind(this)
     this.spawnBubbleOnInterval = this.spawnBubbleOnInterval.bind(this)
     this.deleteBubbles = this.deleteBubbles.bind(this)
+    this.clickButton = this.clickButton.bind(this)
+    this.deleteBubbleOnclick = this.deleteBubbleOnclick.bind(this)
 
     this.spawnBubbleOnInterval()
     this.moveBubbles()
@@ -38,13 +42,24 @@ class Canvas extends React.Component {
     window.setInterval(this.spawnBubble, 700)
   }
 
+  clickButton() {
+    this.setState({playStatus: Sound.status.PLAYING})
+    window.setTimeout(this.soundStops.bind(this), 200)
+  }
+  soundStops() {
+    this.setState({playStatus: Sound.status.STOPPED})
+  }
+
+
+  deleteBubbleOnclick() {
+  }
 
   spawnBubble(){
-    console.log(this.state.libraryOfBubbles.length)
     let cx = Math.floor(Math.random() * 1500)
     let r = Math.floor(15 + Math.random() * (30 - 10))
     let bubble = {r: r, cx: cx, cy: this.state.height, tx:  Math.floor(Math.random() * 5) - 2.5}
     this.state.libraryOfBubbles.push(bubble)
+
   }
 
   moveBubbles(){
@@ -70,19 +85,27 @@ deleteBubbles() {
   this.setState({libraryOfBubbles: newBubble})
 }
 
+
   render() {
-    console.log("newBubble", this.state.libraryOfBubbles)
+    //Sound.status.PLAYING
     return (
       <div>
         <div>
         <svg width={this.state.width} height={this.state.height}>
           {
             this.state.libraryOfBubbles.map(bubble=>{
-              return <Bubble r={bubble.r} cx={bubble.cx} cy={bubble.cy} />
+              return <Bubble
+                clickButton={this.clickButton}
+                r={bubble.r}
+                cx={bubble.cx}
+                cy={bubble.cy}
+                colour={this.state.colour}/>
             })
           }
         </svg>
         </div>
+        <Sound url="sound/bubblePop.mp3" playStatus={this.state.playStatus}/>
+
       </div>
     )
   }

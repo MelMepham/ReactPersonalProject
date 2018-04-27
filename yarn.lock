@@ -4522,6 +4522,13 @@ react-scroll@^1.7.6:
     lodash.throttle "^4.1.1"
     prop-types "^15.5.8"
 
+react-sound@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/react-sound/-/react-sound-1.1.0.tgz#d3647c2cbe8adabc3c6661a804d810f23e81917a"
+  dependencies:
+    prop-types "^15.5.7"
+    soundmanager2 "^2.97.20170602"
+
 react-test-renderer@15:
   version "15.6.2"
   resolved "https://registry.yarnpkg.com/react-test-renderer/-/react-test-renderer-15.6.2.tgz#d0333434fc2c438092696ca770da5ed48037efa8"
@@ -4967,6 +4974,10 @@ sntp@2.x.x:
   resolved "https://registry.yarnpkg.com/sntp/-/sntp-2.1.0.tgz#2c6cec14fedc2222739caf9b5c3d85d1cc5a2cc8"
   dependencies:
     hoek "4.x.x"
+
+soundmanager2@^2.97.20170602:
+  version "2.97.20170602"
+  resolved "https://registry.yarnpkg.com/soundmanager2/-/soundmanager2-2.97.20170602.tgz#fe3bc731bfc4d54c1364e71980263e6816981879"
 
 source-list-map@^2.0.0:
   version "2.0.0"

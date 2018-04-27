@@ -10,23 +10,30 @@ import React from 'react'
         cy: props.cy,
         opacity: 0.8,
         bubbleStroke: 1,
-        colour: "#FF53FF"
+        colour: props.colour
       }
       this.click = this.click.bind(this)
     }
     componentWillReceiveProps(nextProps) {
-      const {r, cx, cy} = nextProps
-      this.setState({r, cx, cy})
+      const {r, cx, cy, colour} = nextProps
+      this.setState({r, cx, cy, colour})
     }
 
     click() {
-      this.setState({opacity: 0, bubbleStroke: 0})
+      this.props.clickButton()
     }
-    
-    render() {
 
+    render() {
       return (
-        <circle onClick={this.click} r={this.props.r} cx={this.props.cx} cy={this.props.cy} fill={this.state.colour} fillOpacity={this.state.opacity} strokeOpacity={this.state.bubbleStroke} stroke={this.state.colour} />
+          <circle
+            onClick={this.click}
+            r={this.props.r}
+            cx={this.props.cx}
+            cy={this.props.cy}
+            fill={this.props.colour}
+            fillOpacity={this.state.opacity}
+            strokeOpacity={this.state.bubbleStroke}
+            stroke={this.props.colour} />
       )
     }
   }
