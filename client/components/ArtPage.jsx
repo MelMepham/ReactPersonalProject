@@ -1,6 +1,5 @@
 import React from 'react'
 import MyHorizontalScroll from './MyHorizontalScroll'
-import { Link, DirectLink, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 import thisArt from '../data/artInfo.js'
 
 
