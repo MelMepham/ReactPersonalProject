@@ -18,11 +18,14 @@ If you have any feedback to give me PLEASE DO! I would love to hear your thought
 ## Features
 
 What can you do? - have a look around! Check it out make sure you
+
 On the Design and Art pages
 * Click on the images to get some more info
+
 On the About Me Page
 * Hover over my logo
 * Hover over the dots next to the skills squares
+
 On the Wed Dev Page
 * Click on a bubble and see what happens..
 
