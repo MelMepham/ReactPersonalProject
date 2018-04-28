@@ -10,9 +10,9 @@ h1 {
 
 h2 {
   margin-top: 10px
-    vertical-align: text-bottom;
-    color: #FFFFFF !important;
-    text-align: center;
+  vertical-align: text-bottom;
+  color: #FFFFFF !important;
+  text-align: center;
 }
 
 h4 {
@@ -24,10 +24,12 @@ h6 {
   font-weight: bold;
   font-size: 120%
 }
+
 hr {
   margin-top: 0;
   margin-bottom: .25rem;
 }
+
 p {
   font-size: 100%
 }
@@ -42,30 +44,11 @@ menu{
   text-align: center;
 }
 
-.aboutMeData {
-  text-align: center !important;
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
-
-.subText {
-  text-align: center !important;
-  margin-top: 15px;
-  font-size: 25px;
-}
-
-.watchThisSpace {
-  text-align: center !important;
-  padding: 40px !important;
-  background-color: #EF26C4;
-  color: white;
-}
-
 .menuButton {
   background-color: #EF26C4
 }
 
-.icons{
+.icons {
   padding-left: 7px;
   padding-right: 7px;
   padding-top: 15px;
@@ -77,10 +60,6 @@ menu{
 .bottomLine {
   border-bottom: 3px solid #EF26C4;
   border-bottom-width: 80%
-}
-
-.margin {
-  margin: 2px;
 }
 
 .header {
@@ -137,9 +116,7 @@ img {
   image-rendering: crisp-edges;
   image-rendering: pixelated;
 }
-.inline{
-  display: inline-block;
-}
+
 .box {
   padding-top: 45px;
   width: 400px;
@@ -173,7 +150,7 @@ img {
 
 /* visited link */
 #menuBig a:visited {
-    color: #EF26C4;
+  color: #EF26C4;
 
 
 }
@@ -190,14 +167,14 @@ img {
 
 /* unvisited link */
 #mobileView a:link {
-    color: #EF26C4;
-    background-color: white !important;
-    padding: 0 !important;
+  color: #EF26C4;
+  background-color: white !important;
+  padding: 0 !important;
 }
 
 /* visited link */
 #mobileView a:visited {
-    color: #EF26C4;
+  color: #EF26C4;
 }
 
 /* mouse over link */
@@ -221,10 +198,7 @@ img {
   .header {
     background-color: white;
   }
-  .CVButton{
-    margin-left: 0px !important;
-    align-items: left;
-  }
+
   .p5SketchAboutMe {
     display: none !important;
   }
@@ -246,18 +220,10 @@ img {
 }
 
 @media only screen and (max-width: 550px) {
-body { font-size:70%; }
-h1 { font-size:30px; }
-.box { width: 200px; }
+  body { font-size:70%; }
+  h1 { font-size:30px; }
+  .box { width: 200px; }
 
-}
-
-.hvr-shrink:hover, .hvr-shrink:focus, .hvr-shrink:active {
-  animation: mymove 5s infinite;
-}
-
-@keyframes mymove {
-    50% {transform: rotate(-180deg);}
 }
 
 .mandalaCentered {
@@ -269,26 +235,6 @@ h1 { font-size:30px; }
   display: flex;
   float: none;
   z-index: -1;
-}
-
-.btn-pink{
-  text-align: center;
-  height: 80px;
-  background-color: #FFA4FF;
-  display: block;
-  color: white;
-  text-decoration: none !important;
-  border-radius: 10px;
-}
-
-.btn-pink:hover{
-  color: #EF26C4;
-}
-
-.littleButton, .littleButton:hover {
-  display: block;
-  color: white;
-  text-decoration: none !important;
 }
 
 .cursor {
@@ -344,22 +290,7 @@ h1 { font-size:30px; }
   margin-top: 30px;
 }
 
-.CVButton {
-  margin-top: 120px;
-  margin-left: 50px;
-}
-
-.btnPadding {
-  margin-top: 5px;
-}
-
 .p5Sketch{
   height: 100%;
   width: 100%;
-}
-
-.canvasAbsoloute {
-  position: 'absolute' !important;
-  z-index: 1 !important
-
 }

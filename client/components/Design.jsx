@@ -1,7 +1,7 @@
 import React from 'react'
 import MyHorizontalScroll from './MyHorizontalScroll'
-import { Link, DirectLink, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
-import thisDesign from '../data/designInfo.js'
+
+import design from '../data/design.json'
 
 class Design extends React.Component {
   constructor(props) {
@@ -14,7 +14,7 @@ class Design extends React.Component {
     this.onMouseOut = this.onMouseOut.bind(this)
   }
   componentDidMount() {
-     this.setState({design:thisDesign})
+     this.setState({design:design})
   }
 
   onMouseOver(img) {

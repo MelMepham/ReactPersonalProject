@@ -1,7 +1,6 @@
 import React from 'react'
 import MyHorizontalScroll from './MyHorizontalScroll'
-import { Link, DirectLink, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
-import thisArt from '../data/artInfo.js'
+import thisArt from '../data/artInfo.json'
 
 
 
@@ -57,6 +56,7 @@ class artPage extends React.Component {
   }
 
   render() {
+    console.log(this.state.art)
         return (
           <div className="parentHorizontal">
             <br />

@@ -72,18 +72,16 @@ class Canvas extends React.Component {
   }
 
   moveBubbles(){
-    let {libraryOfBubbles} = this.state
-    libraryOfBubbles = libraryOfBubbles.map((bubble, i) => {
+    var newBubbles = this.state.libraryOfBubbles.map((bubble, i) => {
         bubble.cy-= Math.floor(Math.random() * 15)
         bubble.cx+= bubble.tx
         return bubble
     })
-    this.setState({libraryOfBubbles})
-    window.setTimeout(this.moveBubbles, 100)
+    window.setTimeout(this.moveBubbles, 100) //This is the line the error is comming from
     this.deleteBubbles()
   }
 
-
+//This is making the errors I do believe...
 deleteBubbles() {
   let newBubble = this.state.libraryOfBubbles.filter(bubble => {
     if (bubble.cy < 0) {
@@ -96,7 +94,6 @@ deleteBubbles() {
 
 
   render() {
-    //Sound.status.PLAYING
     return (
       <div>
         <div>
