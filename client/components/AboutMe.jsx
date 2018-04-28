@@ -4,7 +4,6 @@ import { HashRouter as Router, Route } from 'react-router-dom'
 import P5Wrapper from 'react-p5-wrapper'
 import { Link } from 'react-router-dom'
 
-import data from '../data/personalData.js'
 import MyHorizontalScroll from './MyHorizontalScroll'
 import exhibitions from '../data/exhibitions.json'
 import aboutMe from '../sketches/aboutMe'
