@@ -18,8 +18,13 @@ If you have any feedback to give me PLEASE DO! I would love to hear your thought
 ## Features
 
 What can you do? - have a look around! Check it out make sure you
-* Click on the Mandala
-* Click on the images in Art and Design to get some more info
+On the Design and Art pages
+* Click on the images to get some more info
+On the About Me Page
+* Hover over my logo
+* Hover over the dots next to the skills squares
+On the Wed Dev Page
+* Click on a bubble and see what happens..
 
 ## Testing
 
@@ -38,8 +43,7 @@ Make sure you have watchman installed on your computer by writing either one of 
     m.a.mepham@gmail.com directly instead of using issue tracker. We value your effort
     to improve the security and privacy of this project!
 - Related projects:
-  - Horizontal Scroll I used: https://github.com/hew/react-scroll-horizontal
-  - Old but working website made through squarespace: aplaceofdreams.co.nz
+  - Horizontal Scroll I used: https://github.com/hew/react-scroll-horizontal (Through this project I also contributed to that code)
 
 
 ## Licensing
