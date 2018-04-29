@@ -1,6 +1,7 @@
 import React from 'react'
 var Bubble = require('./Bubble').Bubble
 import Sound from 'react-sound';
+import createId from 'incremental-id'
 
 
 class Canvas extends React.Component {
@@ -16,9 +17,9 @@ class Canvas extends React.Component {
     this.spawnBubble = this.spawnBubble.bind(this)
     this.moveBubbles = this.moveBubbles.bind(this)
     this.spawnBubbleOnInterval = this.spawnBubbleOnInterval.bind(this)
-    this.deleteBubbles = this.deleteBubbles.bind(this)
+    this.deleteBubblesOffScreen = this.deleteBubblesOffScreen.bind(this)
     this.clickButton = this.clickButton.bind(this)
-    this.deleteBubbleOnclick = this.deleteBubbleOnclick.bind(this)
+    this.deleteBubbleById = this.deleteBubbleById.bind(this)
 
     this.spawnBubbleOnInterval()
     this.moveBubbles()
@@ -42,17 +43,10 @@ class Canvas extends React.Component {
     window.setInterval(this.spawnBubble, 700)
   }
 
-  clickButton() {
+  clickButton(bubbleId) {
     this.setState({playStatus: Sound.status.PLAYING})
     window.setTimeout(this.soundStops.bind(this), 200)
-
-    let newBubble = this.state.libraryOfBubbles.filter(bubble => {
-      if (bubble) {
-      } else {
-        return bubble
-      }
-    })
-    this.setState({libraryOfBubbles: newBubble})
+    this.deleteBubbleById(bubbleId)
   }
 
   soundStops() {
@@ -60,13 +54,20 @@ class Canvas extends React.Component {
   }
 
 
-  deleteBubbleOnclick() {
+  deleteBubbleById(id) {
+    let { libraryOfBubbles } = this.state
+    let nextLibraryOfBubbles = libraryOfBubbles.filter(bubble => {
+      return bubble.id !== id
+    })
+    this.setState({ libraryOfBubbles: nextLibraryOfBubbles })
   }
 
   spawnBubble(){
+    let id = createId()
+    console.log('id', id)
     let cx = Math.floor(Math.random() * 1500)
     let r = Math.floor(15 + Math.random() * (30 - 10))
-    let bubble = {r: r, cx: cx, cy: this.state.height, tx:  Math.floor(Math.random() * 5) - 2.5}
+    let bubble = { id, r, cx, cy: this.state.height, tx:  Math.floor(Math.random() * 5) - 2.5}
     this.state.libraryOfBubbles.push(bubble)
 
   }
@@ -78,19 +79,17 @@ class Canvas extends React.Component {
         return bubble
     })
     window.setTimeout(this.moveBubbles, 100) //This is the line the error is comming from
-    this.deleteBubbles()
+    this.deleteBubblesOffScreen()
   }
 
-//This is making the errors I do believe...
-deleteBubbles() {
-  let newBubble = this.state.libraryOfBubbles.filter(bubble => {
-    if (bubble.cy < 0) {
-    } else {
-      return bubble
-    }
-  })
-  this.setState({libraryOfBubbles: newBubble})
-}
+  //This is making the errors I do believe...
+  deleteBubblesOffScreen() {
+    let { libraryOfBubbles } = this.state
+    let nextLibraryOfBubbles = libraryOfBubbles.filter(bubble => {
+      return bubble.cy >= 0
+    })
+    this.setState({ libraryOfBubbles: nextLibraryOfBubbles })
+  }
 
 
   render() {
@@ -101,6 +100,8 @@ deleteBubbles() {
           {
             this.state.libraryOfBubbles.map(bubble=>{
               return <Bubble
+                key={bubble.id}
+                id={bubble.id}
                 clickButton={this.clickButton}
                 r={bubble.r}
                 cx={bubble.cx}

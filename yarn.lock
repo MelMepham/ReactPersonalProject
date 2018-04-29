@@ -2586,6 +2586,10 @@ imurmurhash@^0.1.4:
   version "0.1.4"
   resolved "https://registry.yarnpkg.com/imurmurhash/-/imurmurhash-0.1.4.tgz#9218b9b2b928a238b13dc4fb6b6d576f231453ea"
 
+incremental-id@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/incremental-id/-/incremental-id-1.0.0.tgz#00ede71f49177f9c820d0f80ff6e92cac4f584c9"
+
 indexof@0.0.1:
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/indexof/-/indexof-0.0.1.tgz#82dc336d232b9062179d05ab3293a66059fd435d"

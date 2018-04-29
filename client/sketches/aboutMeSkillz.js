@@ -19,7 +19,7 @@ export default function aboutMeSkillz (p) {
   function criticalReflection() {
     p.noStroke()
     p.fill("#74B7C1")
-    criticalReflectionY > 380 ? criticalReflectionY == 380 : criticalReflectionY = criticalReflectionY + 4
+    criticalReflectionY > 380 ? criticalReflectionY == 380 : criticalReflectionY = criticalReflectionY + 8
     p.rect(700, 50, criticalReflectionY, 41, 10);
     p.push()
     p.fill(255)
@@ -32,7 +32,7 @@ export default function aboutMeSkillz (p) {
   function collaboration() {
     p.noStroke()
     p.fill("#167C55")
-    collaborationY > 380 ? collaborationY == 380 : collaborationY = collaborationY + 4
+    collaborationY > 380 ? collaborationY == 380 : collaborationY = collaborationY + 8
     p.rect(700, 130, collaborationY, 41, 10);
     p.push()
     p.fill(255)
@@ -45,7 +45,7 @@ export default function aboutMeSkillz (p) {
   function creativity() {
     p.noStroke()
     p.fill("#31E384")
-    creativityY > 420 ? creativityY == 420 : creativityY = creativityY + 4
+    creativityY > 420 ? creativityY == 420 : creativityY = creativityY + 8
     p.rect(175, 50, creativityY, 41, 10);
     p.push()
     p.fill(255)
@@ -58,7 +58,7 @@ export default function aboutMeSkillz (p) {
   function communication() {
     p.noStroke()
     p.fill("#5EEDCC")
-    communicationY > 380 ? communicationY == 380 : communicationY = communicationY + 4
+    communicationY > 380 ? communicationY == 380 : communicationY = communicationY + 8
 
     p.rect(175, 130, communicationY, 40, 10);
 
