@@ -58,7 +58,7 @@
 
                       <div className="col-md-2">
                         <div>
-                          <h5 className="webDevTools hidden">HIDDEN</h5>
+                          <h5 className="hidden">HIDDEN</h5>
                           <h5 className="webDevTools">CSS</h5>
                           <h5 className="webDevTools">HTML</h5>
                           <h5 className="webDevTools">JEST TESTING</h5>
@@ -73,7 +73,7 @@
                       <div className="col-md-8 typePadding">
                         <h1> LOOK! I MADE THIS </h1>
                         <p className="pAboutMe">
-                          So I thought about giving you some static images of what I have done, but how boring is that. Check out my site, press around and see what you find. If you want to talk more send me a message, if you want to see more code check out my github, and if you want to follow me check out my instagram and twitter.
+                          So I thought about giving you some static images of what I have done, but how boring is that. Check out my site, press around and see what you find. If you want to talk more send me a message, if you want to see more code check out my github, and if you want to follow me check out my instagram and twitter. You can find all of these links in the top right corner. 
                         </p>
                       </div>
                     </div>
