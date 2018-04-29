@@ -10,25 +10,9 @@ class Design extends React.Component {
       design: [],
     }
     this.showDesign = this.showDesign.bind(this)
-    this.onMouseOver = this.onMouseOver.bind(this)
-    this.onMouseOut = this.onMouseOut.bind(this)
   }
   componentDidMount() {
      this.setState({design:design})
-  }
-
-  onMouseOver(img) {
-      const {design} = this.state
-      var index = design.findIndex(item => item.img == img.img)
-      design[index].img = design[index].imgMouseOver
-      this.setState({design})
-  }
-
-  onMouseOut(img) {
-      const {design} = this.state
-      var index = design.findIndex(item => item.imgMouseOver == img.imgMouseOver)
-      design[index].img = design[index].imgMouseOut
-      this.setState({design})
   }
 
   hideAll(designToHide) {
@@ -55,8 +39,6 @@ class Design extends React.Component {
               {this.state.design && this.state.design.map(design => {
                 return ([
                   <img onClick={(e) => {this.hideAll(design); this.showDesign(design)}}
-                    onMouseOver={(e) => {this.onMouseOver(design)}}
-                    onMouseOut={(e) => {this.onMouseOut(design)}}
                     className='cursor design img-responsive childHorizontal'
                     src={design.img}/>,
                   <div>{design.show == true && <div className='box'><h1>{design.title}</h1><p>{design.about}</p></div>}</div>
