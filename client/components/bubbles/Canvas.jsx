@@ -14,7 +14,8 @@ class Canvas extends React.Component {
       width: window.innerWidth,
       height: window.innerHeight,
       playStatus: Sound.status.STOPPED,
-      colour: "#FF53FF"
+      colour: "#FF53FF",
+      totalScore: 1
     }
     this.spawnBubble = this.spawnBubble.bind(this)
     this.moveBubbles = this.moveBubbles.bind(this)
@@ -24,6 +25,7 @@ class Canvas extends React.Component {
     this.deleteBubbleById = this.deleteBubbleById.bind(this)
     this.setBubbleIntervals = this.setBubbleIntervals.bind(this)
     this.clearBubbleIntervals = this.clearBubbleIntervals.bind(this)
+    this.sendingScore = this.sendingScore.bind(this)
   }
 
   componentDidMount() {
@@ -58,6 +60,9 @@ class Canvas extends React.Component {
     this.setState({playStatus: Sound.status.PLAYING})
     window.setTimeout(this.soundStops.bind(this), 200)
     this.deleteBubbleById(bubbleId)
+    const {totalScore} = this.state
+    this.setState({totalScore: totalScore + 1})
+    this.sendingScore()
   }
 
   soundStops() {
@@ -90,7 +95,6 @@ class Canvas extends React.Component {
     this.deleteBubblesOffScreen()
   }
 
-  //This is making the errors I do believe...
   deleteBubblesOffScreen() {
     let { libraryOfBubbles } = this.state
     let nextLibraryOfBubbles = libraryOfBubbles.filter(bubble => {
@@ -99,28 +103,32 @@ class Canvas extends React.Component {
     this.setState({ libraryOfBubbles: nextLibraryOfBubbles })
   }
 
+  sendingScore(){
+     this.props.sendData(this.state.totalScore);
+   }
 
   render() {
     return (
       <div>
         <div>
-        <svg width={this.state.width} height={this.state.height}>
-          {
-            this.state.libraryOfBubbles.map(bubble=>{
-              return <Bubble
-                key={bubble.id}
-                id={bubble.id}
-                clickButton={this.clickButton}
-                r={bubble.r}
-                cx={bubble.cx}
-                cy={bubble.cy}
-                colour={this.state.colour}/>
-            })
-          }
-        </svg>
+          <svg width={this.state.width} height={this.state.height}>
+            {
+              this.state.libraryOfBubbles.map(bubble=>{
+                return <Bubble
+                  key={bubble.id}
+                  id={bubble.id}
+                  clickButton={this.clickButton}
+                  r={bubble.r}
+                  cx={bubble.cx}
+                  cy={bubble.cy}
+                  colour={this.state.colour}
+                  totalScore={this.state.totalScore}
+                  />
+              })
+            }
+          </svg>
         </div>
         <Sound url="sound/bubblePop.mp3" playStatus={this.state.playStatus}/>
-
       </div>
     )
   }

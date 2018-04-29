@@ -19,6 +19,7 @@ h4 {
   color: #EF26C4 !important;
   text-align: right;
 }
+
 h6 {
   font-family: 'Josefin Sans', sans-serif;
   font-weight: bold;
@@ -202,6 +203,25 @@ img {
   .p5SketchAboutMe {
     display: none !important;
   }
+
+  .hidden {
+    display:none !important;
+  }
+
+  .totalScore {
+    margin-top: 0px !important;
+  }
+
+  .webDevTools {
+    margin-top: 0px !important;
+  }
+
+  .bottom, .top {
+    right: 25% !important;
+    left: 25% !important;
+    margin-bottom: -20px !important;
+  }
+
 }
 
   @media only screen and (min-width: 576px) {
@@ -302,4 +322,37 @@ img {
   display: flex;
   float: none;
   z-index: -1;
+}
+
+.webDevTools {
+  width: 100%;
+  margin-top: 33px;
+  text-align: center;
+  background-color: #A8FFFF;
+  color: #1D55FF;
+  vertical-align: center;
+  font-size: 20px;
+  padding: 5px;
+}
+
+.totalScore {
+  width: 100%;
+  margin-top: 33px;
+  text-align: center;
+  background-color: #1D55FF;
+  color: #A8FFFF;
+  vertical-align: center;
+  font-size: 20px;
+  padding: 5px;
+}
+
+.hidden {
+  width: 100%;
+  margin-top: 33px;
+  text-align: center;
+  background-color: white;
+  color: white;
+  vertical-align: center;
+  font-size: 20px;
+  padding: 5px;
 }
