@@ -8,8 +8,14 @@
 
 
 
-  var pattern = {
+  var fixedBubbles = {
     position: "fixed",
+    width: "100%",
+    height: "100%",
+    left: 0,
+    right: 0,
+    top: 0,
+    bottom: 0,
   }
 
   class webDev extends React.Component {
@@ -25,16 +31,16 @@
           <Router>
             <div>
             <br/> <br/> <br/> <br/>
-              <div style={pattern} className='mandalaCentered'>
+              <div className='mandalaCentered'>
                 <P5Wrapper sketch={this.state.aboutMe}/>
               </div>
-              <div style={pattern} className='mandalaCentered'>
+              <div className='mandalaCentered'>
                 <WebDevBody/>
-              </div>
-              <div>
-                <BubbleCanvas/>
-              </div>
             </div>
+            <div style={fixedBubbles} >
+              <BubbleCanvas/>
+            </div>
+          </div>
           </Router>
         )
       }

@@ -4,8 +4,7 @@ import React from 'react'
 class WebDevBody extends React.Component {
   constructor(props) {
     super(props)
-    this.state = {
-    }
+
   }
 
     render() {

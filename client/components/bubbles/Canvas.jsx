@@ -8,39 +8,50 @@ class Canvas extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
+      spawnIntervalId: null,
+      moveIntervalId: null,
       libraryOfBubbles: [],
       width: window.innerWidth,
-      height: window.innerHeight - 200,
+      height: window.innerHeight,
       playStatus: Sound.status.STOPPED,
       colour: "#FF53FF"
     }
     this.spawnBubble = this.spawnBubble.bind(this)
     this.moveBubbles = this.moveBubbles.bind(this)
-    this.spawnBubbleOnInterval = this.spawnBubbleOnInterval.bind(this)
+    this.updateDimensions = this.updateDimensions.bind(this)
     this.deleteBubblesOffScreen = this.deleteBubblesOffScreen.bind(this)
     this.clickButton = this.clickButton.bind(this)
     this.deleteBubbleById = this.deleteBubbleById.bind(this)
-
-    this.spawnBubbleOnInterval()
-    this.moveBubbles()
+    this.setBubbleIntervals = this.setBubbleIntervals.bind(this)
+    this.clearBubbleIntervals = this.clearBubbleIntervals.bind(this)
   }
 
   componentDidMount() {
     this.updateDimensions();
-    window.addEventListener("resize", this.updateDimensions.bind(this))
+    window.addEventListener("resize", this.updateDimensions)
+    this.setBubbleIntervals()
   }
 
   componentWillUnmount() {
-    this.updateDimensions();
-    window.removeEventListener("resize", this.updateDimensions.bind(this))
+    window.removeEventListener("resize", this.updateDimensions)
+    this.clearBubbleIntervals()
   }
 
   updateDimensions() {
-    this.setState({width: window.innerWidth, height: window.innerHeight - 100})
+    this.setState({width: window.innerWidth, height: window.innerHeight})
   }
 
-  spawnBubbleOnInterval() {
-    window.setInterval(this.spawnBubble, 700)
+  setBubbleIntervals() {
+    const spawnIntervalId = window.setInterval(this.spawnBubble, 700)
+    const moveIntervalId = window.setInterval(this.moveBubbles, 100)
+    this.setState({ spawnIntervalId, moveIntervalId })
+  }
+
+  clearBubbleIntervals() {
+    const { spawnIntervalId, moveIntervalId } = this.state
+    window.clearInterval(spawnIntervalId)
+    window.clearInterval(moveIntervalId)
+    this.setState({spawnIntervalId: null, moveIntervalId: null})
   }
 
   clickButton(bubbleId) {
@@ -53,7 +64,6 @@ class Canvas extends React.Component {
     this.setState({playStatus: Sound.status.STOPPED})
   }
 
-
   deleteBubbleById(id) {
     let { libraryOfBubbles } = this.state
     let nextLibraryOfBubbles = libraryOfBubbles.filter(bubble => {
@@ -64,7 +74,6 @@ class Canvas extends React.Component {
 
   spawnBubble(){
     let id = createId()
-    console.log('id', id)
     let cx = Math.floor(Math.random() * 1500)
     let r = Math.floor(15 + Math.random() * (30 - 10))
     let bubble = { id, r, cx, cy: this.state.height, tx:  Math.floor(Math.random() * 5) - 2.5}
@@ -73,12 +82,11 @@ class Canvas extends React.Component {
   }
 
   moveBubbles(){
-    var newBubbles = this.state.libraryOfBubbles.map((bubble, i) => {
+    var newBubbles = this.state.libraryOfBubbles.map(bubble => {
         bubble.cy-= Math.floor(Math.random() * 15)
         bubble.cx+= bubble.tx
         return bubble
     })
-    window.setTimeout(this.moveBubbles, 100) //This is the line the error is comming from
     this.deleteBubblesOffScreen()
   }
 
