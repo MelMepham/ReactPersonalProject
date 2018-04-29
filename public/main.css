@@ -203,6 +203,25 @@ img {
   .p5SketchAboutMe {
     display: none !important;
   }
+
+  .hidden {
+    display:none !important;
+  }
+
+  .totalScore {
+    margin-top: 0px !important;
+  }
+
+  .webDevTools {
+    margin-top: 0px !important;
+  }
+
+  .bottom, .top {
+    right: 25% !important;
+    left: 25% !important;
+    margin-bottom: -20px !important;
+  }
+
 }
 
   @media only screen and (min-width: 576px) {
