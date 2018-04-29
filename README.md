@@ -48,6 +48,13 @@ Make sure you have watchman installed on your computer by writing either one of 
 - Related projects:
   - Horizontal Scroll I used: https://github.com/hew/react-scroll-horizontal (Through this project I also contributed to that code)
 
+## Contributors
+So, none of this would be possible without the amazing people that answer questions, give me inspiration and are generally in my corner, so here are some and how they have helped
+
+### [Mikey Williams](https://github.com/ahdinosaur)
+Mikey has been a mentor for me over the past weeks, he pushes me to do better work and explore my creative side. He helped heaps with the bubbles on the WebDev page and by generally being awesome!
+### Ross and Harrison at EDA
+I started this project while I was at EDA and these two helped so much with starting this task, and pushing me to explore new terrain
 
 ## Licensing
 
