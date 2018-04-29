@@ -1,5 +1,8 @@
 import React from 'react'
 
+const bubbleCursor = {
+  cursor: "pointer"
+}
 
 class Bubble extends React.Component {
   constructor(props) {
@@ -14,14 +17,9 @@ class Bubble extends React.Component {
   }
 
   render() {
-    const {
-      r, cx, cy,
-      colour,
-      opacity,
-      bubbleStroke
-    } = this.props
+    const { r, cx, cy, colour, opacity, bubbleStroke } = this.props
     return (
-        <circle
+        <circle style={bubbleCursor}
           onClick={this.click}
           r={r}
           cx={cx}
