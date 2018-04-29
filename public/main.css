@@ -115,7 +115,6 @@ menu{
 img {
   image-rendering: auto;
   image-rendering: crisp-edges;
-  image-rendering: pixelated;
 }
 
 .box {
@@ -221,7 +220,6 @@ img {
     left: 25% !important;
     margin-bottom: -20px !important;
   }
-
 }
 
   @media only screen and (min-width: 576px) {
@@ -355,4 +353,21 @@ img {
   vertical-align: center;
   font-size: 20px;
   padding: 5px;
+}
+
+.childHorizontal:hover {
+  -webkit-transition: opacity .5s ease-in-out;
+  -moz-transition: opacity .5s ease-in-out;
+  -o-transition: opacity .5s ease-in-out;
+  transition: opacity .5s ease-in-out;
+  opacity: 1;
+  background-color: black !important;
+}
+
+.art, .design {
+  opacity: .5;
+}
+
+.background {
+  background-color: #A8FFFF !important;
 }

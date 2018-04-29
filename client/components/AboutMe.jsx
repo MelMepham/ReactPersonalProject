@@ -32,7 +32,6 @@ class AboutMe extends React.Component {
             <div className="row">
               <div className="col-md-3 imgPadding">
                 <div id="cf">
-
                   <img className="mx-auto d-block bottom" src="/images/me.jpg" alt="logoImage"/>
                   <img className="mx-auto d-block top" src="/images/logo.svg" alt="logoImage"/>
                 </div>
@@ -49,7 +48,6 @@ class AboutMe extends React.Component {
                 <div className='p5SketchAboutMe'>
                 <P5Wrapper sketch={this.state.aboutMeSkillz}/>
                 </div>
-
             <br/><br/>
           </div>
 
