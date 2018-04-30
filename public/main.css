@@ -166,12 +166,12 @@ img {
   text-decoration: none !important;
 }
 
-
 /* unvisited link */
 #mobileView a:link {
   color: #EF26C4;
   background-color: white !important;
-  padding: 0 !important;
+  /* padding: 0 !important; */
+
 }
 
 /* visited link */
@@ -247,6 +247,9 @@ img {
 .slick-list {
     outline: none !important;
     border: none !important;
+    padding-top: 7px !important;
+    font-size: 15px;
+
 }
 
 @media only screen and (max-width: 550px) {
