@@ -60,7 +60,7 @@ class AboutMe extends React.Component {
               {exhibitions.map((events, index) => {
                 var name = events.exhibitions
                 return (
-                <div key={index} className="background childHorizontalExhibiton exhibitionBox">
+                <div key={index} className="backgroundScroll childHorizontalExhibiton exhibitionBox">
                   <h1>{events.year}</h1>
                     {name[0] ? <div><h6>{name[0].title}</h6><hr/><p>{name[0].venue}<br/>{name[0].where}</p></div> : ""}
                     {name[1] ? <div><h6>{name[1].title}</h6><hr/><p>{name[1].venue}<br/>{name[1].where}</p></div> : ""}
