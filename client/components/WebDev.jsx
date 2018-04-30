@@ -58,7 +58,7 @@
 
                       <div className="col-md-2 col-xs-2">
                         <div>
-                          <h5 className="hidden">HIDDEN</h5>
+                          <h5 className="hidden">DOWNLOAD MY CV</h5>
                           <h5 className="webDevTools">CSS</h5>
                           <h5 className="webDevTools">HTML</h5>
                           <h5 className="webDevTools">JEST TESTING</h5>
@@ -71,9 +71,41 @@
                       </div>
 
                       <div className="col-md-8 typePadding">
-                        <h1> LOOK! I MADE THIS </h1>
+                        <h1 className="webDevHeadings"> LOOK! I MADE THIS </h1>
                         <p className="pAboutMe">
                           So I thought about giving you some static images of what I have done, but how boring is that. Check out my site, press around and see what you find. If you want to talk more send me a message, if you want to see more code check out my github, and if you want to follow me check out my instagram and twitter. You can find all of these links in the top right corner.
+                        </p>
+                        <br/>
+                        <h3 className="webDevHeadings">CURRENT PROJECTS</h3>
+                        <br/>
+                        <h5 className="webDevHeadings">The Colour of Tech</h5>
+                        <p>
+                          When I started learning code I was looking for tutorials to help me understand concepts, and I searched long and hard for tutorials by women, but I could not find any that were applicable and after talking to another lady Jess I was studying with I found that she also looked and couldn't find anything. I knew then that there was room here to create something to promote diversity and inclusion within the tech industry.
+                          <br/>
+                          Jess and I are now working on a project to solve this problem. We are very much in the early phases of this, looking at what can be done, and the steps it will take to get us there.
+                          <br/>
+                          If you have any ideas of things you want to see, or if you want to be apart of the project please get in touch with us at colouroftech@gmail.com.
+                        </p>
+                        <br/>
+                        <h5 className="webDevHeadings">aplaceofdreams.co.nz</h5>
+                        <p>
+                          I have spent hours on this website, and through this process I have learnt so much, of course its not finished, and I am not even sure if I will ever finish it. What will probably happen is when I finish it I will start again, so enjoy it while you can and watch it grow.
+                        </p>
+                        <br/>
+                        <h5 className="webDevHeadings">React Mandalas</h5>
+                        <p>
+                          So I have been using p5.js for all of my animations on this site, it was the library that got me into coding, but now I see the restrictions. I am wanting to now branch out and start animating SVG's in React.
+                          <br/>
+                          Wish me luck!
+                        </p>
+                        <br/>
+                        <h5 className="webDevHeadings">Kiwiburn Arts Committee Chair</h5>
+                        <p>
+                          I have been attending a festival since I was in my early 20's called Kiwiburn, it is a culture and arts festival held in Hunterville, NZ every January.
+                          <br/>
+                          Over the past two years I have been involved in the Arts Committee, where we give out funding to people so they can make and bring art to the event. I love being apart of this creative community and it is lovely to be able to give back.
+                          <br/>
+                          Last year the current Chair stood down and nominated for me to take their place, I was honored and excited to take on more responsibility and work at developing systems and ways of promoting the arts and this festival even further.
                         </p>
                       </div>
                     </div>
