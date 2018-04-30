@@ -34,6 +34,11 @@ hr {
 p {
   font-size: 100%
 }
+
+.webDevHeadings {
+  color: #EF26C4;
+}
+
 .txtCentered {
   color: #EF26C4;
   text-align: center;
@@ -313,13 +318,13 @@ img {
   width: 100%;
 }
 
-.p5p5SketchAboutMe {
+.p5SketchAboutMe {
   width: 100%;
   overflow: hidden;
-  justify-content: space-around;
   display: flex;
   float: none;
   z-index: -1;
+  padding-left: 80px !important;
 }
 
 .webDevTools {
@@ -338,7 +343,7 @@ img {
   margin-top: 33px;
   text-align: center;
   background-color: #1D55FF;
-  color: #A8FFFF;
+  color: #A8FFFF !important;
   vertical-align: center;
   font-size: 20px;
   padding: 5px;
