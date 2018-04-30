@@ -1,53 +1,58 @@
 import React from 'react'
 import MyHorizontalScroll from './MyHorizontalScroll'
+import thisArt from '../data/design.json'
 
-import design from '../data/design.json'
+
 
 class Design extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      design: [],
+      art: [],
+      animValues: '',
     }
-    this.showDesign = this.showDesign.bind(this)
+    this.showArt = this.showArt.bind(this)
   }
+
   componentDidMount() {
-     this.setState({design:design})
+      this.setState({art:thisArt})
   }
 
-  hideAll(designToHide) {
-      var mappedDesign = this.state.design.map((design) => {
-        if (designToHide.show == true) {
+  hideAll(artToHide) {
+      var mappedArt = this.state.art.map((art) => {
+        if (artToHide.show == true) {
         } else {
-         design.show = false; return design}
-         this.setState({design: mappedDesign})
+         art.show = false; return art}
+         this.setState({art: mappedArt})
       })
-    }
+  }
 
-  showDesign(designToShow) {
-      const {design} = this.state
-        var index = design.findIndex(designItem => designItem.title === designToShow.title)
-        design[index].show = !design[index].show
-        this.setState({design})
+  showArt(artToShow) {
+      const {art} = this.state
+        var index = art.findIndex(artItem => artItem.title === artToShow.title)
+        art[index].show = !art[index].show
+        this.setState({art})
   }
 
   render() {
         return (
           <div className="parentHorizontal">
             <br />
-            <MyHorizontalScroll>
-              {this.state.design && this.state.design.map(design => {
-                return ([
-                  <img onClick={(e) => {this.hideAll(design); this.showDesign(design)}}
-                    className='cursor design img-responsive childHorizontal'
-                    src={design.img}/>,
-                  <div>{design.show == true && <div className='box'><h1>{design.title}</h1><p>{design.about}</p></div>}</div>
-                ])
-              }
-            )}
-          </MyHorizontalScroll>
-        </div>
-      )}
+              <MyHorizontalScroll>
+                {this.state.art && this.state.art.map(art => {
+                  return ([
+                      <div className=" art container">
+                        <h2 className="overlay pink">{art.title.toUpperCase()}</h2>
+                        <img onClick={ (e) => {this.hideAll(art); this.showArt(art)} }
+                        className=" cursor img-responsive childHorizontal" src={art.img}/>
+                      </div>,
+                      <div className="mobileMargin">{art.show == true && <div className='img-responsive box'><h1>{art.title}</h1><p>{art.about}</p></div>}</div>
+                  ])
+                }
+              )}
+              </MyHorizontalScroll>
+          </div>
+        )}
   }
 
 

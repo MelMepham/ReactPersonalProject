@@ -155,8 +155,6 @@ img {
 /* visited link */
 #menuBig a:visited {
   color: #EF26C4;
-
-
 }
 
 /* mouse over link */
@@ -224,6 +222,16 @@ img {
     left: 25% !important;
     margin-bottom: -20px !important;
   }
+
+  .parentHorizontal {
+    height: 110vw;
+    width: auto;
+  }
+  .childHorizontal {
+    width: 220px;
+  }
+  h2 { font-size:100%; }
+
 }
 
   @media only screen and (min-width: 576px) {
@@ -380,7 +388,7 @@ img {
   top: 85%;
   left: 50%;
   transform: translate(-50%, -50%);
-  opacity: .3
+  opacity: .1
 }
 
 .container {

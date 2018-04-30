@@ -45,8 +45,6 @@ class artPage extends React.Component {
                         <img onClick={ (e) => {this.hideAll(art); this.showArt(art)} }
                         className=" cursor img-responsive childHorizontal" src={art.img}/>
                       </div>,
-
-
                       <div className="mobileMargin">{art.show == true && <div className='img-responsive box'><h1>{art.title}</h1><p>{art.about}</p></div>}</div>
                   ])
                 }
