@@ -11,7 +11,7 @@ h1 {
 h2 {
   margin-top: 10px
   vertical-align: text-bottom;
-  color: #FFFFFF !important;
+  color: #FFFFFF;
   text-align: center;
 }
 
@@ -92,8 +92,7 @@ menu{
 .childHorizontal {
   margin-top: 70px;
   margin-bottom: 20px;
-  max-width: 100%;
-  max-height: 90%;
+  max-height: 85%;
 }
 
 .parentHorizontalExhibition {
@@ -156,8 +155,6 @@ img {
 /* visited link */
 #menuBig a:visited {
   color: #EF26C4;
-
-
 }
 
 /* mouse over link */
@@ -225,6 +222,16 @@ img {
     left: 25% !important;
     margin-bottom: -20px !important;
   }
+
+  .parentHorizontal {
+    height: 110vw;
+    width: auto;
+  }
+  .childHorizontal {
+    width: 220px;
+  }
+  h2 { font-size:100%; }
+
 }
 
   @media only screen and (min-width: 576px) {
@@ -360,13 +367,12 @@ img {
   padding: 5px;
 }
 
-.childHorizontal:hover {
+.art:hover, .design:hover, .overlay:hover {
   -webkit-transition: opacity .5s ease-in-out;
   -moz-transition: opacity .5s ease-in-out;
   -o-transition: opacity .5s ease-in-out;
   transition: opacity .5s ease-in-out;
   opacity: 1;
-  background-color: black !important;
 }
 
 .art, .design {
@@ -375,4 +381,27 @@ img {
 
 .background {
   background-color: #A8FFFF !important;
+}
+
+.overlay {
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: .1
+}
+
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.pink {
+  padding: 20px;
+  width: 100%;
+  height: 20%;
+  background-color: #1D55FF;
+  color: #A8FFFF !important;
+  font-weight: bold;
 }

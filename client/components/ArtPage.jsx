@@ -40,9 +40,11 @@ class artPage extends React.Component {
               <MyHorizontalScroll>
                 {this.state.art && this.state.art.map(art => {
                   return ([
-                      <img onClick={ (e) => {this.hideAll(art); this.showArt(art)} }
-                        className='art cursor img-responsive childHorizontal'
-                        src={art.img}/>,
+                      <div className=" art container">
+                        <h2 className="overlay pink">{art.title.toUpperCase()}</h2>
+                        <img onClick={ (e) => {this.hideAll(art); this.showArt(art)} }
+                        className=" cursor img-responsive childHorizontal" src={art.img}/>
+                      </div>,
                       <div className="mobileMargin">{art.show == true && <div className='img-responsive box'><h1>{art.title}</h1><p>{art.about}</p></div>}</div>
                   ])
                 }
