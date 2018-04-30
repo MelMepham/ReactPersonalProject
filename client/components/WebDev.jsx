@@ -42,9 +42,11 @@
                   <div className="container-fluid">
                     <div className="row">
 
-                      <div className="col-md-2 col-xs-2">
+                      <div className="col-sm-12 col-lg-4">
+                      <h5 className="totalScore">TOTAL: { this.state.totalScore }</h5>
+                      <div className="row">
+                      <div className="col-sm-6">
                         <div>
-                          <h5 className="totalScore">TOTAL: { this.state.totalScore }</h5>
                           <h5 className="webDevTools">JAVASCRIPT</h5>
                           <h5 className="webDevTools">REACT.JS</h5>
                           <h5 className="webDevTools">REDUX</h5>
@@ -56,9 +58,8 @@
                         </div>
                       </div>
 
-                      <div className="col-md-2 col-xs-2">
+                      <div className="col-sm-6">
                         <div>
-                          <h5 className="hidden">DOWNLOAD MY CV</h5>
                           <h5 className="webDevTools">CSS</h5>
                           <h5 className="webDevTools">HTML</h5>
                           <h5 className="webDevTools">JEST TESTING</h5>
@@ -69,8 +70,10 @@
                           <h5 className="webDevTools">AGILE</h5>
                         </div>
                       </div>
+                      </div>
+                      </div>
 
-                      <div className="col-md-8 typePadding">
+                      <div className="col-lg-8 col-sm-12 typePadding">
                         <h1 className="webDevHeadings"> LOOK! I MADE THIS </h1>
                         <p className="pAboutMe">
                           So I thought about giving you some static images of what I have done, but how boring is that. Check out my site, press around and see what you find. If you want to talk more send me a message, if you want to see more code check out my github, and if you want to follow me check out my instagram and twitter. You can find all of these links in the top right corner.

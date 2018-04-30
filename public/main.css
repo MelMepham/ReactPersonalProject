@@ -186,6 +186,12 @@ img {
   text-decoration: none !important;
 }
 
+@media only screen and (max-width: 1200px) {
+  .p5SketchAboutMe {
+    display: none !important;
+  }
+}
+
 @media only screen and (max-width: 576px) {
   .mobileHide {
     display:none;
@@ -199,10 +205,6 @@ img {
   }
   .header {
     background-color: white;
-  }
-
-  .p5SketchAboutMe {
-    display: none !important;
   }
 
   .hidden {
