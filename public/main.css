@@ -230,6 +230,7 @@ img {
   .childHorizontal {
     width: 220px;
   }
+
   h2 { font-size:100%; }
 
 }
@@ -407,4 +408,8 @@ img {
   background-color: #1D55FF;
   color: #A8FFFF !important;
   font-weight: bold;
+}
+
+.mobileMargin {
+  padding-top: 10px;
 }
