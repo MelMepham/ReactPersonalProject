@@ -14,7 +14,7 @@ class artPage extends React.Component {
   }
 
   componentDidMount() {
-      this.setState({art:thisArt})
+      this.setState({art: thisArt})
   }
 
   hideAll(artToHide) {
@@ -40,10 +40,10 @@ class artPage extends React.Component {
               <MyHorizontalScroll>
                 {this.state.art && this.state.art.map(art => {
                   return ([
-                      <div className=" art container">
+                      <div className="container">
                         <h2 className="overlay pink">{art.title.toUpperCase()}</h2>
                         <img onClick={ (e) => {this.hideAll(art); this.showArt(art)} }
-                        className="art cursor img-responsive childHorizontal" src={art.img}/>
+                        className="cursor img-responsive childHorizontal" src={art.img}/>
                       </div>,
                       <div className="mobileMargin">{art.show == true && <div className='img-responsive box'><h1>{art.title}</h1><p>{art.about}</p></div>}</div>
                   ])

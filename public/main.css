@@ -401,11 +401,13 @@ img {
     text-align: center;
     color: white;
     padding: 0;
+    margin: 0;
     opacity: .5;
 }
 
 .pink {
-  padding: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   width: 100%;
   height: 20%;
   background-color: #1D55FF;
