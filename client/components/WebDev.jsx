@@ -26,7 +26,6 @@
 
   getTotalScore(score) {
     this.setState({totalScore: score})
-    console.log(this.state.totalScore)
   }
 
   render() {

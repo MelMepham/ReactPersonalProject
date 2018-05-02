@@ -373,7 +373,7 @@ img {
   padding: 5px;
 }
 
-.art:hover, .design:hover, .overlay:hover {
+.container:hover, .overlay:hover {
   -webkit-transition: opacity .5s ease-in-out;
   -moz-transition: opacity .5s ease-in-out;
   -o-transition: opacity .5s ease-in-out;
@@ -381,9 +381,6 @@ img {
   opacity: 1;
 }
 
-.art, .design {
-  opacity: .5;
-}
 
 .background {
   background-color: #A8FFFF !important;
@@ -394,17 +391,23 @@ img {
   top: 85%;
   left: 50%;
   transform: translate(-50%, -50%);
-  opacity: .1
+  width: 100% !important;
+  opacity: .2;
+
 }
 
 .container {
     position: relative;
     text-align: center;
     color: white;
+    padding: 0;
+    margin: 0;
+    opacity: .5;
 }
 
 .pink {
-  padding: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   width: 100%;
   height: 20%;
   background-color: #1D55FF;

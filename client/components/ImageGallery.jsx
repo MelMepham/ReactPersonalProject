@@ -1,7 +1,5 @@
 import React from 'react'
 import MyHorizontalScroll from './MyHorizontalScroll'
-import thisArt from '../data/artInfo.json'
-
 
 class artPage extends React.Component {
   constructor(props) {
@@ -13,9 +11,15 @@ class artPage extends React.Component {
     this.showArt = this.showArt.bind(this)
   }
 
-  componentDidMount() {
-      this.setState({art: thisArt})
+  componentWillUnmount() {
+    window.location.reload()
   }
+
+  componentDidMount() {
+    const info = this.props.info
+    this.setState({art: info})
+  }
+
 
   hideAll(artToHide) {
       var mappedArt = this.state.art.map((art) => {
@@ -27,6 +31,7 @@ class artPage extends React.Component {
   }
 
   showArt(artToShow) {
+
       const {art} = this.state
         var index = art.findIndex(artItem => artItem.title === artToShow.title)
         art[index].show = !art[index].show
@@ -34,11 +39,14 @@ class artPage extends React.Component {
   }
 
   render() {
+    console.log("state", this.state)
+    const art = this.props.info
+    console.log("props", this.props)
         return (
           <div className="parentHorizontal">
             <br />
               <MyHorizontalScroll>
-                {this.state.art && this.state.art.map(art => {
+                {art && art.map(art => {
                   return ([
                       <div className="container">
                         <h2 className="overlay pink">{art.title.toUpperCase()}</h2>
