@@ -9,6 +9,9 @@ import artPage from './components/ArtPage'
 import Design from './components/Design'
 import WebDev from './components/WebDev'
 
+import ImageGallery from './components/ImageGallery'
+
+
 
 import {HashRouter as Router, Route} from 'react-router-dom'
 
@@ -16,6 +19,8 @@ const App = (props) => {
   return (
     <Router>
       <div>
+      <Route path='/image' component={ImageGallery} />
+
       <Route path='/' component={Header} />
       <Route exact path='/' component={HomePage} />
       <Route exact path='/art' component={artPage} />
