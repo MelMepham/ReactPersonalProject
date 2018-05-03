@@ -11,13 +11,10 @@ class artPage extends React.Component {
     this.showArt = this.showArt.bind(this)
   }
 
-  componentWillUnmount() {
-    window.location.reload()
-  }
-
-  componentDidMount() {
+  componentWillMount() {
     const info = this.props.info
     this.setState({art: info})
+
   }
 
 
@@ -31,17 +28,14 @@ class artPage extends React.Component {
   }
 
   showArt(artToShow) {
-
-      const {art} = this.state
+      const { art } = this.state
         var index = art.findIndex(artItem => artItem.title === artToShow.title)
         art[index].show = !art[index].show
-        this.setState({art})
+        this.setState({ art })
   }
 
   render() {
-    console.log("state", this.state)
     const art = this.props.info
-    console.log("props", this.props)
         return (
           <div className="parentHorizontal">
             <br />
