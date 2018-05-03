@@ -21,9 +21,9 @@ render() {
   return (
     <Router>
       <div>
-        <br /> <br />
+      <br/> <br/>
         <div className='mandalaCentered'>
-            <P5Wrapper sketch={this.state.MandalaOne}/>
+          <P5Wrapper sketch={this.state.MandalaOne}/>
         </div>
         <div>
           <p className="txtCentered">I hope you enjoy my site, make sure you poke around. <br/> There are heaps of little interactive bits if you know where to look.</p>

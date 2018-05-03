@@ -23,7 +23,7 @@ class AboutMe extends React.Component {
       return (
         <Router>
         <div>
-          <br/><br/><br/><br/>
+        <br/><br/><br/><br/>
           <div className='mandalaCentered'>
             <P5Wrapper sketch={this.state.aboutMe}/>
           </div>
@@ -45,11 +45,11 @@ class AboutMe extends React.Component {
               </div>
             </div>
             <br/><br/>
-                <div className='p5SketchAboutMe'>
-                <P5Wrapper sketch={this.state.aboutMeSkillz}/>
-                </div>
+              <div className='p5SketchAboutMe'>
+              <P5Wrapper sketch={this.state.aboutMeSkillz}/>
+              </div>
             <br/><br/>
-          </div>
+            </div>
 
           <div className="parentHorizontalExhibition">
             <MyHorizontalScroll>
@@ -57,25 +57,25 @@ class AboutMe extends React.Component {
                 <h1>PAST <br/> EXHIBI-<br/>TIONS</h1>
                 <h5>If you like my art and want to chat about where I can exhibit it, please let me know!</h5>
               </div>
-              {exhibitions.map((events, index) => {
+              { exhibitions.map((events, index) => {
                 var name = events.exhibitions
                 return (
-                <div key={index} className="backgroundScroll childHorizontalExhibiton exhibitionBox">
-                  <h1>{events.year}</h1>
-                    {name[0] ? <div><h6>{name[0].title}</h6><hr/><p>{name[0].venue}<br/>{name[0].where}</p></div> : ""}
-                    {name[1] ? <div><h6>{name[1].title}</h6><hr/><p>{name[1].venue}<br/>{name[1].where}</p></div> : ""}
-                    {name[2] ? <div><h6>{name[2].title}</h6><hr/><p>{name[2].venue}<br/>{name[2].where}</p></div> : ""}
-                </div>
+                  <div key={index} className="backgroundScroll childHorizontalExhibiton exhibitionBox">
+                    <h1>{events.year}</h1>
+                      {name[0] ? <div><h6>{name[0].title}</h6><hr/><p>{name[0].venue}<br/>{name[0].where}</p></div> : ""}
+                      {name[1] ? <div><h6>{name[1].title}</h6><hr/><p>{name[1].venue}<br/>{name[1].where}</p></div> : ""}
+                      {name[2] ? <div><h6>{name[2].title}</h6><hr/><p>{name[2].venue}<br/>{name[2].where}</p></div> : ""}
+                  </div>
                 )
-              })}
-            </MyHorizontalScroll>
-          </div>
-          <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+              })
+            }
+          </MyHorizontalScroll>
         </div>
-      </Router>
-
-        )}
-      }
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+      </div>
+    </Router>
+  )}
+}
 
 
   export default AboutMe

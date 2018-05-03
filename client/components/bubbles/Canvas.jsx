@@ -112,18 +112,17 @@ class Canvas extends React.Component {
       <div>
         <div>
           <svg width={this.state.width} height={this.state.height}>
-            {
-              this.state.libraryOfBubbles.map(bubble=>{
-                return <Bubble
-                  key={bubble.id}
-                  id={bubble.id}
-                  clickButton={this.clickButton}
-                  r={bubble.r}
-                  cx={bubble.cx}
-                  cy={bubble.cy}
-                  colour={this.state.colour}
-                  totalScore={this.state.totalScore}
-                  />
+            { this.state.libraryOfBubbles.map(bubble=> {
+              return <Bubble
+                key={bubble.id}
+                id={bubble.id}
+                clickButton={this.clickButton}
+                r={bubble.r}
+                cx={bubble.cx}
+                cy={bubble.cy}
+                colour={this.state.colour}
+                totalScore={this.state.totalScore}
+                />
               })
             }
           </svg>

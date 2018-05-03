@@ -24,12 +24,12 @@ const Footer = (props) => {
               {footerLink('aboutme', 'ABOUT', false)}
             <div className="col-sm-1"></div>
           </div>
-            <div className="row">
-              <div className="col-lg-12">
-                <div className="bottomLine"></div>
-                <br/>
-              </div>
+          <div className="row">
+            <div className="col-lg-12">
+              <div className="bottomLine"></div>
+              <br/>
             </div>
+          </div>
         </div>
       </div>
 

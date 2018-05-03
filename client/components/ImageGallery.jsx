@@ -36,24 +36,24 @@ class artPage extends React.Component {
 
   render() {
     const art = this.props.info
-        return (
-          <div className="parentHorizontal">
-            <br />
-              <MyHorizontalScroll>
-                {art && art.map(art => {
-                  return ([
-                      <div className="container">
-                        <h2 className="overlay pink">{art.title.toUpperCase()}</h2>
-                        <img onClick={ (e) => {this.hideAll(art); this.showArt(art)} }
-                        className="cursor img-responsive childHorizontal" src={art.img}/>
-                      </div>,
-                      <div className="mobileMargin">{art.show == true && <div className='img-responsive box'><h1>{art.title}</h1><p>{art.about}</p></div>}</div>
-                  ])
-                }
-              )}
-              </MyHorizontalScroll>
-          </div>
+    return (
+      <div className="parentHorizontal">
+      <br />
+        <MyHorizontalScroll>
+          {art && art.map(art => {
+            return ([
+              <div className="container">
+                <h2 className="overlay pink">{art.title.toUpperCase()}</h2>
+                <img onClick={ (e) => {this.hideAll(art); this.showArt(art)} }
+                className="cursor img-responsive childHorizontal" src={art.img}/>
+              </div>,
+              <div className="mobileMargin">{art.show == true && <div className='img-responsive box'><h1>{art.title}</h1><p>{art.about}</p></div>}</div>
+            ])
+          }
         )}
+        </MyHorizontalScroll>
+      </div>
+    )}
   }
 
 
