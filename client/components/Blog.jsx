@@ -40,7 +40,13 @@ class Blog extends React.Component {
             <div className="col-md-4">
             <div className="blog-card">
               <p className="blog-title">One Plastic Free Month</p>
-              </div>
+            </div>
+
+            </div>
+            <div className="col-md-4">
+            <div className="blog-card">
+              <p className="blog-title">One Plastic Free Month</p>
+            </div>
 
             </div>
 
