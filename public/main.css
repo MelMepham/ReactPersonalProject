@@ -422,3 +422,15 @@ img {
 .backgroundScroll {
   background-color: #E8FAFF;
 }
+
+.page-container {
+  padding: 30px;
+}
+
+.blog-card {
+  margin: 0 5px;
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%;
+  background-color: #EF26C4;
+}
