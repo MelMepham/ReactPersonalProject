@@ -1,15 +1,20 @@
 import React from "react";
-import { HashRouter as Router, Route } from "react-router-dom";
+import { Route } from "react-router-dom";
 import MySecondAttempt from './blog-posts/MySecondAttempt';
 
 const PlasticFreeMonthHomepage = props => {
+  const { match } = props
   return (
     <div>
-      <Router>
-        <div>
-          <Route exact path="/" component={MySecondAttempt} />
-        </div>
-      </Router>
+      <Route
+        path={`${match.path}/two`}
+        component={MySecondAttempt}
+      />
+      <Route
+        exact
+        path={`${match.path}`}
+        component={MySecondAttempt}
+      />
     </div>
   );
 };
