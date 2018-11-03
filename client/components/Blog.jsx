@@ -3,13 +3,15 @@ import P5Wrapper from "react-p5-wrapper";
 
 import { Link } from "react-router-dom";
 
+import blogContent from '../data/blogHomepage.json';
 import aboutMe from "../sketches/aboutMe";
 
 class Blog extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      aboutMe: aboutMe
+      aboutMe: aboutMe,
+      blogContent: blogContent
     };
     this.findMyColour = this.findMyColour.bind(this);
   }
@@ -21,33 +23,11 @@ class Blog extends React.Component {
 
   render() {
 
-    let blogContent = [
-      {
-        title: "PLASTIC FREE NOVEMBER",
-        link: "/",
-        imageAlt:
-          "An image of a green field with a rubbish bin in the center and plastic littered everywhere around the bin",
-        imageSrc: "images/blog/plastic-free-month.jpg"
-      },
-      {
-        title: "PLASTIC FREE NOVEMBER",
-        link: "/",
-        imageAlt:
-          "An image of a green field with a rubbish bin in the center and plastic littered everywhere around the bin",
-        imageSrc: "images/blog/plastic-free-month.jpg"
-      },
-      {
-        title: "PLASTIC FREE NOVEMBER",
-        link: "/",
-        imageAlt:
-          "An image of a green field with a rubbish bin in the center and plastic littered everywhere around the bin",
-        imageSrc: "images/blog/plastic-free-month.jpg"
-      }
-    ];
+    let blogContent = this.state.blogContent;
 
     return (
       <div className="page-container">
-        <h1>CHECK OUT MY BLOG</h1>
+        <h1>CHECK OUT MY BLOG PAGE</h1>
         <div className="mandalaCentered">
           <P5Wrapper sketch={this.state.aboutMe} />
         </div>

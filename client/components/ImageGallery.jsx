@@ -14,7 +14,6 @@ class artPage extends React.Component {
   componentWillMount() {
     const info = this.props.info
     this.setState({art: info})
-
   }
 
 
