@@ -21,9 +21,11 @@ class Blog extends React.Component {
     return colours[Math.floor(Math.random() * colours.length)];
   }
 
-  render(props) {
+  render() {
+    const { match } = this.props
+    console.log(match.url)
     let blogContent = this.state.blogContent;
-
+    
     return (
       <div className="page-container">
         <h1>CHECK OUT MY BLOG PAGE</h1>
@@ -35,7 +37,7 @@ class Blog extends React.Component {
             {blogContent.map(blog => {
               return [
                 <div className="col-md-4">
-                  <Link to={`/blog${blog.link}`}>
+                  <Link to={`${match.url}${blog.link}`}>
                     <div
                       style={{ backgroundColor: this.findMyColour() }}
                       className="blog-card"

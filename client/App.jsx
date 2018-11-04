@@ -1,5 +1,5 @@
 import React from "react";
-import { HashRouter as Router, Route } from "react-router-dom";
+import { HashRouter as Router, Route, Switch } from "react-router-dom";
 
 import Footer from "./components/Footer";
 import HomePage from "./components/HomePage";
@@ -10,19 +10,23 @@ import BlogApp from "./components/blog/BlogApp";
 
 import artInfo from "./data/artInfo.json";
 
-
 const App = props => {
   return (
     <Router>
       <div>
-        <Route exact path="/" component={HomePage} />
-        <Route exact path="/webdev" component={WebDev} />
-        <Route exact path="/aboutme" component={AboutMe} />
-        <Route exact path="/art" render={() => <ImageGallery info={artInfo} />} />
-        <Route exact path="/blog" component={BlogApp} />
         <Route path="/" component={Footer} />
-        {/* <Route exact path="/blog/plastic-free-month" render={() =>  <h3>Please select a topic.</h3>} /> */}
-
+        <Switch>
+          <Route exact path="/" component={HomePage} />
+          <Route exact path="/webdev" component={WebDev} />
+          <Route exact path="/aboutme" component={AboutMe} />
+          <Route
+            exact
+            path="/art"
+            render={() => <ImageGallery info={artInfo} />}
+          />
+          <Route exact path="/blog" component={BlogApp} />
+          <Route exact path="/blog/plastic-free-month" render={() =>  <h3>Please select a topic.</h3>} />
+        </Switch>
       </div>
     </Router>
   );
