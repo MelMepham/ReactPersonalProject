@@ -3,8 +3,8 @@ import P5Wrapper from "react-p5-wrapper";
 
 import { Link } from "react-router-dom";
 
-import blogContent from '../data/blogHomepage.json';
-import aboutMe from "../sketches/aboutMe";
+import blogContent from '../../data/blogHomepage.json';
+import aboutMe from "../../sketches/aboutMe";
 
 class Blog extends React.Component {
   constructor(props) {
@@ -21,8 +21,7 @@ class Blog extends React.Component {
     return colours[Math.floor(Math.random() * colours.length)];
   }
 
-  render() {
-
+  render(props) {
     let blogContent = this.state.blogContent;
 
     return (
@@ -36,7 +35,7 @@ class Blog extends React.Component {
             {blogContent.map(blog => {
               return [
                 <div className="col-md-4">
-                  <Link to={blog.link}>
+                  <Link to={`/blog${blog.link}`}>
                     <div
                       style={{ backgroundColor: this.findMyColour() }}
                       className="blog-card"

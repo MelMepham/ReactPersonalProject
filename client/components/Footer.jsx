@@ -19,7 +19,7 @@ const Footer = (props) => {
             <div className="col-sm-1"></div>
               {footerLink('', 'HOME', false)}
               {footerLink('art', 'ART', false)}
-              {footerLink('Blog', 'BLOG', false)}
+              {footerLink('blog', 'BLOG', false)}
               {footerLink('webdev', 'WEB', false)}
               {footerLink('aboutme', 'ABOUT', false)}
             <div className="col-sm-1"></div>
