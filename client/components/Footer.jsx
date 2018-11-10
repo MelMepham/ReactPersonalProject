@@ -19,7 +19,7 @@ const Footer = (props) => {
             <div className="col-sm-1"></div>
               {footerLink('', 'HOME', false)}
               {footerLink('art', 'ART', false)}
-              {footerLink('design', 'DESIGN', false)}
+              {footerLink('blog', 'BLOG', false)}
               {footerLink('webdev', 'WEB', false)}
               {footerLink('aboutme', 'ABOUT', false)}
             <div className="col-sm-1"></div>
@@ -45,7 +45,7 @@ const Footer = (props) => {
           <ul className="nav navbar-nav">
             {footerLink('', 'HOME', true)}
             {footerLink('art', 'ART', true)}
-            {footerLink('design', 'DESIGN', true)}
+            {footerLink('blog', 'BLOG', true)}
             {footerLink('webdev', 'WEB DEV', true)}
             {footerLink('aboutme', 'ABOUT ME', true)}
           </ul>
