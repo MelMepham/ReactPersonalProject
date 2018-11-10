@@ -1,7 +1,7 @@
 import React from 'react'
-var Bubble = require('./Bubble').Bubble
 import Sound from 'react-sound';
 import createId from 'incremental-id'
+var Bubble = require('./Bubble').Bubble
 
 
 class Canvas extends React.Component {
