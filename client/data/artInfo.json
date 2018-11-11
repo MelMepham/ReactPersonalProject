@@ -1,136 +1,86 @@
 [
-    {
-      "show": false,
-      "img": "images/art/jellyfish.jpg",
-      "title": "Jellyfish Kingdom",
-      "about": "Mid 2016 while having an evening of craft with a friend, Mel crochet a jellyfish, using a simple pattern found online she fell in love with the process and her mind started to think about all of the amazing things that could happen with such a simple shape, and thus, the Jellyfish Kingdom was born. Over the next 6 months Mel with the help of some friends crochet around 60 jellyfish, all with long central tentacles that were using UV reactive wool. and created an interactive space that has been seen around New Zealand"
-    },
-
-    {
-      "show": false,
-      "img": "images/art/kiwiburnArtsCommittee.jpg",
-      "title": "Kiwiburn Swag",
-      "about": "Mel is currently the Chair of the Kiwiburn Arts Committee, this was a design she made to put on jumpers to give to her team to thank them for their support."
-    },
-    {
-      "show": false,
-      "img": "images/art/ensoul.jpg",
-      "title": "EnSoul Mural",
-      "about": "Mel moved out to the Kapiti Coast in June of 2017 to get some space and re group, while she was there she in collaboration with EnSoul Yoga Studio, painted a mural on their focal wall.As the first big mural this was an amazing experience for Mel and she learn so much about how to move into a different medium that she had wanted to for a while. The image was created specifically to fit into the emotive space that it was put into, and has had a really positive effect on the studio’s participants."
-    },
-    {
-      "show": false,
-      "img": "images/art/lanterns.jpg",
-      "title": "Lanterns",
-      "about": "In 2017 Mel was approached by a friend creating an interactive art piece. The idea was to create lanterns that had programmable LED’s in them that lit up with sound and changed colour depending on the key of the sound.  Mel work alongside this project designing the lanterns to be able to be flat packable, and create an image to be laser cut to produce interesting and alluring shapes."
-    },
-    {
-      "show": false,
-      "img": "images/art/mandalaColabs.jpg",
-      "title": "Mandala Colaborations",
-      "about": "Mel loves working with other people and over the years and discovered how easy and interesting mandalas can be to collaborate with other people, and has spent a lot of time collaborating and inspiring people to explore this medium, here are a few mandala’s that were made in collaboration with other beautiful humans."
-    },
-    {
-      "show": false,
-      "img": "images/art/geometryGlass.jpg",
-      "title": "Leadlight",
-      "about": "As you can probably tell Mel is very inspired by geometry and different ways of playing with that, and one of these explorations was with leadlighting."
-    },
-    {
-      "show": false,
-      "img": "images/art/crochetBlanket.jpg",
-      "title": "Crochet Shapes",
-      "about": "Another way in which Mel explores shapes and patterns is with crochet, this is a part of a bigger hexagonal blanket."
-    },
-    {
-      "show": false,
-      "img": "images/art/abcd.jpg",
-      "title": "Letters",
-      "about": "Mel has been playing with typography for years now, and this is an example of her playing with hand letting with gouache. "
-    },
-    {
-      "show": false,
-      "img": "images/art/sanctuary.jpg",
-      "title": "Sanctuary",
-      "about": "A friend of Mel’s was setting up a safe space at a festival early 2018 and Mel designed the main type for the space ‘sanctuary’ this is still a work in progress, and it is some experimentation into big type and how it works in big spaces."
-    },
-    {
-      "show": false,
-      "img": "images/art/mandala.jpg",
-      "title": "Mandala",
-      "about": "This was a piece of work I completed while living in Brisbane, and an early exploration into Geometry. I became facinated with geometry in around 2011 in my last year of university when I was exploring the ideas behind Junian Psychology and the way that symbols can be used to explore the subconscious."
-    },
-    {
-      "show": false,
-      "img": "images/art/chaos.jpg",
-      "title": "Chaos",
-      "about": "This is the biggest painting I have completed to date, it took about 12 months, and I used goache and pen. After hours and hours of painting this I spilt some of the paint on the image, not sure about what to do I sat there and stared at it for about 30 minutes. Knowing I had nothing to loose I decided to spill more paint on the image and experiemented with how I could use that. That element really added to the final product, and goes to show that mistakes are inevitable and have an amazing opportinuty to learn."
-    },
-    {
-      "show": false,
-      "img": "images/art/stardust.jpg",
-      "title": "We are all made of Stardust",
-      "about": "Sketchbooks is a really important way for me to explore new ideas, express myself and learn more, its where I make a lot of mistakes, and a place that reminds me why I love drawing. I think its important to look at where people get to where they are and sketchbooks are a great way to show thoughts and processes."
-    },
-    {
-      "show": false,
-      "img": "images/art/misprintedCo.jpg",
-      "title": "The Misprint co.",
-      "about": "In spring 2017 Mel entered a competition to win a guest artist spot at The Misprint Co. and managed to be the people's choice! The Misprint Co. is a small Wellington based company aimed at getting waste paper from sources around the region and repurposing them into something usable. With so much waste in the world its so great to see creative solutions to re-purpose rather than recycle Photography by Jenny Buckler. Check out their website misprint.co"
-    },
-    {
-      "show": false,
-      "img": "images/art/coryChampion.jpg",
-      "title": "Cory Champion Poster",
-      "about": "While I was working as an InHouse Designer with Havana Bar in Wellington I completed this poster. Fromm Winery sponosored a Jazz night once a month."
-    },
-    {
-      "show": false,
-      "img": "images/art/fidelsMenu.jpg",
-      "title": "Fidel's Menu",
-      "about": "While I was the General Manager I redesigned their 6 page menu, utilizing a dynamic 5 column grid structure to allow each page to be utilized to create a compresensive menu that can easily be updated and modified."
-    },
-    {
-      "show": false,
-      "img": "images/art/giftVoucher.jpg",
-      "title": "Fidels gift voucher",
-      "about": "The Fidel's gift voucher hadn't been updated in a very long time, so I worked with some of the updated styling to create a new and updated voucher."
-    },
-    {
-      "show": false,
-      "img": "images/art/havanaFlyer.jpg",
-      "title": "Havana Flyer",
-      "about": "This was a flyer that I designed for Havana Bar's 10th birthday that was used to promote their 10 year party and was published in a local Wellington magazine Capital Mag, While I was working as the inHouse designer I created an ad for Capital Mag every month."
-    },
-    {
-      "show": false,
-      "img": "images/art/havanaBarGiftVoucher.jpg",
-      "title": "Havana Bar Gift Voucher",
-      "about": "Like the Fidel's voucher, the Havana Bar voucher was even more outdated, I created the illustration a few months prior that was printed onto a teatowel."
-    },
-    {
-      "show": false,
-      "img": "images/art/kiwiburnPoster.jpg",
-      "title": "Kiwiburn Poster",
-      "about": "Kiwiburn held a poster competition for their 10th festival, I submited this illustration and basic layout and it was chosen, Shelly Watson then designed the type on top of the illustration."
-    },
-    {
-      "show": false,
-      "img": "images/art/existenceOfChaos.jpg",
-      "title": "The Existence of Chaos Poster",
-      "about": "In 2017 I held an exhibition at Black Coffee in Wellington, and created this for the event."
-    },
-    {
-      "show": false,
-      "img": "images/art/poiCreations.jpg",
-      "title": "Poi Creations",
-      "about": "in 2015 a friend decided to start a small company making fabric poi, around this time I was heavily involved in the flow arts scene, doing performances at festivals around Australia, I was happy to help create a a logo and some visuals for their online presence."
-    },
-    {
-      "show": false,
-      "img": "images/art/oneNest.jpg",
-      "title": "One Nest",
-      "about": "Two sisters came to me after seeing the geometric work I do to create a logo for a family business they started in 2017 making holistic natural remidies, they were amazing clients, and the aesthetic works really well with their nuturing home made feel."
-    }
-
+  {
+    "show": false,
+    "img": "images/art/sanctuary.jpg",
+    "title": "Sanctuary",
+    "alt": "Typography Illustration of the word 'Sanctuary' hand written in a cursive font.",
+    "about": "A friend of Mel’s was setting up a safe space at a festival early 2018 and Mel designed the main type for the space ‘sanctuary’ this is still a work in progress, and it is some experimentation into big type and how it works in big spaces."
+  },
+  {
+    "show": false,
+    "img": "images/art/mandala.jpg",
+    "title": "Mandala",
+    "alt": "A Mandala hand painted in oranges and blues with a lot of plant and flower elements.",
+    "about": "This was a piece of work I completed while living in Brisbane, and an early exploration into Geometry. I became facinated with geometry in around 2011 in my last year of university when I was exploring the ideas behind Junian Psychology and the way that symbols can be used to explore the subconscious."
+  },
+  {
+    "show": false,
+    "img": "images/art/chaos.jpg",
+    "title": "Chaos",
+    "alt": "A massive painting in a frame filled with geometry, can't see much of the detail.",
+    "about": "This is the biggest painting I have completed to date, it took about 12 months, and I used goache and pen. After hours and hours of painting this I spilt some of the paint on the image, not sure about what to do I sat there and stared at it for about 30 minutes. Knowing I had nothing to loose I decided to spill more paint on the image and experiemented with how I could use that. That element really added to the final product, and goes to show that mistakes are inevitable and have an amazing opportinuty to learn."
+  },
+  {
+    "show": false,
+    "img": "images/art/stardust.jpg",
+    "title": "Stardust",
+    "alt": "A black and white sketch of the words 'We are all made of the same stardust' in a cloud, white text and black background.",
+    "about": "Sketchbooks is a really important way for me to explore new ideas, express myself and learn more, its where I make a lot of mistakes, and a place that reminds me why I love drawing. I think its important to look at where people get to where they are and sketchbooks are a great way to show thoughts and processes."
+  },
+  {
+    "show": false,
+    "img": "images/art/misprintedCo.jpg",
+    "title": "The Misprint co.",
+    "alt": "A photograph of a sketchbook, the cover of the sketch book is a geometric pattern that was hand painted, it looks like a kalediscope",
+    "about": "In spring 2017 Mel entered a competition to win a guest artist spot at The Misprint Co. and managed to be the people's choice! The Misprint Co. is a small Wellington based company aimed at getting waste paper from sources around the region and repurposing them into something usable. With so much waste in the world its so great to see creative solutions to re-purpose rather than recycle Photography by Jenny Buckler. Check out their website misprint.co"
+  },
+  {
+    "show": false,
+    "img": "images/art/poiCreations.jpg",
+    "title": "Poi Creations",
+    "alt": "Image of social media sites from a company 'Poi Creations' to show the logo and visual elements I made for them.",
+    "about": "in 2015 a friend decided to start a small company making fabric poi, around this time I was heavily involved in the flow arts scene, doing performances at festivals around Australia, I was happy to help create a a logo and some visuals for their online presence."
+  },
+  {
+    "show": false,
+    "img": "images/art/ensoul.jpg",
+    "title": "EnSoul Mural",
+    "alt": "A mural of a Mandala in browns and some green highlights painted on a brick wall of a yoga Studio.",
+    "about": "Mel moved out to the Kapiti Coast in June of 2017 to get some space and re group, while she was there she in collaboration with EnSoul Yoga Studio, painted a mural on their focal wall.As the first big mural this was an amazing experience for Mel and she learn so much about how to move into a different medium that she had wanted to for a while. The image was created specifically to fit into the emotive space that it was put into, and has had a really positive effect on the studio’s participants."
+  },
+  {
+    "show": false,
+    "img": "images/art/kiwiburnArtsCommittee.jpg",
+    "title": "Kiwiburn Swag",
+    "alt": "A hoodie with the words 'Kiwiburn Arts Committee' written on it in a hand written cursive font with a picture of some paintbrushes.",
+    "about": "Mel is currently the Chair of the Kiwiburn Arts Committee, this was a design she made to put on jumpers to give to her team to thank them for their support."
+  },
+  {
+    "show": false,
+    "img": "images/art/lanterns.jpg",
+    "title": "Lanterns",
+    "alt":"An abstract image of some geometric triangle images that were laser cut out of wood.",
+    "about": "In 2017 Mel was approached by a friend creating an interactive art piece. The idea was to create lanterns that had programmable LED’s in them that lit up with sound and changed colour depending on the key of the sound.  Mel work alongside this project designing the lanterns to be able to be flat packable, and create an image to be laser cut to produce interesting and alluring shapes."
+  },
+  {
+    "show": false,
+    "img": "images/art/mandalaColabs.jpg",
+    "title": "Colaborations",
+    "alt": "Four images of black and white highly detailed Mandalas.",
+    "about": "Mel loves working with other people and over the years and discovered how easy and interesting mandalas can be to collaborate with other people, and has spent a lot of time collaborating and inspiring people to explore this medium, here are a few mandala’s that were made in collaboration with other beautiful humans."
+  },
+  {
+    "show": false,
+    "img": "images/art/geometryGlass.jpg",
+    "title": "Leadlight",
+    "alt": "An image of a five sided geometric terrarium that was made out of leadlight, the image looks in the terrarium so you can see it create more intricate patterns.",
+    "about": "As you can probably tell Mel is very inspired by geometry and different ways of playing with that, and one of these explorations was with leadlighting."
+  },
+  {
+    "show": false,
+    "img": "images/art/oneNest.jpg",
+    "title": "One Nest",
+    "alt": "An image of a logo design for a wellbeing company called 'One Nest', the logo was hand painted and has lavender around the outside with a birds eye view of a nest (I hope you liked the pun",
+    "about": "Two sisters came to me after seeing the geometric work I do to create a logo for a family business they started in 2017 making holistic natural remidies, they were amazing clients, and the aesthetic works really well with their nuturing home made feel."
+  }
 ]
