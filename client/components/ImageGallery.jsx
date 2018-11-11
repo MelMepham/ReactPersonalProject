@@ -66,6 +66,7 @@ class artPage extends React.Component {
                 <img 
                   height="400px" 
                   src={art.img} 
+                  alt={art.alt}
                   onClick={ (e) => {this.hideAllLong(art); this.showArtLong(art)}}/>
                   </div>
               ])
@@ -80,6 +81,7 @@ class artPage extends React.Component {
                 <img 
                   height="570px" 
                   src={art.img}
+                  alt={art.alt}
                   onClick={ (e) => {this.hideAllSquare(art); this.showArtSquare(art)}} />
                 </div>,
                 // <div className="mobileMargin">{art.show == true && <div className='img-responsive box'><h1>{art.title}</h1><p>{art.about}</p></div>}</div>
