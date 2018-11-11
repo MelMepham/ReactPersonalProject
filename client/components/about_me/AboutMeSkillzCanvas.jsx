@@ -21,6 +21,7 @@ class AboutMeSkillzCanvas extends React.Component {
 
     createShapes() {
         let shapes = []
+        let names = ["CREATIVITY", "COMMUNICATION", "CRITICAL REFLECTION", "COLLABORATION"]
         for (let i = 0; i < 4; i++) {
             let id = createId()
             let circle = {
@@ -35,7 +36,7 @@ class AboutMeSkillzCanvas extends React.Component {
                 height: "",
                 fill: "#FFD080"
             }
-            shapes.push({circle: circle, rectange: rectangle})
+            shapes.push({name: names[i], circle: circle, rectange: rectangle})
         }
         this.setState({ baseShapes: shapes })
     }
@@ -53,9 +54,10 @@ class AboutMeSkillzCanvas extends React.Component {
                     <div className="about-me-flex-container">
                         <div className="about-me-flex-col">
                             {this.state.baseShapes.map(shape => {
-                                console.log(shape.circle.id)
+                                console.log(shape)
                                 return (
                                     <div key={createId()}>
+                                    <h4>{shape.name}</h4>
                                         <svg>
                                             <SkillzCircle
                                                 key={shape.circle.id}
