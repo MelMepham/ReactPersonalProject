@@ -498,3 +498,14 @@ Link {
     grid-template-columns: repeat(1, 1fr);
   }
 }
+
+
+/* aboutMeSkillz */
+
+.about-me-flex-container {
+  display: flex;
+}
+
+.about-me-flex-col {
+  flex: 1;
+}
