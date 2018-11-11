@@ -7,7 +7,7 @@ import AboutMe from "./components/AboutMe";
 import WebDev from "./components/WebDev";
 import ImageGallery from "./components/ImageGallery";
 import BlogApp from "./components/blog/BlogApp";
-import BlogNav from "./components/blog/BlogNav";
+import PlasticFreeNovember from "./components/blog/PlasticFreeNovember";
 
 import longArtInfo from "./data/artInfo.json";
 
@@ -24,18 +24,13 @@ const App = props => {
         <Route exact path="/aboutme" component={AboutMe} />
         <Route
           exact
-          path="/art"
+          path="/gallery"
           render={() => <ImageGallery infoSquare={artInfo} infoLong={longArtInfo} />}
         />
         <Route exact path="/blog" component={BlogApp} />
         <Route
-          exact
           path="/blog/plastic-free-month"
-          render={() => <h3>Please select a topic.</h3>}
-        />
-        <Route
-          path="/blog/plastic-free-month"
-          render={() => <BlogNav info={plasticFreeMonthInfo} />}
+          render={() => <PlasticFreeNovember info={plasticFreeMonthInfo} />}
         />
       </div>
     </Router>

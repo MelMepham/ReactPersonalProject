@@ -18,7 +18,7 @@ const Footer = (props) => {
           <div className="row text-center align-text-bottom">
             <div className="col-sm-1"></div>
               {footerLink('', 'HOME', false)}
-              {footerLink('art', 'ART', false)}
+              {footerLink('gallery', 'GALLERY', false)}
               {footerLink('blog', 'BLOG', false)}
               {footerLink('webdev', 'WEB', false)}
               {footerLink('aboutme', 'ABOUT', false)}
@@ -44,7 +44,7 @@ const Footer = (props) => {
         <div className="collapse navbar-collapse, container-fluid" id="myNavbar">
           <ul className="nav navbar-nav">
             {footerLink('', 'HOME', true)}
-            {footerLink('art', 'ART', true)}
+            {footerLink('gallery', 'GALLERY', true)}
             {footerLink('blog', 'BLOG', true)}
             {footerLink('webdev', 'WEB DEV', true)}
             {footerLink('aboutme', 'ABOUT ME', true)}
