@@ -497,18 +497,6 @@ link {
   align-items: center;
 }
 
-@media only screen and (max-width: 1267px) {
-  .portfolio {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media only screen and (max-width: 846px) {
-  .portfolio {
-    grid-template-columns: repeat(1, 1fr);
-  }
-}
-
 /* aboutMeSkillz */
 
 .about-me-flex-container {
@@ -526,10 +514,17 @@ link {
   padding: 20px;
 }
 
-.about-me-rectangle-svg {
-padding-left: 30px;
+.about-me-svg-container {
+ align-self:stretch;
+ width: 100%;
 }
 
-.hello{
- display: inline-block;
+.about-me-heading {
+  text-align: left;
+}
+
+@media only screen and (max-width: 846px) {
+  .about-me-container {
+    grid-template-columns: 1fr;
+  }
 }

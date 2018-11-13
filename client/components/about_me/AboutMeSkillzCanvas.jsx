@@ -12,6 +12,7 @@ class AboutMeSkillzCanvas extends React.Component {
     };
     this.clickCircle = this.clickCircle.bind(this);
     this.createShapes = this.createShapes.bind(this);
+    this.hoverMouseRectangle = this.hoverMouseRectangle.bind(this);
   }
   componentDidMount() {
     console.log(SkillzRectangle);
@@ -39,8 +40,8 @@ class AboutMeSkillzCanvas extends React.Component {
       let rectangle = {
         key: createId(),
         id: id,
-        width: "20",
-        height: "20",
+        width: "10%",
+        height: "40",
         fill: "#FFD080"
       };
       shapes.push({ name: names[i], circle: circle, rectangle: rectangle });
@@ -56,6 +57,10 @@ class AboutMeSkillzCanvas extends React.Component {
     console.log(id);
   }
 
+  hoverMouseRectangle(id) {
+    console.log("hover yo");
+  }
+
   render() {
     return (
       <div className="about-me-container">
@@ -63,26 +68,27 @@ class AboutMeSkillzCanvas extends React.Component {
           console.log(shape.rectangle.height);
           return (
             <div className="about-me-item" key={createId()}>
-              <h4>{shape.name}</h4>
-              <svg className="hello">
-                <svg width="60">
+              <h4 className="about-me-heading">{shape.name}</h4>
+              <svg height="auto" height="60" className="about-me-svg-container">
+                <svg width="20%">
                   <SkillzCircle
                     key={shape.circle.key}
                     id={shape.circle.id}
                     clickCircle={this.clickCircle}
                     cy={shape.circle.cy}
                     cx={shape.circle.cx}
-                    r="30"
+                    r="23"
                     color={shape.circle.fill}
                   />
                 </svg>
-                <svg width="200">
+                <svg width="auto">
                   <SkillzRectangle
                     key={shape.rectangle.key}
                     id={shape.rectangle.id}
                     clickRectangle={this.clickRectangle}
-                    height="40"
-                    width="455"
+                    hoverMouseRectangle={this.hoverMouseRectangle}
+                    height={shape.rectangle.height}
+                    width={shape.rectangle.width}
                     color={shape.circle.fill}
                   />
                 </svg>
