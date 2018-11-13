@@ -3,6 +3,7 @@ var SkillzCircle = require("./AboutMeSkillz").AboutMeSkillzCircle;
 var SkillzRectangle = require("./AboutMeSkillz").AboutMeSkillzRectangle;
 
 import createId from "incremental-id";
+import { registerHelper } from "handlebars";
 
 class AboutMeSkillzCanvas extends React.Component {
   constructor(props) {
@@ -58,7 +59,14 @@ class AboutMeSkillzCanvas extends React.Component {
   }
 
   hoverMouseRectangle(id) {
-    console.log("hover yo");
+    let newShapes = this.state.baseShapes.filter(shape => {
+        if(shape.rectangle.id == id) {
+            shape.rectangle.width = "70%"
+            // console.log(shape)
+        }
+        return shape
+    })
+    console.log(newShapes)
   }
 
   render() {
