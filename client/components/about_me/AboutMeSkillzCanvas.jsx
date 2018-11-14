@@ -52,11 +52,11 @@ class AboutMeSkillzCanvas extends React.Component {
   clickCircle(id) {}
 
   hoverMouseCircle(id) {
-    var maxRectangleWidth = $("#background-rect-length").width();
-    console.log(maxRectangleWidth)
+    let maxRectangle = document.getElementById("background-rect-length");
+    let maxRectangleWidth = maxRectangle.width.animVal.value;
     let newShapes = this.state.baseShapes.filter(shape => {
       if (shape.circle.id == id) {
-        shape.rectangle.width === maxRectangleWidth
+        shape.rectangle.width > maxRectangleWidth
           ? shape
           : (shape.rectangle.width = shape.rectangle.width + 1);
       }
@@ -73,37 +73,33 @@ class AboutMeSkillzCanvas extends React.Component {
             <div className="about-me-item" key={createId()}>
               <h4 className="about-me-heading">{shape.name}</h4>
               <svg width="auto" height="60" className="about-me-svg-container">
-                <svg width="60">
-                  <SkillzCircle
-                    key={shape.circle.key}
-                    id={shape.circle.id}
-                    hoverMouseCircle={this.hoverMouseCircle}
-                    clickCircle={this.clickCircle}
-                    cy={shape.circle.cy}
-                    cx={shape.circle.cx}
-                    r="23"
-                    color={shape.circle.fill}
-                  />
-                </svg>
-                <svg width="auto">
-                  <rect
-                    id="background-rect-length"
-                    width="300"
-                    height="40"
-                    rx="5"
-                    y="10"
-                    x="80"
-                    stroke={shape.circle.fill}
-                    fill="none"
-                  />
-                  <SkillzRectangle
-                    key={shape.rectangle.key}
-                    id={shape.rectangle.id}
-                    height={shape.rectangle.height}
-                    width={shape.rectangle.width}
-                    color={shape.circle.fill}
-                  />
-                </svg>
+                <SkillzCircle
+                  key={shape.circle.key}
+                  id={shape.circle.id}
+                  hoverMouseCircle={this.hoverMouseCircle}
+                  clickCircle={this.clickCircle}
+                  cy={shape.circle.cy}
+                  cx={shape.circle.cx}
+                  r="23"
+                  color={shape.circle.fill}
+                />
+                <rect
+                  id="background-rect-length"
+                  width="70%"
+                  height="40"
+                  rx="5"
+                  y="10"
+                  x="80"
+                  stroke={shape.circle.fill}
+                  fill="none"
+                />
+                <SkillzRectangle
+                  key={shape.rectangle.key}
+                  id={shape.rectangle.id}
+                  height={shape.rectangle.height}
+                  width={shape.rectangle.width}
+                  color={shape.circle.fill}
+                />
               </svg>
             </div>
           );
