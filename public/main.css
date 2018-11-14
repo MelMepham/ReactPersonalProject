@@ -504,20 +504,18 @@ link {
 }
 
 .about-me-container {
-  border: red 3px solid;
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
 
 .about-me-item {
-  border: black 3px solid;
   padding: 20px;
 }
 
 .about-me-svg-container {
   display: flex;
- align-self:stretch;
- width: 100%;
+  align-self: stretch;
+  width: 100%;
 }
 
 .about-me-heading {

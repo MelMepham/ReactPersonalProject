@@ -13,19 +13,41 @@ class AboutMeSkillzCircle extends React.Component {
   }
 
   hover() {
-    const {hoverMouseCircle, id} = this.props;
+    const { hoverMouseCircle, id } = this.props;
     hoverMouseCircle(id);
   }
 
   render() {
     const { cy, cx, r, color } = this.props;
-    return <circle 
-      onMouseOver={this.hover}
-      onClick={this.click} 
-      cy={cy} 
-      cx={cx} 
-      r={r} 
-      fill={color} />;
+    console.log(color)
+    return (
+      <svg>
+        <defs>
+          <radialGradient id="bones-gradient">
+            <stop offset="0%" style={{stopColor: color, stopOpacity:'1'}} />
+            {/* <stop offset="100%" style={{stopColor: 'white', stopOpacity:'0.5'}}/> */}
+          </radialGradient>
+        </defs>
+        <circle
+          onMouseOver={this.hover}
+          onClick={this.click}
+          cy={cy}
+          cx={cx}
+          r={r}
+          fill="url(#bones-gradient)"
+        >
+          {/* <animate
+            attributeType="CSS"
+            attributeName="opacity"
+            from="1"
+            to="1"
+            dur="5"
+            values="1; 0; 1"
+            repeatCount="indefinite"
+          /> */}
+        </circle>
+      </svg>
+    );
   }
 }
 
@@ -36,14 +58,7 @@ class AboutMeSkillzRectangle extends React.Component {
   render() {
     const { width, height, color } = this.props;
     return (
-      <rect
-        width={width}
-        height={height}
-        fill={color}
-        rx="5"
-        y="10"
-        x="80"
-      />
+      <rect width={width} height={height} fill={color} rx="5" y="10" x="80" />
     );
   }
 }
