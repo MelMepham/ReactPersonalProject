@@ -528,3 +528,17 @@ link {
     grid-template-columns: 1fr;
   }
 }
+
+.CREATIVITY {
+color: #74B7C1;
+}
+
+.COMMUNICATION {
+color: #167C55;
+}
+/* .CRITICAL REFLECTION {
+  color: #31E384;
+} */
+.COLLABORATION {
+  color: #5EEDCC;
+}

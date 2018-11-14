@@ -3,7 +3,7 @@ var SkillzCircle = require("./AboutMeSkillz").AboutMeSkillzCircle;
 var SkillzRectangle = require("./AboutMeSkillz").AboutMeSkillzRectangle;
 
 import createId from "incremental-id";
-import { registerHelper } from "handlebars";
+import { INSPECT_MAX_BYTES } from "buffer";
 
 class AboutMeSkillzCanvas extends React.Component {
   constructor(props) {
@@ -13,12 +13,10 @@ class AboutMeSkillzCanvas extends React.Component {
     };
     this.clickCircle = this.clickCircle.bind(this);
     this.createShapes = this.createShapes.bind(this);
-    this.hoverMouseRectangle = this.hoverMouseRectangle.bind(this);
+    this.hoverMouseCircle = this.hoverMouseCircle.bind(this);
   }
   componentDidMount() {
-    console.log(SkillzRectangle);
     this.createShapes();
-    console.log(this.state);
   }
 
   createShapes() {
@@ -29,6 +27,7 @@ class AboutMeSkillzCanvas extends React.Component {
       "CRITICAL REFLECTION",
       "COLLABORATION"
     ];
+    let colors = ["#74B7C1", "#167C55", "#31E384", "#5EEDCC"];
     for (let i = 0; i < 4; i++) {
       let id = createId();
       let circle = {
@@ -36,52 +35,49 @@ class AboutMeSkillzCanvas extends React.Component {
         id: id,
         cx: "30",
         cy: "30",
-        fill: "#FFD080"
+        fill: colors[i]
       };
       let rectangle = {
         key: createId(),
         id: id,
-        width: "10%",
-        height: "40",
-        fill: "#FFD080"
+        width: 1,
+        height: 40,
+        fill: colors[i]
       };
       shapes.push({ name: names[i], circle: circle, rectangle: rectangle });
     }
     this.setState({ baseShapes: shapes });
   }
 
-  clickCircle(id) {
-    console.log(id);
-  }
+  clickCircle(id) {}
 
-  clickRectangle(id) {
-    console.log(id);
-  }
-
-  hoverMouseRectangle(id) {
+  hoverMouseCircle(id) {
+    var maxRectangleWidth = $("#background-rect-length").width();
+    console.log(maxRectangleWidth)
     let newShapes = this.state.baseShapes.filter(shape => {
-        if(shape.rectangle.id == id) {
-            shape.rectangle.width = "70%"
-            // console.log(shape)
-        }
-        return shape
-    })
-    console.log(newShapes)
+      if (shape.circle.id == id) {
+        shape.rectangle.width === maxRectangleWidth
+          ? shape
+          : (shape.rectangle.width = shape.rectangle.width + 1);
+      }
+      return shape;
+    });
+    this.setState({ baseShapes: newShapes });
   }
 
   render() {
     return (
       <div className="about-me-container">
         {this.state.baseShapes.map(shape => {
-          console.log(shape.rectangle.height);
           return (
             <div className="about-me-item" key={createId()}>
               <h4 className="about-me-heading">{shape.name}</h4>
-              <svg height="auto" height="60" className="about-me-svg-container">
-                <svg width="20%">
+              <svg width="auto" height="60" className="about-me-svg-container">
+                <svg width="60">
                   <SkillzCircle
                     key={shape.circle.key}
                     id={shape.circle.id}
+                    hoverMouseCircle={this.hoverMouseCircle}
                     clickCircle={this.clickCircle}
                     cy={shape.circle.cy}
                     cx={shape.circle.cx}
@@ -90,11 +86,19 @@ class AboutMeSkillzCanvas extends React.Component {
                   />
                 </svg>
                 <svg width="auto">
+                  <rect
+                    id="background-rect-length"
+                    width="300"
+                    height="40"
+                    rx="5"
+                    y="10"
+                    x="80"
+                    stroke={shape.circle.fill}
+                    fill="none"
+                  />
                   <SkillzRectangle
                     key={shape.rectangle.key}
                     id={shape.rectangle.id}
-                    clickRectangle={this.clickRectangle}
-                    hoverMouseRectangle={this.hoverMouseRectangle}
                     height={shape.rectangle.height}
                     width={shape.rectangle.width}
                     color={shape.circle.fill}
