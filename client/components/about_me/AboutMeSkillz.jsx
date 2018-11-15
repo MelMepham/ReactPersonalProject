@@ -19,24 +19,26 @@ class AboutMeSkillzCircle extends React.Component {
 
   render() {
     const { cy, cx, r, color } = this.props;
-    console.log(color)
+    let gradientFill = "url(#" + color + ")";
     return (
       <svg>
         <defs>
-          <radialGradient id="bones-gradient">
-            <stop offset="0%" style={{stopColor: color, stopOpacity:'1'}} />
-            {/* <stop offset="100%" style={{stopColor: 'white', stopOpacity:'0.5'}}/> */}
+          <radialGradient id={color}>
+            <stop offset="0%" style={{ stopColor: color, stopOpacity: "1" }} />
+            <stop offset="70%" style={{ stopColor: color, stopOpacity: "1" }} />
+            <stop
+              offset="100%"
+              style={{ stopColor: color, stopOpacity: "0" }}
+            />
           </radialGradient>
         </defs>
         <circle
-          onMouseOver={this.hover}
-          onClick={this.click}
           cy={cy}
           cx={cx}
-          r={r}
-          fill="url(#bones-gradient)"
+          r="30"
+          fill={gradientFill}
         >
-          {/* <animate
+          <animate
             attributeType="CSS"
             attributeName="opacity"
             from="1"
@@ -44,8 +46,16 @@ class AboutMeSkillzCircle extends React.Component {
             dur="5"
             values="1; 0; 1"
             repeatCount="indefinite"
-          /> */}
+          />
         </circle>
+        <circle
+          onMouseOver={this.hover}
+          onClick={this.click}
+          cy={cy}
+          cx={cx}
+          r={r}
+          fill={gradientFill}
+        />
       </svg>
     );
   }
