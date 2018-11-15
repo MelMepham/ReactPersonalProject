@@ -2,7 +2,7 @@ import React from "react";
 import { HashRouter as Router, Route } from "react-router-dom";
 import P5Wrapper from "react-p5-wrapper";
 import { Link } from "react-router-dom";
-import AboutMeSkillzCanvas from './AboutMeSkillzCanvas'
+import AboutMeSkillzCanvas from "./AboutMeSkillzCanvas";
 
 import MyHorizontalScroll from "../MyHorizontalScroll";
 import exhibitions from "../../data/exhibitions.json";
@@ -38,12 +38,7 @@ class AboutMe extends React.Component {
               and love new things!
             </p>
 
-      <AboutMeSkillzCanvas />
-
-            <div className="p5SketchAboutMe">
-              <P5Wrapper sketch={this.state.aboutMeSkillz} />
-            </div>
-
+            <AboutMeSkillzCanvas />
 
             <br />
             <br />

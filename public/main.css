@@ -21,7 +21,7 @@ h2 {
 }
 
 h4 {
-  color: #ef26c4 !important;
+  color: #ef26c4;
   text-align: right;
 }
 
@@ -497,6 +497,12 @@ link {
   align-items: center;
 }
 
+@media only screen and (max-width: 846px) {
+  .about-me-container {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* aboutMeSkillz */
 
 .about-me-flex-container {
@@ -509,7 +515,7 @@ link {
 }
 
 .about-me-item {
-  padding: 20px;
+  padding-bottom: 20px;
 }
 
 .about-me-svg-container {

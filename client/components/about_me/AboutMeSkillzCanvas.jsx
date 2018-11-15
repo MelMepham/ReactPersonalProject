@@ -3,7 +3,6 @@ var SkillzCircle = require("./AboutMeSkillz").AboutMeSkillzCircle;
 var SkillzRectangle = require("./AboutMeSkillz").AboutMeSkillzRectangle;
 
 import createId from "incremental-id";
-import { INSPECT_MAX_BYTES } from "buffer";
 
 class AboutMeSkillzCanvas extends React.Component {
   constructor(props) {
@@ -58,7 +57,7 @@ class AboutMeSkillzCanvas extends React.Component {
       if (shape.circle.id == id) {
         shape.rectangle.width > maxRectangleWidth
           ? shape
-          : (shape.rectangle.width = shape.rectangle.width + 1);
+          : (shape.rectangle.width = shape.rectangle.width + 3);
       }
       return shape;
     });
@@ -69,9 +68,11 @@ class AboutMeSkillzCanvas extends React.Component {
     return (
       <div className="about-me-container">
         {this.state.baseShapes.map(shape => {
+          console.log(shape.circle.fill)
+
           return (
             <div className="about-me-item" key={createId()}>
-              <h4 className="about-me-heading">{shape.name}</h4>
+              <h4 style={{ 'color': shape.circle.fill }} className="about-me-heading">{shape.name}</h4>
               <svg width="auto" height="60" className="about-me-svg-container">
                 <SkillzCircle
                   key={shape.circle.key}
