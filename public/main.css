@@ -497,12 +497,17 @@ link {
   align-items: center;
 }
 
-@media only screen and (max-width: 846px) {
-  .about-me-container {
-    grid-template-columns: 1fr;
+@media only screen and (max-width: 1259px) {
+  .portfolio {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
+@media only screen and (max-width: 885px) {
+  .portfolio {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
 /* aboutMeSkillz */
 
 .about-me-flex-container {
