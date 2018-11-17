@@ -3,14 +3,9 @@ import React from "react";
 class AboutMeSkillzCircle extends React.Component {
   constructor(props) {
     super(props);
-    this.click = this.click.bind(this);
     this.hover = this.hover.bind(this);
   }
 
-  click() {
-    const { clickCircle, id } = this.props;
-    clickCircle(id);
-  }
 
   hover() {
     const { hoverMouseCircle, id } = this.props;
@@ -18,7 +13,7 @@ class AboutMeSkillzCircle extends React.Component {
   }
 
   render() {
-    const { cy, cx, r, color } = this.props;
+    const { cy, cx, r, color, id } = this.props;
     let gradientFill = "url(#" + color + ")";
     return (
       <svg>
@@ -49,8 +44,8 @@ class AboutMeSkillzCircle extends React.Component {
           />
         </circle>
         <circle
+          id={id}
           onMouseOver={this.hover}
-          onClick={this.click}
           cy={cy}
           cx={cx}
           r={r}
@@ -66,9 +61,9 @@ class AboutMeSkillzRectangle extends React.Component {
     super(props);
   }
   render() {
-    const { width, height, color } = this.props;
+    const { width, height, color, x } = this.props;
     return (
-      <rect width={width} height={height} fill={color} rx="5" y="10" x="80" />
+      <rect width={width} height={height} fill={color} y="10" x={x} />
     );
   }
 }

@@ -8,102 +8,108 @@ class AboutMeSkillzCanvas extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      baseShapes: []
+      circles: [],
+      rectangles: [],
+      names: ["CREATIVITY", "COMMUNICATION", "CRITICAL REFLECTION", "COLLABORATION"],
+      colors: ["#74B7C1", "#167C55", "#31E384", "#5EEDCC"]
     };
-    this.clickCircle = this.clickCircle.bind(this);
-    this.createShapes = this.createShapes.bind(this);
     this.hoverMouseCircle = this.hoverMouseCircle.bind(this);
+    this.createCircles = this.createCircles.bind(this);
+    this.createRectangles = this.createRectangles.bind(this);
   }
   componentDidMount() {
-    this.createShapes();
+    this.createCircles()
+    this.createRectangles()
   }
 
-  createShapes() {
-    let shapes = [];
-    let names = [
-      "CREATIVITY",
-      "COMMUNICATION",
-      "CRITICAL REFLECTION",
-      "COLLABORATION"
-    ];
-    let colors = ["#74B7C1", "#167C55", "#31E384", "#5EEDCC"];
+  createCircles() {
+    let newCircles = []
     for (let i = 0; i < 4; i++) {
-      let id = createId();
       let circle = {
         key: createId(),
-        id: id,
         cx: "30",
         cy: "30",
-        fill: colors[i]
+        r: "23"
       };
-      let rectangle = {
-        key: createId(),
-        id: id,
-        width: 1,
-        height: 40,
-        fill: colors[i]
-      };
-      shapes.push({ name: names[i], circle: circle, rectangle: rectangle });
+      newCircles.push(circle);
     }
-    this.setState({ baseShapes: shapes });
+    this.setState({ circles: newCircles });
   }
 
-  clickCircle(id) {}
+  createRectangles() {
+    let newRectangles = []
+    for (let i = 0; i < 4; i++) {
+      let rectangle = {
+        key: createId(),
+        width: 1,
+        height: 40,
+        x: "15%"
+      };
+      newRectangles.push({ rectangles: rectangle });
+    }
+    this.setState({ rectangles: newRectangles });
+  }
 
   hoverMouseCircle(id) {
     let maxRectangle = document.getElementById("background-rect-length");
     let maxRectangleWidth = maxRectangle.width.animVal.value;
-    let newShapes = this.state.baseShapes.filter(shape => {
-      if (shape.circle.id == id) {
-        shape.rectangle.width > maxRectangleWidth
-          ? shape
-          : (shape.rectangle.width = shape.rectangle.width + 3);
+    let newRectangles = this.state.rectangles.filter((rectangle, i) => {
+      console.log(this.state.circles[i].id)
+
+      if (this.state.circles[i].id == id) {
+
+        console.log(rectangle.width)
+        rectangle.rectangle.width > maxRectangleWidth
+          ? rectangle
+          : (rectangle.width = rectangle.width + 3);
       }
-      return shape;
+      return rectangle;
     });
-    this.setState({ baseShapes: newShapes });
+    this.setState({ rectangles: newRectangles });
   }
 
   render() {
     return (
       <div className="about-me-container">
-        {this.state.baseShapes.map(shape => {
-          console.log(shape.circle.fill)
 
-          return (
-            <div className="about-me-item" key={createId()}>
-              <h4 style={{ 'color': shape.circle.fill }} className="about-me-heading">{shape.name}</h4>
-              <svg width="auto" height="60" className="about-me-svg-container">
-                <SkillzCircle
-                  key={shape.circle.key}
-                  id={shape.circle.id}
-                  hoverMouseCircle={this.hoverMouseCircle}
-                  clickCircle={this.clickCircle}
-                  cy={shape.circle.cy}
-                  cx={shape.circle.cx}
-                  r="23"
-                  color={shape.circle.fill}
-                />
-                <rect
-                  id="background-rect-length"
-                  width="70%"
-                  height="40"
-                  rx="5"
-                  y="10"
-                  x="80"
-                  stroke={shape.circle.fill}
-                  fill="none"
-                />
-                <SkillzRectangle
-                  key={shape.rectangle.key}
-                  id={shape.rectangle.id}
-                  height={shape.rectangle.height}
-                  width={shape.rectangle.width}
-                  color={shape.circle.fill}
-                />
-              </svg>
-            </div>
-          );
+        {this.state.colors.map((color, i) => {
+          if (this.state.circles.length > 0 && this.state.rectangles.length > 0) {
+            let circle = this.state.circles[i]
+            let rectangle = this.state.rectangles[i]
+            return (
+              <div className="about-me-item" key={createId()}>
+                <h4 style={{ 'color': color }} className="about-me-heading">{this.state.name}</h4>
+                <svg height="60" className="about-me-svg-container">
+                  
+                  <SkillzCircle
+                    key={circle.key}
+                    hoverMouseCircle={this.hoverMouseCircle}
+                    cy={circle.cy}
+                    cx={circle.cx}
+                    r={circle.r}
+                    color={color}/>
+                  
+                  <rect
+                    id="background-rect-length"
+                    width="75%"
+                    height={rectangle.height}
+                    rx="5"
+                    y="10"
+                    x={rectangle.x}
+                    stroke={color}
+                    fill="none"/>
+                  
+                  <SkillzRectangle
+                    key={rectangle.key}
+                    height={rectangle.height}
+                    width={rectangle.width}
+                    color={color}
+                    x={rectangle.x}
+                  />
+                </svg>
+              </div>
+            );
+          }
         })}
       </div>
     );
