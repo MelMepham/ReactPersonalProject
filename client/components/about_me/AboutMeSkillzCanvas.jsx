@@ -19,14 +19,13 @@ class AboutMeSkillzCanvas extends React.Component {
   }
   componentDidMount() {
     this.createCircles()
-    this.createRectangles()
   }
 
   createCircles() {
     let newCircles = []
     for (let i = 0; i < 4; i++) {
       let circle = {
-        key: createId(),
+        id: createId(),
         cx: "30",
         cy: "30",
         r: "23"
@@ -34,32 +33,34 @@ class AboutMeSkillzCanvas extends React.Component {
       newCircles.push(circle);
     }
     this.setState({ circles: newCircles });
+    this.createRectangles()
   }
 
   createRectangles() {
+    let { circles } = this.state
+    console.log(this.state)
     let newRectangles = []
     for (let i = 0; i < 4; i++) {
       let rectangle = {
+        id: circles.id,
         key: createId(),
         width: 1,
         height: 40,
         x: "15%"
       };
-      newRectangles.push({ rectangles: rectangle });
+      newRectangles.push(rectangle);
     }
     this.setState({ rectangles: newRectangles });
   }
 
   hoverMouseCircle(id) {
+    console.log(id)
     let maxRectangle = document.getElementById("background-rect-length");
     let maxRectangleWidth = maxRectangle.width.animVal.value;
     let newRectangles = this.state.rectangles.filter((rectangle, i) => {
-      console.log(this.state.circles[i].id)
-
-      if (this.state.circles[i].id == id) {
-
-        console.log(rectangle.width)
-        rectangle.rectangle.width > maxRectangleWidth
+      console.log(rectangle)
+      if (id == rectangle.id) {
+        rectangle.width > maxRectangleWidth
           ? rectangle
           : (rectangle.width = rectangle.width + 3);
       }
@@ -80,15 +81,16 @@ class AboutMeSkillzCanvas extends React.Component {
               <div className="about-me-item" key={createId()}>
                 <h4 style={{ 'color': color }} className="about-me-heading">{this.state.name}</h4>
                 <svg height="60" className="about-me-svg-container">
-                  
+
                   <SkillzCircle
+                    id={circle.id}
                     key={circle.key}
                     hoverMouseCircle={this.hoverMouseCircle}
                     cy={circle.cy}
                     cx={circle.cx}
                     r={circle.r}
-                    color={color}/>
-                  
+                    color={color} />
+
                   <rect
                     id="background-rect-length"
                     width="75%"
@@ -97,9 +99,10 @@ class AboutMeSkillzCanvas extends React.Component {
                     y="10"
                     x={rectangle.x}
                     stroke={color}
-                    fill="none"/>
-                  
+                    fill="none" />
+
                   <SkillzRectangle
+                    id={rectangle.id}
                     key={rectangle.key}
                     height={rectangle.height}
                     width={rectangle.width}

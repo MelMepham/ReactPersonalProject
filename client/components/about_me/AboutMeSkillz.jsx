@@ -61,9 +61,9 @@ class AboutMeSkillzRectangle extends React.Component {
     super(props);
   }
   render() {
-    const { width, height, color, x } = this.props;
+    const { width, height, color, x, id } = this.props;
     return (
-      <rect width={width} height={height} fill={color} y="10" x={x} />
+      <rect id={id} width={width} height={height} fill={color} y="10" x={x} />
     );
   }
 }
