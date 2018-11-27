@@ -32,7 +32,6 @@ class webDev extends React.Component {
     return (
       <Router>
         <div className="page-container">
-          <h1>MY LIFE AS A WEB DEVELOPER</h1>
           <div className="mandalaCentered">
             <P5Wrapper sketch={this.state.aboutMe} />
           </div>

@@ -22,7 +22,6 @@ class AboutMe extends React.Component {
     return (
       <Router>
         <div className="page-container">
-          <h1>KIA ORA / HELLO</h1>
           <div className="mandalaCentered">
             <P5Wrapper sketch={this.state.aboutMe} />
           </div>

@@ -28,7 +28,6 @@ class Blog extends React.Component {
     
     return (
       <div className="page-container">
-        <h1>CHECK OUT MY BLOG PAGE</h1>
         <div className="mandalaCentered">
           <P5Wrapper sketch={this.state.aboutMe} />
         </div>

@@ -18,7 +18,7 @@ class AboutMeSkillzCanvas extends React.Component {
     this.createCircles = this.createCircles.bind(this);
     this.createRectangles = this.createRectangles.bind(this);
   }
-  componentDidMount() {
+  componentWillMount() {
     this.createCircles()
     this.createRectangles()
   }
@@ -71,14 +71,15 @@ class AboutMeSkillzCanvas extends React.Component {
   render() {
     return (
       <div className="about-me-container">
-
         {this.state.colors.map((color, i) => {
-          if (this.state.circles.length > 0 && this.state.rectangles.length > 0) {
             let circle = this.state.circles[i]
             let rectangle = this.state.rectangles[i]
             return (
               <div className="about-me-item" key={createId()}>
-                <h4 style={{ 'color': color, 'textAlign': 'right', 'padding-right': '10%' }} className="about-me-heading">{this.state.names[i]}</h4>
+                <h4 
+                  style={{ 'color': color }} 
+                  className="about-me-heading">{this.state.names[i]}
+                </h4>
                 <svg height="60" className="about-me-svg-container">
 
                   <SkillzCircle
@@ -88,7 +89,7 @@ class AboutMeSkillzCanvas extends React.Component {
                     cy={circle.cy}
                     cx={circle.cx}
                     r={circle.r}
-                    color={color} />
+                    color={color}/>
 
                   <rect
                     id="background-rect-length"
@@ -98,7 +99,7 @@ class AboutMeSkillzCanvas extends React.Component {
                     y="10"
                     x={rectangle.x}
                     stroke={color}
-                    fill="none" />
+                    fill="none"/>
 
                   <SkillzRectangle
                     id={rectangle.id}
@@ -106,13 +107,12 @@ class AboutMeSkillzCanvas extends React.Component {
                     height={rectangle.height}
                     width={rectangle.width}
                     color={color}
-                    x={rectangle.x}
-                  />
+                    x={rectangle.x}/>
                 </svg>
               </div>
             );
           }
-        })}
+        )}
       </div>
     );
   }
