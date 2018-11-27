@@ -13,6 +13,7 @@ class AboutMeSkillzCircle extends React.Component {
   }
 
   render() {
+    console.log("this.props", this.props)
     const { cy, cx, r, color, id } = this.props;
     let gradientFill = "url(#" + color + ")";
     return (

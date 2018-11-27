@@ -10,6 +10,7 @@ class AboutMeSkillzCanvas extends React.Component {
     this.state = {
       circles: [],
       rectangles: [],
+      id: [0, 1, 2, 3],
       names: ["CREATIVITY", "COMMUNICATION", "CRITICAL REFLECTION", "COLLABORATION"],
       colors: ["#74B7C1", "#167C55", "#31E384", "#5EEDCC"]
     };
@@ -19,13 +20,14 @@ class AboutMeSkillzCanvas extends React.Component {
   }
   componentDidMount() {
     this.createCircles()
+    this.createRectangles()
   }
 
   createCircles() {
     let newCircles = []
     for (let i = 0; i < 4; i++) {
       let circle = {
-        id: createId(),
+        id: this.state.id[i],
         cx: "30",
         cy: "30",
         r: "23"
@@ -33,16 +35,15 @@ class AboutMeSkillzCanvas extends React.Component {
       newCircles.push(circle);
     }
     this.setState({ circles: newCircles });
-    this.createRectangles()
   }
 
   createRectangles() {
     let { circles } = this.state
-    console.log(this.state)
     let newRectangles = []
     for (let i = 0; i < 4; i++) {
+      console.log("circles", circles)
       let rectangle = {
-        id: circles.id,
+        id: this.state.id[i],
         key: createId(),
         width: 1,
         height: 40,
@@ -54,11 +55,9 @@ class AboutMeSkillzCanvas extends React.Component {
   }
 
   hoverMouseCircle(id) {
-    console.log(id)
     let maxRectangle = document.getElementById("background-rect-length");
     let maxRectangleWidth = maxRectangle.width.animVal.value;
     let newRectangles = this.state.rectangles.filter((rectangle, i) => {
-      console.log(rectangle)
       if (id == rectangle.id) {
         rectangle.width > maxRectangleWidth
           ? rectangle
@@ -79,7 +78,7 @@ class AboutMeSkillzCanvas extends React.Component {
             let rectangle = this.state.rectangles[i]
             return (
               <div className="about-me-item" key={createId()}>
-                <h4 style={{ 'color': color }} className="about-me-heading">{this.state.name}</h4>
+                <h4 style={{ 'color': color, 'textAlign': 'right', 'padding-right': '10%' }} className="about-me-heading">{this.state.names[i]}</h4>
                 <svg height="60" className="about-me-svg-container">
 
                   <SkillzCircle
