@@ -24,16 +24,14 @@ class AboutMeSkillzCircle extends React.Component {
             <stop offset="70%" style={{ stopColor: color, stopOpacity: "1" }} />
             <stop
               offset="100%"
-              style={{ stopColor: color, stopOpacity: "0" }}
-            />
+              style={{ stopColor: color, stopOpacity: "0" }} />
           </radialGradient>
         </defs>
         <circle
           cy={cy}
           cx={cx}
           r="30"
-          fill={gradientFill}
-        >
+          fill={gradientFill}>
           <animate
             attributeType="CSS"
             attributeName="opacity"
@@ -41,8 +39,7 @@ class AboutMeSkillzCircle extends React.Component {
             to="1"
             dur="5"
             values="1; 0; 1"
-            repeatCount="indefinite"
-          />
+            repeatCount="indefinite" />
         </circle>
         <circle
           id={id}
@@ -50,8 +47,7 @@ class AboutMeSkillzCircle extends React.Component {
           cy={cy}
           cx={cx}
           r={r}
-          fill={gradientFill}
-        />
+          fill={gradientFill} />
       </svg>
     );
   }

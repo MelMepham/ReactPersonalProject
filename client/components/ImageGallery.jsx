@@ -24,12 +24,12 @@ class artPage extends React.Component {
             {infoLong && infoLong.map(art => {
               return ([
                 <div className="container">
-                <h2 className="overlay pink">{art.title.toUpperCase()}</h2>
-                <img 
-                  height="400px" 
-                  src={art.img} 
-                  alt={art.alt} />
-                  </div>
+                  <h2 className="overlay pink">{art.title.toUpperCase()}</h2>
+                  <img
+                    height="400px"
+                    src={art.img}
+                    alt={art.alt} />
+                </div>
               ])
             })
             }
@@ -37,17 +37,15 @@ class artPage extends React.Component {
             {infoSquare && infoSquare.map(art => {
               return ([
                 <div className="container">
-                <h2 className="overlay pink">{art.title.toUpperCase()}</h2>
-                <img 
-                  height="570px" 
-                  src={art.img}
-                  alt={art.alt}/>
+                  <h2 className="overlay pink">{art.title.toUpperCase()}</h2>
+                  <img
+                    height="570px"
+                    src={art.img}
+                    alt={art.alt} />
                 </div>
 
               ])
-            })
-
-            }
+            })}
           </div>
         </div>
       </div>
