@@ -5,47 +5,37 @@ class artPage extends React.Component {
     super(props)
     this.state = {
       art: [],
-      artLong: [],
     }
   }
 
   componentWillMount() {
-    const { infoSquare, infoLong } = this.props
-    this.setState({ art: infoSquare, artLong: infoLong })
+    const { infoSquare } = this.props
+    this.setState({ art: infoSquare })
   }
 
   render() {
-    const { infoSquare, infoLong } = this.props
+    const { infoSquare } = this.props
+    const square = "400px"
+    const rect = "570px"
+    var height
     return (
       <div className="body">
         <div className="main-content">
           <div className="portfolio">
 
-            {infoLong && infoLong.map(art => {
+            {infoSquare && infoSquare.map(art => {
+              height = art.imageSize === "square" ? square : rect
               return ([
                 <div className="container">
                   <h2 className="overlay pink">{art.title.toUpperCase()}</h2>
                   <img
-                    height="400px"
+                    height={height}
                     src={art.img}
                     alt={art.alt} />
                 </div>
               ])
             })
             }
-
-            {infoSquare && infoSquare.map(art => {
-              return ([
-                <div className="container">
-                  <h2 className="overlay pink">{art.title.toUpperCase()}</h2>
-                  <img
-                    height="570px"
-                    src={art.img}
-                    alt={art.alt} />
-                </div>
-
-              ])
-            })}
           </div>
         </div>
       </div>

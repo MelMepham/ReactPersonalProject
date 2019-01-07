@@ -9,9 +9,8 @@ import ImageGallery from "./components/ImageGallery";
 import BlogApp from "./components/blog/BlogApp";
 import PlasticFreeNovember from "./components/blog/PlasticFreeNovember";
 
-import longArtInfo from "./data/artInfo.json";
 
-import artInfo from "./data/longArtInfo.json";
+import artInfo from "./data/ArtInfo.json";
 import plasticFreeMonthInfo from "./data/plasticFreeMonthInfo.json";
 
 const App = props => {
@@ -25,7 +24,7 @@ const App = props => {
         <Route
           exact
           path="/gallery"
-          render={() => <ImageGallery infoSquare={artInfo} infoLong={longArtInfo} />}
+          render={() => <ImageGallery infoSquare={artInfo} />}
         />
         <Route exact path="/blog" component={BlogApp} />
         <Route

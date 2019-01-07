@@ -1,6 +1,7 @@
 [
   {
     "show": false,
+    "imageSize": "square",
     "img": "images/art/sanctuary.jpg",
     "title": "Sanctuary",
     "alt": "Typography Illustration of the word 'Sanctuary' hand written in a cursive font.",
@@ -8,6 +9,7 @@
   },
   {
     "show": false,
+    "imageSize": "square",
     "img": "images/art/mandala.jpg",
     "title": "Mandala",
     "alt": "A Mandala hand painted in oranges and blues with a lot of plant and flower elements.",
@@ -15,6 +17,7 @@
   },
   {
     "show": false,
+    "imageSize": "square",
     "img": "images/art/chaos.jpg",
     "title": "Chaos",
     "alt": "A massive painting in a frame filled with geometry, can't see much of the detail.",
@@ -22,6 +25,31 @@
   },
   {
     "show": false,
+    "imageSize": "rect",
+    "img": "images/art/kiwiburnPoster.jpg",
+    "title": "Kiwiburn Poster",
+    "alt": "A poster with the flower of life pattern painted in the background in rainbow colours with the kiwiburn logo (An abstracted person) overtop.",
+    "about": "Kiwiburn held a poster competition for their 10th festival, I submited this illustration and basic layout and it was chosen, Shelly Watson then designed the type on top of the illustration."
+  },
+  {
+    "show": false,
+    "imageSize": "rect",
+    "img": "images/art/crochetBlanket.jpg",
+    "title": "Crochet Shapes",
+    "alt": "A colourful image of crochet 6 sided flower looking patches.",
+    "about": "Another way in which Mel explores shapes and patterns is with crochet, this is a part of a bigger hexagonal blanket."
+  },
+  {
+    "show": false,
+    "imageSize": "rect",
+    "img": "images/art/abcd.jpg",
+    "title": "Letters",
+    "alt": "The letter 'A', 'B', 'C', 'D' hand pained in different styles.",
+    "about": "Mel has been playing with typography for years now, and this is an example of her playing with hand letting with gouache. "
+  },
+  {
+    "show": false,
+    "imageSize": "square",
     "img": "images/art/stardust.jpg",
     "title": "Stardust",
     "alt": "A black and white sketch of the words 'We are all made of the same stardust' in a cloud, white text and black background.",
@@ -29,6 +57,7 @@
   },
   {
     "show": false,
+    "imageSize": "square",
     "img": "images/art/misprintedCo.jpg",
     "title": "The Misprint co.",
     "alt": "A photograph of a sketchbook, the cover of the sketch book is a geometric pattern that was hand painted, it looks like a kalediscope",
@@ -36,6 +65,7 @@
   },
   {
     "show": false,
+    "imageSize": "square",
     "img": "images/art/poiCreations.jpg",
     "title": "Poi Creations",
     "alt": "Image of social media sites from a company 'Poi Creations' to show the logo and visual elements I made for them.",
@@ -43,6 +73,31 @@
   },
   {
     "show": false,
+    "imageSize": "rect",
+    "img": "images/art/giftVoucher.jpg",
+    "title": "Fidels gift voucher",
+    "alt": "An image of a gift voucher with big, bold and fun text.",
+    "about": "The Fidel's gift voucher hadn't been updated in a very long time, so I worked with some of the updated styling to create a new and updated voucher."
+  },
+  {
+    "show": false,
+    "imageSize": "rect",
+    "img": "images/art/havanaFlyer.jpg",
+    "title": "Havana Flyer",
+    "alt": "An image of a flyer, it has a photograph on the front of a bar with people standing around having heaps of fun, with an old cuban car (sorry I don't know my car models very well).",
+    "about": "This was a flyer that I designed for Havana Bar's 10th birthday that was used to promote their 10 year party and was published in a local Wellington magazine Capital Mag, While I was working as the inHouse designer I created an ad for Capital Mag every month."
+  },
+  {
+    "show": false,
+    "imageSize": "rect",
+    "img": "images/art/havanaBarGiftVoucher.jpg",
+    "title": "Havana Bar Gift Voucher",
+    "alt": "A picture of a gift voucher with pretty pink and brown test with a hand drawn illustration of a bar with some palm trees to make it look like a tropical island treasure.",
+    "about": "Like the Fidel's voucher, the Havana Bar voucher was even more outdated, I created the illustration a few months prior that was printed onto a teatowel."
+  },
+  {
+    "show": false,
+    "imageSize": "square",
     "img": "images/art/ensoul.jpg",
     "title": "EnSoul Mural",
     "alt": "A mural of a Mandala in browns and some green highlights painted on a brick wall of a yoga Studio.",
@@ -50,6 +105,7 @@
   },
   {
     "show": false,
+    "imageSize": "square",
     "img": "images/art/kiwiburnArtsCommittee.jpg",
     "title": "Kiwiburn Swag",
     "alt": "A hoodie with the words 'Kiwiburn Arts Committee' written on it in a hand written cursive font with a picture of some paintbrushes.",
@@ -57,13 +113,40 @@
   },
   {
     "show": false,
+    "imageSize": "square",
     "img": "images/art/lanterns.jpg",
     "title": "Lanterns",
     "alt":"An abstract image of some geometric triangle images that were laser cut out of wood.",
     "about": "In 2017 Mel was approached by a friend creating an interactive art piece. The idea was to create lanterns that had programmable LED’s in them that lit up with sound and changed colour depending on the key of the sound.  Mel work alongside this project designing the lanterns to be able to be flat packable, and create an image to be laser cut to produce interesting and alluring shapes."
   },
+
   {
     "show": false,
+    "imageSize": "rect",
+    "img": "images/art/jellyfish.jpg",
+    "title": "Jellyfish Kingdom",
+    "alt":"An Image from inside a tent covered in material and long crochet jellyfish hanging from the celing with some pretty lights.",
+    "about": "Mid 2016 while having an evening of craft with a friend, Mel crochet a jellyfish, using a simple pattern found online she fell in love with the process and her mind started to think about all of the amazing things that could happen with such a simple shape, and thus, the Jellyfish Kingdom was born. Over the next 6 months Mel with the help of some friends crochet around 60 jellyfish, all with long central tentacles that were using UV reactive wool. and created an interactive space that has been seen around New Zealand"
+  },
+  {
+    "show": false,
+    "imageSize": "rect",
+    "img": "images/art/existenceOfChaos.jpg",
+    "title": "The Existence of Chaos Poster",
+    "alt": "An Exhibition poster with a blue and green 9 sided mandala.",
+    "about": "In 2017 I held an exhibition at Black Coffee in Wellington, and created this for the event."
+  },
+  {
+    "show": false,
+    "imageSize": "rect",
+    "img": "images/art/coryChampion.jpg",
+    "title": "Cory Champion Poster",
+    "alt": "A poster that has a pink image on the background of four circles overlapping in interesting ways, it looks like a flower, or a geometric pattern",
+    "about": "While I was working as an InHouse Designer with Havana Bar in Wellington I completed this poster. Fromm Winery sponosored a Jazz night once a month."
+  },
+  {
+    "show": false,
+    "imageSize": "square",
     "img": "images/art/mandalaColabs.jpg",
     "title": "Colaborations",
     "alt": "Four images of black and white highly detailed Mandalas.",
@@ -71,6 +154,7 @@
   },
   {
     "show": false,
+    "imageSize": "square",
     "img": "images/art/geometryGlass.jpg",
     "title": "Leadlight",
     "alt": "An image of a five sided geometric terrarium that was made out of leadlight, the image looks in the terrarium so you can see it create more intricate patterns.",
@@ -78,9 +162,11 @@
   },
   {
     "show": false,
+    "imageSize": "square",
     "img": "images/art/oneNest.jpg",
     "title": "One Nest",
     "alt": "An image of a logo design for a wellbeing company called 'One Nest', the logo was hand painted and has lavender around the outside with a birds eye view of a nest (I hope you liked the pun",
     "about": "Two sisters came to me after seeing the geometric work I do to create a logo for a family business they started in 2017 making holistic natural remidies, they were amazing clients, and the aesthetic works really well with their nuturing home made feel."
   }
+
 ]
