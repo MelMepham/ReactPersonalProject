@@ -38,10 +38,8 @@ class AboutMeSkillzCanvas extends React.Component {
   }
 
   createRectangles() {
-    let { circles } = this.state
     let newRectangles = []
     for (let i = 0; i < 4; i++) {
-      console.log("circles", circles)
       let rectangle = {
         id: this.state.id[i],
         key: createId(),
