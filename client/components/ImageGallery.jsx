@@ -16,7 +16,7 @@ class artPage extends React.Component {
   render() {
     const { infoSquare } = this.props
     const square = "400px"
-    const rect = "570px"
+    const rect = "520px"
     var height
     return (
       <div className="body">
@@ -30,6 +30,7 @@ class artPage extends React.Component {
                   <h2 className="overlay pink">{art.title.toUpperCase()}</h2>
                   <img
                     height={height}
+                    width={square}
                     src={art.img}
                     alt={art.alt} />
                 </div>

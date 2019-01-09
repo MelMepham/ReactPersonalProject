@@ -2,6 +2,30 @@
   {
     "show": false,
     "imageSize": "square",
+    "img": "images/art/mandalaColabs.jpg",
+    "title": "Colaborations",
+    "alt": "Four images of black and white highly detailed Mandalas.",
+    "about": "Mel loves working with other people and over the years and discovered how easy and interesting mandalas can be to collaborate with other people, and has spent a lot of time collaborating and inspiring people to explore this medium, here are a few mandala’s that were made in collaboration with other beautiful humans."
+  },
+  {
+    "show": false,
+    "imageSize": "square",
+    "img": "images/art/geometryGlass.jpg",
+    "title": "Leadlight",
+    "alt": "An image of a five sided geometric terrarium that was made out of leadlight, the image looks in the terrarium so you can see it create more intricate patterns.",
+    "about": "As you can probably tell Mel is very inspired by geometry and different ways of playing with that, and one of these explorations was with leadlighting."
+  },
+  {
+    "show": false,
+    "imageSize": "square",
+    "img": "images/art/oneNest.jpg",
+    "title": "One Nest",
+    "alt": "An image of a logo design for a wellbeing company called 'One Nest', the logo was hand painted and has lavender around the outside with a birds eye view of a nest (I hope you liked the pun",
+    "about": "Two sisters came to me after seeing the geometric work I do to create a logo for a family business they started in 2017 making holistic natural remidies, they were amazing clients, and the aesthetic works really well with their nuturing home made feel."
+  },
+  {
+    "show": false,
+    "imageSize": "square",
     "img": "images/art/sanctuary.jpg",
     "title": "Sanctuary",
     "alt": "Typography Illustration of the word 'Sanctuary' hand written in a cursive font.",
